@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+
+.textStyle1{
+font-size: 100px;
+color: red;
+}
+
+.textStyle2{
+font-size: 10px;
+color: blue;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<input type="text" id="demo"  onkeyup="myFunction()">
+
+<div id="demo2"> 
+<p class="textStyle1">Hello World</p>
+</div>
+
+
+<script>
+window.onload = function setUp() {
+
+	var html = document.getElementById("demo").value = document.getElementById("demo2").innerHTML;
+	window.alert(html);
+}
+
+function myFunction() {                
+document.getElementById("demo2").innerHTML = document.getElementById("demo").value;
+}
+
+
+</script>
+
+</body>
+</html>
