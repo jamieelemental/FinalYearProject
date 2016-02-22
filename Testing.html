@@ -2,50 +2,33 @@
 <html>
 <head>
 
-
-<style>
-
-.textStyle1{
-font-size: 100px;
-color: red;
-}
-
-.textStyle2{
-font-size: 10px;
-color: blue;
-}
-
-
-</style>
-
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap.theme.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
- 
+	<script>
+		window.onload = function setUp() {
+
+		var html = document.getElementById("inpt").value = document.getElementById("outpt").innerHTML;
+		<!-- window.alert(html); testing-->
+		}
+
+		function myFunction() {                
+			document.getElementById("outpt").innerHTML = document.getElementById("inpt").value;
+		}
+	</script>
 </head>
-<body>
+<body class="jumbotron">
 
-<input type="text" id="demo"  onkeyup="myFunction()">
-
-<div id="demo2"> 
-<p class="textStyle1">Hello World</p>
+<div>
+<textarea id="inpt" type="text" class="center-block container" rows="20" onkeyup="myFunction()"> </textarea>
 </div>
 
+<br/>
 
-<script>
-window.onload = function setUp() {
-
-	var html = document.getElementById("demo").value = document.getElementById("demo2").innerHTML;
-	window.alert(html);
-}
-
-function myFunction() {                
-document.getElementById("demo2").innerHTML = document.getElementById("demo").value;
-}
-
-
-</script>
+<div id="outpt" class="center-block container table-bordered"> 
+<p class="input-lg">Hello World</p>
+</div>
 
 </body>
 </html>
