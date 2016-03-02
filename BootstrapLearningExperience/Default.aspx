@@ -49,25 +49,30 @@
 
         <div class="row">
 
-            <div class="col-xs-4 text-center">
+            <div class="col-md-4 text-center">
 
-                <div class="col-xs-12">
+                <div class="col-md-12">
                     <div class="row">
                         <h2>Beginner</h2>
                     </div>
                     <div class="row">
                         <p>
-                            You're starting point for learning Bootstrap. Introduction to the Bootstrap framework, how to integrate into your project and what it can
-                    bring to your websites. Click below to begin.
+                            Your starting point for learning Bootstrap. Introduction to the Bootstrap framework, 
+                            how to integrate into your project and what it can do.
+      
                         </p>
+                    </div>
+                    
+                    <div class="row">
+                        <input type="button" value="Begin" class="btn btn-success" name="Beginner" onclick="window.location = '/Begin/One.aspx'" />
                     </div>
                 </div>
 
             </div>
 
-            <div class="col-xs-4 text-center">
+            <div class="col-md-4 text-center">
 
-                <div class="col-xs-12">
+                <div class="col-md-12">
                     <div class="row">
                         <h2>Intermediate</h2>
                     </div>
@@ -77,33 +82,32 @@
                     and start editing code for yourself.
                         </p>
                     </div>
+                    
+                    <div class="row">
+                        <input type="button" value="Begin" class="btn btn-warning" name="Intermediate" onclick="window.location = '/Interm/IOne.aspx'" />
+                    </div>
                 </div>
             </div>
 
 
-            <div class="col-xs-4 text-center">
+            <div class="col-md-4 text-center">
 
-                <div class="col-xs-12">
+                <div class="col-md-12">
                     <div class="row">
                         <p class="h2">Advanced</p>
                     </div>
                     <div class="row">
                         <p>Need no guidance, jump in and practive what you've learned. A true master of Bootstrap in the making, returned for old times. Be bold, try something new!</p>
                     </div>
+                    
+                    <div class="row">
+                        <input type="button" value="Begin" class="btn btn-danger" name="Advanced" />
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-4 text-center">
-                <input type="button" value="Begin" class="btn btn-success" name="Beginner" onclick="window.location = '/Begin/One.aspx'" />
-            </div>
-            <div class="col-xs-4 text-center">
-                <input type="button" value="Begin" class="btn btn-warning" name="Intermediate" />
-            </div>
-            <div class="col-xs-4 text-center">
-                <input type="button" value="Begin" class="btn btn-danger" name="Advanced" />
-            </div>
         </div>
 
 
