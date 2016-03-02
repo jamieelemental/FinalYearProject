@@ -39,4 +39,22 @@
         </div>
     </div>--%>
 
+    <div class="container">
+
+        <div class="row">
+
+            <div>
+                Content
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            More content
+
+        </div>
+
+    </div>
+
 </asp:Content>
