@@ -42,19 +42,73 @@
     <div class="container">
 
         <div class="row">
-
-            <div>
-                Content
+            <div class="text-center h1">
+                Welcome to the bootstrap tutorial!
             </div>
-
         </div>
 
         <div class="row">
 
-            More content
+            <div class="col-xs-4 text-center">
 
+                <div class="col-xs-12">
+                    <div class="row">
+                        <h2>Beginner</h2>
+                    </div>
+                    <div class="row">
+                        <p>
+                            You're starting point for learning Bootstrap. Introduction to the Bootstrap framework, how to integrate into your project and what it can
+                    bring to your websites. Click below to begin.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xs-4 text-center">
+
+                <div class="col-xs-12">
+                    <div class="row">
+                        <h2>Intermediate</h2>
+                    </div>
+                    <div class="row">
+                        <p>
+                            You've had some experience with the Bootstrap framework before, and want to jump straight into coding. Jump right on in
+                    and start editing code for yourself.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-4 text-center">
+
+                <div class="col-xs-12">
+                    <div class="row">
+                        <p class="h2">Advanced</p>
+                    </div>
+                    <div class="row">
+                        <p>Need no guidance, jump in and practive what you've learned. A true master of Bootstrap in the making, returned for old times. Be bold, try something new!</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <div class="row">
+            <div class="col-xs-4 text-center">
+                <input type="button" value="Begin" class="btn btn-success" name="Beginner" onclick="window.location = '/Begin/One.aspx'" />
+            </div>
+            <div class="col-xs-4 text-center">
+                <input type="button" value="Begin" class="btn btn-warning" name="Intermediate" />
+            </div>
+            <div class="col-xs-4 text-center">
+                <input type="button" value="Begin" class="btn btn-danger" name="Advanced" />
+            </div>
+        </div>
+
+
+
     </div>
+
 
 </asp:Content>
