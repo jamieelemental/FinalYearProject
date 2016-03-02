@@ -1,10 +1,7 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IOne.aspx.cs" Inherits="BootstrapLearningExperience.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <%--  <link href="Content/bootstrap.min.css" rel="stylesheet">
-    <link href="Content/bootstrap.theme.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>--%>
+   
     <script>
         window.onload = function setUp() {
 
