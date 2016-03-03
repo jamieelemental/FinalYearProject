@@ -124,5 +124,22 @@ namespace BootstrapLearningExperience.Account
 
             Response.Redirect("/Account/Manage");
         }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+ 
+            //var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            //var user = Context.GetOwinContext().Request.User;
+      
+            //user.
+            //manager.RemoveLogin(user.Identity, new UserLoginInfo(user.LoginProvider, user.ProviderKey));
+            //HttpContext.Current.User.Identity.GetUserId();
+           
+            //var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            //var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
+            //var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
+            //IdentityResult result = manager.Create(user, Password.Text);
+
+        }
     }
 }
