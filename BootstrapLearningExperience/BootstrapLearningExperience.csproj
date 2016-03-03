@@ -175,6 +175,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Begin\Three.aspx" />
+    <Content Include="Begin\Four.aspx" />
+    <Content Include="Begin\Five.aspx" />
+    <Content Include="Begin\Six.aspx" />
     <Content Include="Begin\Two.aspx" />
     <Content Include="Begin\One.aspx" />
     <Content Include="Contact.aspx" />
@@ -363,6 +367,34 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Begin\Three.aspx.cs">
+      <DependentUpon>Three.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Begin\Three.aspx.designer.cs">
+      <DependentUpon>Three.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Begin\Four.aspx.cs">
+      <DependentUpon>Four.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Begin\Four.aspx.designer.cs">
+      <DependentUpon>Four.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Begin\Five.aspx.cs">
+      <DependentUpon>Five.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Begin\Five.aspx.designer.cs">
+      <DependentUpon>Five.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Begin\Six.aspx.cs">
+      <DependentUpon>Six.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Begin\Six.aspx.designer.cs">
+      <DependentUpon>Six.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Begin\Two.aspx.cs">
       <DependentUpon>Two.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
