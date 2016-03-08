@@ -44,10 +44,12 @@
 
             <div class="col-md-1 col-xs-1"></div>
             <div class="col-md-10 col-xs-10">
-                <p>
-                    This is the part where all of the content is placed. It will typically be instructions and information about the bootstrap framework
-                    but for now it is just a random stream of content to test how it will appear on the page. 
+                <p class="h3">What is BootStrap?</p>
+                <p>Bootstrap is a collection of files, CSS (cascading style sheets) and JavaScript, that you can include as part of a website to help
+                    create a structured layout and add some functionality. Bootstrap has many useful features, and is quite notable for including tools
+                    to make your website responsive, resizing items to fit different screen sizes. 
                 </p>
+                
             </div>
             <div class="col-md-1 col-xs-1"></div>
 
@@ -55,9 +57,9 @@
 
 
         <div class="row">
-            <div class="col-md-6 col-xs-6 text-center"></div>
-            <div class="col-md-6 col-xs-6 text-center">
-                <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Two.aspx'" />
+  
+            <div class="col-md-12 col-xs-12 text-center">
+                <input type="button" value="Begin" class="btn btn-success" onclick="window.location = '/Begin/Two.aspx'" />
             </div>
         </div>
 

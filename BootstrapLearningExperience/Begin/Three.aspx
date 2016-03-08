@@ -44,9 +44,8 @@
 
             <div class="col-md-1 col-xs-1"></div>
             <div class="col-md-10 col-xs-10">
-                <p>
-                    This is the part where all of the content is placed. It will typically be instructions and information about the bootstrap framework
-                    but for now it is just a random stream of content to test how it will appear on the page. 
+                <p>With Bootstrap, you can create 4 different designs for your page, making the page appear differently depneding on the size of the device
+                    viewing the webpage.
                 </p>
             </div>
             <div class="col-md-1 col-xs-1"></div>
