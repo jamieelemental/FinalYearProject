@@ -113,7 +113,7 @@
                 </p>
                 <p>Once we have our container, it is time to build our sections. The first is a <code>row</code>. In our example the first row has no other
                     Bootstrap classes, and spans the width of the page. Next we declare another <code>row</code>, this will sit below our first row, and 
-                    contain our three columns. 
+                    contain our 3 columns. 
                 </p>
                 <p>The page or container can be split into up to 12 sections. Each section must have a size in reference to that. Our example
                     uses Bootstrap CSS <code>col-md-4</code>. This defines a new column, for medium devices (more on this later), of width

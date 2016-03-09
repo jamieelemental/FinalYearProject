@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container">
-                <div class="row">
+        <div class="row">
             <p class="h2 text-center">Chapter 5</p>
         </div>
         <div class="row">
@@ -44,10 +44,12 @@
 
             <div class="col-md-1 col-xs-1"></div>
             <div class="col-md-10 col-xs-10">
+                <p class="h3">Different Devices Advanced</p>
+
                 <p>
-                    This is the part where all of the content is placed. It will typically be instructions and information about the bootstrap framework
-                    but for now it is just a random stream of content to test how it will appear on the page. 
+                    <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example3.html', '_blank', 'width=600, height=480', 'false')" />
                 </p>
+                <p>
             </div>
             <div class="col-md-1 col-xs-1"></div>
 

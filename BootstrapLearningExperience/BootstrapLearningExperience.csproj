@@ -173,6 +173,8 @@
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Begin\Example.html" />
+    <Content Include="Begin\Example2.html" />
+    <Content Include="Begin\Example3.html" />
     <Content Include="Begin\Three.aspx" />
     <Content Include="Begin\Four.aspx" />
     <Content Include="Begin\Five.aspx" />
