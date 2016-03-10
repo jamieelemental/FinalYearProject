@@ -1,14 +1,6 @@
 ﻿<%@ Page Title="Chapter 5" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Five.aspx.cs" Inherits="BootstrapLearningExperience._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <script>
-        $(document).ready(function () {
-
-            $("#show").click(function () {
-                $("#Answer").toggle();
-            });
-        });
-    </script>
 
     <div class="container">
         <div class="row">
@@ -50,96 +42,148 @@
 
         <div class="row">
 
-            <div class="col-md-1 col-xs-1"></div>
-            <div class="col-md-10 col-xs-10">
-                <p class="h3">Different Devices Advanced</p>
-
-                <p>
-                    It is not only possible to rearrange the layout of the page on different screen sizes, but we can also hide content. The next example contains 4 similar items on the page
-                    but they are only visible in the correct screen size. Click below to open and have a go at slowly resizing the window. 
-                </p>
-                <p>
-                    <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example3.html', '_blank', 'width=600, height=480', 'false')" />
-                </p>
-                <p>Hopefully from the example you will see how we can change the content based on the window size. Take a look at the code used below to achieve this:</p>
-                <pre>
-        
-        &lt;div class="col-xs-12 hidden-sm hidden-md hidden-lg h6"&gt;
-            &lt;p&gt;This is a extra small screen size, typically a mobile screen.&lt;/p&gt;
-            &lt;div class="btn btn-default"&gt;
-                &lt;p&gt;Mobile Phone (xs)&lt;/p&gt;
-                &lt;p&gt;Less than 798px wide.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    
-        &lt;div class="hidden-xs col-sm-12 hidden-md hidden-lg h4"&gt;
-            &lt;p&gt;This is a small screen size, typically a tablet screen.&lt;/p&gt;
-            &lt;div class="btn btn-default"&gt;
-                &lt;p&gt;Tablet (sm)&lt;/p&gt;
-                &lt;p&gt;798px - 992px wide.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-   
-        &lt;div class="hidden-xs hidden-sm col-12-md hidden-lg h2"&gt;
-            &lt;p&gt;This is a medium screen size, typically a laptop screen.&lt;/p&gt;
-            &lt;div class="btn btn-default"&gt;
-                &lt;p&gt;Laptop (md)&lt;/p&gt;
-                &lt;p&gt;993px - 1200px wide.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class="hidden-xs hidden-sm hidden-md col-lg-12 h1"&gt;
-            &lt;p&gt;This is a large screen size, typically a desktop screen.&lt;/p&gt;
-            &lt;div class="btn btn-default"&gt;
-                &lt;p&gt;Desktop (lg)&lt;/p&gt;
-                &lt;p&gt;Greater than 1200px wide.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-                </pre>
-                <p>
-                    If we look at the classes on the first <code>&lt;div&gt;</code> tag, we see <code>col-xs-12 hidden-sm hidden-md hidden-lg h6</code> which tells our
-                    window: 
-                </p>
-                <ul>
-                    <li>On Mobile Phones (xs) this column spans 12/12, 100% of the container.</li>
-                    <li>On Tablets (sm) this column is hidden.</li>
-                    <li>On Laptops (md) this column is hidden.</li>
-                    <li>On Desktops (lg) this column is hidden.</li>
-                    <li>The content is Heading 6 size.</li>
-                </ul>
-                <p>
-                    To emphasise this example, we will look at the classes on the third <code>&lt;div&gt;</code>. We see <code>hidden-xs hidden-sm col-12-md hidden-lg h2</code>. 
-                    Can you guess what this tells us about the column?
-                </p>
-                
-                <div id="Answer" hidden="hidden">
-                    <ul>
-                        <li>On Mobile Phones (xs) this column is hidden.</li>
-                        <li>On Tablets (sm) this column is hidden.</li>
-                        <li>On Laptops (md) this column spans 12/12, 100% of the container.</li>
-                        <li>On Desktops (lg) this column is hidden.</li>
-                        <li>The content is Heading 2 size.</li>
-                    </ul>
-
+            <div class="row">
+                <div class="col-md-1 col-xs-1"></div>
+                <div class="col-md-10 col-xs-10">
+                    <p class="h3">Different devices</p>
+                    <p>
+                        The grid will display differently depending on the size of the device
+                    viewing the webpage. Generally, these devices are categorised as the following:
+                    </p>
                 </div>
-                <p>
-                    <input id="show" type="button" value="Reveal Answer" class="btn btn-primary" />
-                </p>
+                <div class="col-md-1 col-xs-1"></div>
             </div>
-            <div class="col-md-1 col-xs-1"></div>
+
+            <div class="row text-center">
+
+                <div class="col-md-2"></div>
+
+                <div class="col-md-2">
+                    <div class="btn btn-default">
+                        <p>Mobile Phone (xs)</p>
+                        <p>Less than 798px wide.</p>
+                    </div>
+                    <div class="hidden-md">
+                        <br />
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="btn btn-default">
+                        <p>Tablet (sm)</p>
+                        <p>798px - 992px wide.</p>
+                    </div>
+                    <div class="hidden-md">
+                        <br />
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="btn btn-default">
+                        <p>Laptop (md)</p>
+                        <p>993px - 1200px wide.</p>
+                    </div>
+                    <div class="hidden-md">
+                        <br />
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="btn btn-default">
+                        <p>Desktop (lg)</p>
+                        <p>Greater than 1200px wide.</p>
+                    </div>
+                    <div class="hidden-md">
+                        <br />
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-1 col-xs-1"></div>
+                <div class="col-md-10 col-xs-10">
+                    <p>
+                        If we recall our example in chapter 4, it used <code>col-md-4</code>, to define 3 columns of width 4 of 12. The <code>md</code>
+                        part indicates which devices this column should display at width of 4 of 12. Medium size (md) screens will view this column as a third of the screen, however,
+                    if we open the same example page using a smaller window size, we see the columns display differently.
+                    </p>
+                    <p>
+                        <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example.html', '_blank', 'width=800, height=600', 'false')" />
+                    </p>
+                    <p>
+                        Our 3 columns have seemingly collapsed into 1. This is because we haven't explicitly stated how to handle the columns for a smaller screen or window size.
+                        To do this we must add the another Bootstrap class designed for smaller screens.
+                    </p>
+
+                    <p>
+                        For this example, we decide that whilst on larger screens 3 column layout is perfect, we would like a maximum of two columns on the screen, and any extra columns display on
+                        the next row. Here is the code, note the changes made:
+                    </p>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Simple Example&lt;/title&gt;
+        &lt;script src="js/bootstrap.js">&lt;/script&gt;
+        &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body class="container text-center"&gt;
+        &lt;div class="row"&gt;This Row could contain your title for the page&lt;/div&gt;
+
+        &lt;div class="row"&gt;
+
+            <span style="color:red;">&lt;div class="col-md-4"&gt;This is an &lt;/div&gt;</span>
+            &lt;div class="col-md-4 col-sm-6"&gt;This is an &lt;/div&gt;
+
+            <span style="color:red;">&lt;div class="col-md-4"&gt;example of a &lt;/div&gt;</span>
+            &lt;div class="col-md-4 col-sm-6"&gt;edited example of a &lt;/div&gt;
+
+            <span style="color:red;">&lt;div class="col-md-4"&gt;three column layout &lt;/div&gt;</span>
+            &lt;div class="col-md-4 col-sm-6"&gt;three column layout &lt;/div&gt;
+
+
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+                    </pre>
+                    <p>
+                        We have changed <code>col-md-4</code> on each of the <code>&lt;div&gt;</code> tags to <code>col-md-4 col-sm-6</code>. This means that for medium screens (md) each column
+                        should have a width 4/12 of the container (1/3), but on small devices (sm), each column should have a width of 6/12 (1/2). Since the third column can no longer fit, it 
+                        defaults to the natural flow of the page, downwards. We can control this, discussed later on. 
+                    </p>
+                    <p>
+                        <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example2.html', '_blank', 'width=800, height=600', 'false')" />
+                    </p>
+
+                    <p>
+                        Notice that if you resize the window so it is slightly wider, it reverts back to the 3 column layout. This is because the browser detects that the screen
+                        size has become large enough to be classed as a medium size device.
+                    </p>
+                </div>
+                <div class="col-md-1 col-xs-1"></div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Four.aspx'" />
+                </div>
+                <div class="col-md-6 text-center">
+                    <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Six.aspx'" />
+                </div>
+            </div>
+
 
         </div>
-
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Four.aspx'" />
-            </div>
-            <div class="col-md-6 text-center">
-                <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Six.aspx'" />
-            </div>
-        </div>
-
-
     </div>
-
 </asp:Content>

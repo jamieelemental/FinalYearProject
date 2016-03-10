@@ -106,6 +106,12 @@
                     elements of bootstrap.
                 </p>
 
+                <p>
+                    Once we have Bootstrap hooked up to our website, we can make use of the following CSS classes:
+                    <code>col-sm-1</code>, <code>text-center</code>, <code>hidden-lg</code>, <code>col-push-5</code>, <code>btn-primary</code>, <code>table-bordered</code>
+                    By the end of all three tutorials, you'll know how all these classes work, their different variants and hopefully many more.
+                </p>
+
 
                 <br />
             </div>
