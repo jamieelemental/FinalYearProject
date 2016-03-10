@@ -14,9 +14,6 @@
         }
     </script>
 
-
-   
-
         <div class="row">
 
             <div class="col-md-2 col-xs-3 OutLine">

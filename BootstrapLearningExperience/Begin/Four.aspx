@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="col-md-2">
-                    <div class=" btn btn-default">
+                    <div class="btn btn-default">
                         <p>Desktop (lg)</p>
                         <p>Greater than 1200px wide.</p>
                     </div>

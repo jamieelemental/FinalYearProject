@@ -5,16 +5,51 @@
     <script src="../Scripts/bootstrap.js"></script>
     <link href="../Content/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script>
+        function getWidth() {
+            var content = $(document).width();
+
+            document.getElementById("wind").innerHTML = "Content Width: " + content;
+        };
+    </script>
 </head>
-<body class="container text-center">
+<body class="container text-center" onresize="getWidth()">
 
-        <div class="col-xs-12 hidden-sm hidden-md hidden-lg h6"><p>This is a extra small screen size, typically a mobile screen.</p></div>
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg h6">
+            <p>This is a extra small screen size, typically a mobile screen.</p>
+            <div class="btn btn-default">
+                <p>Mobile Phone (xs)</p>
+                <p>Less than 798px wide.</p>
+
+            </div>
+        </div>
     
-        <div class="hidden-xs col-sm-12 hidden-md hidden-lg h4"><p>This is a small screen size, typically a tablet screen.</p></div>
+        <div class="hidden-xs col-sm-12 hidden-md hidden-lg h4">
+            <p>This is a small screen size, typically a tablet screen.</p>
+            <div class="btn btn-default">
+                <p>Tablet (sm)</p>
+                <p>798px - 992px wide.</p>
+            </div>
+        </div>
    
-        <div class="hidden-xs hidden-sm col-12-md hidden-lg h2"><p>This is a medium screen size, typically a laptop screen.</p></div>
+        <div class="hidden-xs hidden-sm col-12-md hidden-lg h2">
+            <p>This is a medium screen size, typically a laptop screen.</p>
+            <div class="btn btn-default">
+                <p>Laptop (md)</p>
+                <p>993px - 1200px wide.</p>
+            </div>
+        </div>
 
-        <div class="hidden-xs hidden-sm hidden-md col-lg-12 h1"><p>This is a large screen size, typically a desktop screen.</p></div>
+        <div class="hidden-xs hidden-sm hidden-md col-lg-12 h1">
+            <p>This is a large screen size, typically a desktop screen.</p>
+            <div class="btn btn-default">
+                <p>Desktop (lg)</p>
+                <p>Greater than 1200px wide.</p>
+            </div>
+        </div>
+
+        <p id="wind"></p>
  
 </body>
 </html>
