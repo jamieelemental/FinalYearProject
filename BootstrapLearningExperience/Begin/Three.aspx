@@ -252,10 +252,10 @@
                 <p>
                     We then also have suppliment classes to modify the size of the button:
 
-                    <code>btn-block</code>
+                    <code>btn-block</code>,
                     <code>btn-lg</code>,
                     <code>btn-md</code>, 
-                    <code>btn-sm</code>, and
+                    <code>btn-sm</code> and
                     <code>btn-xs</code>.
 
                     
