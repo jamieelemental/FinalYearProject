@@ -4,6 +4,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Collections.Generic;
+using System.IO;
 
 namespace BootstrapLearningExperience
 {
@@ -66,12 +68,73 @@ namespace BootstrapLearningExperience
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            versionInfo();
 
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+        }
+
+        private void versionInfo()
+        {
+            Session["VersionNo"] = findFiles().ToString();
+        }
+
+        private List<String> DirSearch(string sDir)
+        {
+            List<String> files = new List<String>();
+            string txtFiles = "";
+            try
+            {
+                foreach (string file in Directory.GetFiles(sDir))
+                {
+                    if (file.StartsWith(sDir + "\\" + "._"))
+                    {
+                        files.Add(file);
+                    }
+                }
+                foreach (string dir in Directory.GetDirectories(sDir))
+                {
+                    files.AddRange(DirSearch(dir));
+                }
+            }
+            catch (System.Exception exc)
+            {
+                txtFiles += "\r\n" + exc.Message;
+            }
+            return files;
+        }
+
+        private DateTime findFiles()
+        {
+            string exePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string exeDir = System.IO.Path.GetDirectoryName(exePath);
+            DirectoryInfo binDir = System.IO.Directory.GetParent(exeDir);
+
+            DirectoryInfo dir = new DirectoryInfo(binDir.ToString());
+            Console.WriteLine(dir.ToString());
+
+            string TopDIR = dir.ToString();
+            List<String> files = DirSearch(TopDIR);
+
+            DateTime lastModified = new DateTime(1990, 1, 1);
+
+            if (files.Count != 0)
+            {
+                foreach (string file in files)
+                {
+                    DateTime fileEditDate = new FileInfo(file).LastWriteTime;
+
+                    if (fileEditDate > lastModified)
+                    {
+                        lastModified = fileEditDate;
+                    }
+                }
+            }
+            return lastModified;
+            
         }
     }
 

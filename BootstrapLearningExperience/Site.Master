@@ -83,7 +83,9 @@
         <br />
         <hr />
         <footer>
-            <p>&copy; <%: DateTime.Now.Year %> - Jamie Chester Charles Element</p>
+                <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6">&copy; <%: DateTime.Now.Year %> - Jamie Chester Charles Element </p>
+                <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><%= Session["VersionNo"].ToString() %></p>
+
         </footer>
     </div>
     </form>
