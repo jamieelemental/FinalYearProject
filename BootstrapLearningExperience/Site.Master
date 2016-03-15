@@ -13,6 +13,7 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript" src="Scripts/ZeroClip/ZeroClipboard.js"></script>
 
 </head>
 <body>
@@ -36,6 +37,7 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
             </Scripts>
+
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top">

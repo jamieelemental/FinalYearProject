@@ -2,6 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <script type="text/javascript" src="../Scripts/ZeroClip/ZeroClipboard.js"></script>
     <script>
         $(document).ready(function () {
 
@@ -11,12 +12,38 @@
         });
     </script>
 
+    <script>
+       
+        ZeroClipboard.config({ swfPath: "../Scripts/ZeroClip/ZeroClipboard.swf" });
+
+
+        var clip = new ZeroClipboard($("button#copy-button"));
+
+            
+            
+            clip.on('load', function (clip) {
+                window.alert('loaded');
+
+                clip.on('datarequested', function (clip) {
+                    var text = document.getElementById("#CopySource").innerText;
+                    clip.setData(text);
+                });
+
+                clip.on('complete', function clip, args) {
+                    console.log("Text copied to clipboard: \n" + args.text);
+                });
+            });
+
+
+
+    </script>
+
 
     <div class="container">
         <div class="row">
             <p class="h2 text-center">Chapter 6</p>
         </div>
-        
+
 
 
         <div class="row">
@@ -33,7 +60,7 @@
                     <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example3.html', '_blank', 'width=600, height=480', 'false')" />
                 </p>
                 <p>Hopefully from the example you will see how we can change the content based on the window size. Take a look at the code used below to achieve this:</p>
-                <pre>
+                <pre id="CopySource">
         
         &lt;div class="col-xs-12 hidden-sm hidden-md hidden-lg h6"&gt;
             &lt;p&gt;This is a extra small screen size, typically a mobile screen.&lt;/p&gt;
@@ -67,6 +94,7 @@
             &lt;/div&gt;
         &lt;/div&gt;
                 </pre>
+                <input id="copy-button" type="button" value="Copy" class="copybtn" />
                 <p>
                     If we look at the classes on the first <code>&lt;div&gt;</code> tag, we see <code>col-xs-12 hidden-sm hidden-md hidden-lg h6</code> which tells our
                     window: 
@@ -82,7 +110,7 @@
                     To emphasise this example, we will look at the classes on the third <code>&lt;div&gt;</code>. We see <code>hidden-xs hidden-sm col-12-md hidden-lg h2</code>. 
                     Can you guess what this tells us about the column?
                 </p>
-                
+
                 <div id="Answer" hidden="hidden">
                     <ul>
                         <li>On Mobile Phones (xs) this column is hidden.</li>
@@ -102,7 +130,7 @@
         </div>
 
 
-       
+
 
 
 
