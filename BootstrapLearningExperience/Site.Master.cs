@@ -69,7 +69,6 @@ namespace BootstrapLearningExperience
         protected void Page_Load(object sender, EventArgs e)
         {
             versionInfo();
-
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
@@ -90,10 +89,7 @@ namespace BootstrapLearningExperience
             {
                 foreach (string file in Directory.GetFiles(sDir))
                 {
-                    if (file.StartsWith(sDir + "\\" + "._"))
-                    {
-                        files.Add(file);
-                    }
+                    files.Add(file);
                 }
                 foreach (string dir in Directory.GetDirectories(sDir))
                 {
@@ -134,8 +130,6 @@ namespace BootstrapLearningExperience
                 }
             }
             return lastModified;
-            
         }
     }
-
 }
