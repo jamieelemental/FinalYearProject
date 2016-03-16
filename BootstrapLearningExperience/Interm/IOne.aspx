@@ -33,9 +33,6 @@
 
                 <p class="h3">Results:</p>
 
-                <%--<div id="outpt" class="OutLine">
-                    <p class="h3">Hello World</p>
-                </div>--%>
 
                 <pre id="outpt">
                     <p class="h3">Hello World</p>

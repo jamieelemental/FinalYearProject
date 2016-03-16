@@ -38,6 +38,17 @@
 
         });
     </script>
+    <script>
+        window.onload = function setUp() {
+
+            var html = document.getElementById("inpt").value = document.getElementById("outpt").innerHTML.trim();
+            <%--window.alert(html);--%>
+        }
+
+        function myFunction() {
+            document.getElementById("outpt").innerHTML = document.getElementById("inpt").value.trim();
+        }
+    </script>
 
 
 
@@ -232,49 +243,95 @@
                     <li><code>table-condensed</code> adds a smaller amount of padding, does not alter width of the table. </li>
                     <li><code>table-bordered</code> does not add padding, does not alter width, adds all gridlines.</li>
                 </ul>
-                The all option, <code>table table-condensed table-bordered</code> adds padding left and right, adds smaller padding top and bottom, makes the table as wide
+                <p>
+                    The all option, <code>table table-condensed table-bordered</code> adds padding left and right, adds smaller padding top and bottom, makes the table as wide
                     as the container and adds all gridlines. The reason for this is that <code>table</code> and <code>table-condensed</code> conflict. Despite this, it is
                     useful to combine the others, <code>table table-bordered</code> which gives a similar result to the All example. This is because <code>table</code>
-                gives us a good base, and <code>table-bordered</code> extends it with further styling.
-                </ul>
+                    gives us a good base, and <code>table-bordered</code> extends it with further styling.
+                </p>
+
                 <p class="h2">Buttons</p>
                 <p>
                     Another quick style that can be applied to elements of your website is the button styles. You may have already noticed some of them already on this website. 
                     Different coloured buttons can be used to signify different things. In bootstrap we have a few different ones: 
-                    <code>btn-default</code>,
-                    <code>btn-primary</code>,
-                    <code>btn-success</code>,
-                    <code>btn-info</code>,
-                    <code>btn-warning</code>, 
-                    <code>btn-danger</code>, and
-                    <code>btn-link</code>.
                 </p>
+
+                <table class="table-bordered table-condensed text-center">
+
+                    <tr>
+                        <td><code>btn-default</code></td>
+                        <td><code>btn-primary</code></td>
+                        <td><code>btn-success</code></td>
+                        <td><code>btn-info</code></td>
+                        <td><code>btn-warning</code></td>
+                        <td><code>btn-danger</code></td>
+                        <td><code>btn-link</code></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input class="btn btn-default" type="button" value="Click" /></td>
+                        <td>
+                            <input class="btn btn-primary" type="button" value="Click" /></td>
+                        <td>
+                            <input class="btn btn-success" type="button" value="Click" /></td>
+                        <td>
+                            <input class="btn btn-info" type="button" value="Click" /></td>
+                        <td>
+                            <input class="btn btn-warning" type="button" value="Click" /></td>
+                        <td>
+                            <input class="btn btn-danger" type="button" value="Click" /></td>
+                        <td>
+                            <input class="btn btn-link" type="button" value="Click" /></td>
+                    </tr>
+                </table>
+
+                <br />
                 <p>
                     We then also have suppliment classes to modify the size of the button:
-
-                    <code>btn-block</code>,
-                    <code>btn-lg</code>,
-                    <code>btn-md</code>, 
-                    <code>btn-sm</code> and
-                    <code>btn-xs</code>.
-
-                    
                 </p>
 
+                <table class="table-condensed table-bordered text-center">
+                    <tr>
+                        <td><code>btn-xs</code></td>
+                        <td><code>btn-sm</code></td>
+                        <td><code>btn-md</code></td>
+                        <td><code>btn-lg</code></td>
+                    </tr>
 
-                <p class="btn btn-default">hello</p>
-                <p class="btn btn-primary">hello</p>
-                <p class="btn btn-success">hello</p>
-                <p class="btn btn-info">hello</p>
-                <p class="btn btn-warning">hello</p>
-                <p class="btn btn-danger">hello</p>
-                <p class="btn btn-link">hello</p>
-                <p class="btn btn-default btn-block">hello</p>
-                <p class="btn btn-default btn-lg">hello</p>
-                <p class="btn btn-default btn-md">hello</p>
-                <p class="btn btn-default btn-sm">hello</p>
-                <p class="btn btn-default btn-xs">hello</p>
+                    <tr>
+                        <td>
+                            <input type="button" value="Click" class="btn btn-default btn-xs" /></td>
+                        <td>
+                            <input type="button" value="Click" class="btn btn-default btn-sm" /></td>
+                        <td>
+                            <input type="button" value="Click" class="btn btn-default btn-md" /></td>
+                        <td>
+                            <input type="button" value="Click" class="btn btn-default btn-lg" /></td>
+                    </tr>
 
+                </table>
+                <br />
+                <p>And finally, we have <code>btn-block</code> which fills whatever container it is placed in:</p>
+                <p>
+                    <input type="button" value="Click" class="btn btn-default btn-block" />
+                </p>
+                <p>All these should be combined with the base button class <code>btn</code>. So <code>btn-danger</code> becomes <code>btn btn-danger</code>.</p>
+                <p>Have a go combining these classes below:</p>
+
+
+
+                <div class="col-md-6 col-xs-12">
+                    <p class="h3">Code: </p>
+                    <textarea id="inpt" class="table" onkeyup="myFunction()" style="height: 80px;"></textarea>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <p class="h3">Results:</p>
+                    <pre id="outpt" style="height: 80px;">
+<input type="button" class="btn btn-danger btn-xs" value="Click" />
+                        </pre>
+                </div>
 
 
             </div>
@@ -283,7 +340,7 @@
         </div>
 
 
-
+        <br />
         <div class="row">
             <div class="col-md-6 col-xs-6 text-center">
                 <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Two.aspx'" />

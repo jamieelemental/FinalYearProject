@@ -3,66 +3,67 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container">
+
         <div class="row">
             <p class="h2 text-center">Chapter 1</p>
         </div>
+
         <div class="row">
 
-            <div class="col-md-3 col-xs-2"></div>
+            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-4"></div>
 
-            <div class="col-md-6 col-xs-8">
-                <div class="col-md-2 col-xs-2 text-center">
+            <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-primary">1</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-danger">2</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-danger">3</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-danger">4</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-danger">5</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-danger">6</p>
                 </div>
             </div>
 
-            <div class="col-md-3 col-xs-2"></div>
+             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-4"></div>
 
         </div>
 
         <div class="row">
 
-            <div class="col-md-1 col-xs-1"></div>
-            <div class="col-md-10 col-xs-10">
+            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+
                 <p class="h3">What is BootStrap?</p>
-                <p>Bootstrap is a collection of files, CSS (cascading style sheets) and JavaScript, that you can include as part of a website to help
+                <p>
+                    Bootstrap is a collection of files, CSS (cascading style sheets) and JavaScript, that you can include as part of a website to help
                     create a structured layout and add some functionality. Bootstrap has many useful features, and is quite notable for including tools
                     to make your website responsive, resizing items to fit different screen sizes. 
                 </p>
-                
             </div>
-            <div class="col-md-1 col-xs-1"></div>
+            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
 
         </div>
 
 
         <div class="row">
-  
-            <div class="col-md-12 col-xs-12 text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                 <input type="button" value="Begin" class="btn btn-success" onclick="window.location = '/Begin/Two.aspx'" />
             </div>
         </div>
-
 
     </div>
 
