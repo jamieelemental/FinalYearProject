@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Chapter 6" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Six.aspx.cs" Inherits="BootstrapLearningExperience._Default" %>
+﻿<%@ Page Title="Chapter 6" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Six.aspx.cs" Inherits="BootstrapLearningExperience._Six" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -17,6 +17,40 @@
         <div class="row">
             <p class="h2 text-center">Chapter 6</p>
         </div>
+
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+
+            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
+                    <p class="btn-success">1</p>
+                </div>
+
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
+                    <p class="btn-success">2</p>
+                </div>
+
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
+                    <p class="btn-success">3</p>
+                </div>
+
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
+                    <p class="btn-success">4</p>
+                </div>
+
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
+                    <p class="btn-success">5</p>
+                </div>
+
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
+                    <p class="btn-primary">6</p>
+                </div>
+            </div>
+
+            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+
+        </div>
+
 
         <div class="row">
 
@@ -66,7 +100,7 @@
             &lt;/div&gt;
         &lt;/div&gt;
                 </pre>
-                
+
                 <p>
                     If we look at the classes on the first <code>&lt;div&gt;</code> tag, we see <code>col-xs-12 hidden-sm hidden-md hidden-lg h6</code> which tells our
                     window: 
@@ -107,7 +141,7 @@
                 <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Five.aspx'" />
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
-                <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Finished.aspx'" />
+                <asp:Button ID="btnFinished" runat="server" CssClass="btn btn-success" Text="Finish" OnClick="btnFinished_Click" />
             </div>
         </div>
     </div>

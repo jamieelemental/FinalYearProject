@@ -9,5 +9,11 @@ namespace BootstrapLearningExperience
         {
 
         }
+
+        protected void btnFinished_Click(object sender, EventArgs e)
+        {
+            Session["Rank"] = "Initiate";
+            Response.Redirect("/Begin/Finished.aspx", true);
+        }
     }
 }

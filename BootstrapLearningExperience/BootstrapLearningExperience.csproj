@@ -175,6 +175,7 @@
     <Content Include="Begin\Example.html" />
     <Content Include="Begin\Example2.html" />
     <Content Include="Begin\Example3.html" />
+    <Content Include="Begin\Finished.aspx" />
     <Content Include="Begin\Three.aspx" />
     <Content Include="Begin\Four.aspx" />
     <Content Include="Begin\Five.aspx" />
@@ -346,6 +347,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Begin\Finished.aspx.cs">
+      <DependentUpon>Finished.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Begin\Finished.aspx.designer.cs">
+      <DependentUpon>Finished.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Begin\Three.aspx.cs">
       <DependentUpon>Three.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

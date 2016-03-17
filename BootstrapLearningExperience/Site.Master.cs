@@ -69,6 +69,7 @@ namespace BootstrapLearningExperience
         protected void Page_Load(object sender, EventArgs e)
         {
             versionInfo();
+            getRank();
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
@@ -130,6 +131,17 @@ namespace BootstrapLearningExperience
                 }
             }
             return lastModified;
+        }
+
+        private void getRank()
+        {
+            if (Session["Rank"] != null)
+            {
+                //Do nothing as their rank is set.
+            }
+            else { 
+                Session["Rank"] = "Novice";
+            }
         }
     }
 }
