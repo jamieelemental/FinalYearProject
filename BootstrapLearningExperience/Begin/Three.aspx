@@ -9,7 +9,6 @@
                 $("#TableBordered").hide();
                 $("#TableCondensed").hide();
                 $("#TableAll").hide();
-
             });
 
             $("#showTableCondensed").click(function () {
@@ -17,7 +16,6 @@
                 $("#TableBordered").hide();
                 $("#TableCondensed").show();
                 $("#TableAll").hide();
-
             });
 
             $("#showTableBordered").click(function () {
@@ -25,7 +23,6 @@
                 $("#TableBordered").show();
                 $("#TableCondensed").hide();
                 $("#TableAll").hide();
-
             });
 
             $("#showTableAll").click(function () {
@@ -33,9 +30,7 @@
                 $("#TableBordered").hide();
                 $("#TableCondensed").hide();
                 $("#TableAll").show();
-
             });
-
         });
     </script>
     <script>
@@ -51,48 +46,48 @@
     </script>
 
 
-
     <div class="container">
         <div class="row">
             <p class="h2 text-center">Chapter 3</p>
         </div>
+
         <div class="row">
-            <div class="col-md-3 col-xs-2"></div>
+            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
 
-            <div class="col-md-6 col-xs-8">
+            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-success">1</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-success">2</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-primary">3</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-danger">4</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-danger">5</p>
                 </div>
 
-                <div class="col-md-2 col-xs-2 text-center">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-danger">6</p>
                 </div>
             </div>
 
-            <div class="col-md-3 col-xs-2"></div>
+            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
 
         </div>
 
         <div class="row">
-            <div class="col-md-1 col-xs-1"></div>
-            <div class="col-md-10 col-xs-10">
+            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
                 <p class="h2">The Basics</p>
                 <p>
                     The first part of bootstrap to get to grips with is the style elements. These are typically simple, but useful stylings for your webpage, that are conviniently set up for
@@ -255,6 +250,7 @@
                     Another quick style that can be applied to elements of your website is the button styles. You may have already noticed some of them already on this website. 
                     Different coloured buttons can be used to signify different things. In bootstrap we have a few different ones: 
                 </p>
+                
 
                 <table class="table-bordered table-condensed text-center">
 
@@ -312,10 +308,14 @@
 
                 </table>
                 <br />
-                <p>And finally, we have <code>btn-block</code> which fills whatever container it is placed in:</p>
+                <p>We also have <code>btn-block</code> which fills whatever container it is placed in:</p>
                 <p>
                     <input type="button" value="Click" class="btn btn-default btn-block" />
                 </p>
+                <p>Finally, we can add in <code>active</code> or <code>disabled</code> to determine
+                    whether the button is clickable.
+                </p>
+                <p><input type="button" value="Active" class="btn btn-primary active" />&nbsp;<input type="button" value="Disabled" class="btn btn-primary disabled" /></p>
                 <p>All these should be combined with the base button class <code>btn</code>. So <code>btn-danger</code> becomes <code>btn btn-danger</code>.</p>
                 <p>Have a go combining these classes below:</p>
 
@@ -335,17 +335,17 @@
 
 
             </div>
-            <div class="col-md-1 col-xs-1"></div>
+            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
 
         </div>
 
 
         <br />
         <div class="row">
-            <div class="col-md-6 col-xs-6 text-center">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
                 <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Two.aspx'" />
             </div>
-            <div class="col-md-6 col-xs-6 text-center">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
                 <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Four.aspx'" />
             </div>
         </div>

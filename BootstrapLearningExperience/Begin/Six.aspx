@@ -18,12 +18,10 @@
             <p class="h2 text-center">Chapter 6</p>
         </div>
 
-
-
         <div class="row">
 
-            <div class="col-md-1 col-xs-1"></div>
-            <div class="col-md-10 col-xs-10">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                 <p class="h3">Different Devices Advanced</p>
 
                 <p>
@@ -98,25 +96,20 @@
                 <p>
                     <input id="show" type="button" value="Reveal Answer" class="btn btn-primary" />
                 </p>
+                <br />
             </div>
-            <div class="col-md-1 col-xs-1"></div>
-
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
         </div>
-
-
-
 
 
         <div class="row">
-            <div class="col-md-6 text-center">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
                 <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Five.aspx'" />
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
                 <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Finished.aspx'" />
             </div>
         </div>
-
-
     </div>
 
 </asp:Content>
