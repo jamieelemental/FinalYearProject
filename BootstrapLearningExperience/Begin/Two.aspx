@@ -8,9 +8,9 @@
         </div>
         <div class="row">
 
-            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
 
-            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+            <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="btn-success">1</p>
                 </div>
@@ -36,14 +36,14 @@
                 </div>
             </div>
 
-            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
 
         </div>
 
         <div class="row">
 
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
                 <p class="h3">Getting Bootstrap</p>
                 <p>Bootstrap can be downloaded for free from here: <a href="http://http://getbootstrap.com/">http://getbootstrap.com/</a></p>
                 <p>This tutorial will be using Bootstrap V3.3.6</p>
@@ -116,7 +116,7 @@
 
                 <br />
             </div>
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
 
         </div>
 
