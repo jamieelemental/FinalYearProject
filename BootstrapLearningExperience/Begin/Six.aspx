@@ -23,27 +23,27 @@
 
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">1</p>
+                    <p class="bg-success">1</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">2</p>
+                    <p class="bg-success">2</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">3</p>
+                    <p class="bg-success">3</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">4</p>
+                    <p class="bg-success">4</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">5</p>
+                    <p class="bg-success">5</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-primary">6</p>
+                    <p class="bg-primary">6</p>
                 </div>
             </div>
 
@@ -68,15 +68,16 @@
                 <p>Hopefully from the example you will see how we can change the content based on the window size. Take a look at the code used below to achieve this:</p>
                 <pre>
         
-        &lt;div class="col-xs-12 hidden-sm hidden-md hidden-lg h6"&gt;
+        &lt;div class="visible-xs h6"&gt;
             &lt;p&gt;This is a extra small screen size, typically a mobile screen.&lt;/p&gt;
             &lt;div class="btn btn-default"&gt;
                 &lt;p&gt;Mobile Phone (xs)&lt;/p&gt;
                 &lt;p&gt;Less than 798px wide.&lt;/p&gt;
+
             &lt;/div&gt;
         &lt;/div&gt;
     
-        &lt;div class="hidden-xs col-sm-12 hidden-md hidden-lg h4"&gt;
+        &lt;div class="visible-sm h4"&gt;
             &lt;p&gt;This is a small screen size, typically a tablet screen.&lt;/p&gt;
             &lt;div class="btn btn-default"&gt;
                 &lt;p&gt;Tablet (sm)&lt;/p&gt;
@@ -84,7 +85,7 @@
             &lt;/div&gt;
         &lt;/div&gt;
    
-        &lt;div class="hidden-xs hidden-sm col-12-md hidden-lg h2"&gt;
+        &lt;div class="visible-md h2"&gt;
             &lt;p&gt;This is a medium screen size, typically a laptop screen.&lt;/p&gt;
             &lt;div class="btn btn-default"&gt;
                 &lt;p&gt;Laptop (md)&lt;/p&gt;
@@ -92,28 +93,34 @@
             &lt;/div&gt;
         &lt;/div&gt;
 
-        &lt;div class="hidden-xs hidden-sm hidden-md col-lg-12 h1"&gt;
+        &lt;div class="visible-lg h1"&gt;
             &lt;p&gt;This is a large screen size, typically a desktop screen.&lt;/p&gt;
             &lt;div class="btn btn-default"&gt;
                 &lt;p&gt;Desktop (lg)&lt;/p&gt;
                 &lt;p&gt;Greater than 1200px wide.&lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+
                 </pre>
 
                 <p>
-                    If we look at the classes on the first <code>&lt;div&gt;</code> tag, we see <code>col-xs-12 hidden-sm hidden-md hidden-lg h6</code> which tells our
+                    If we look at the classes on the first <code>&lt;div&gt;</code> tag, we see <code>visible-xs h6</code> which tells our
                     window: 
                 </p>
                 <ul>
-                    <li>On Mobile Phones (xs) this column spans 12/12, 100% of the container.</li>
+                    <li>On Mobile Phones (xs) this column is visible and spans 12/12, 100% of the container by default.</li>
                     <li>On Tablets (sm) this column is hidden.</li>
                     <li>On Laptops (md) this column is hidden.</li>
                     <li>On Desktops (lg) this column is hidden.</li>
                     <li>The content is Heading 6 size.</li>
                 </ul>
+                <p>In the previous example we used multiple classes, <code>col-md-4 col-sm-6</code>, to specify how a column should appear for different screen sizes. 
+                    In this example you could achieve column hiding using a similar approach, <code>col-xs-12 hidden-sm hidden-md hidden-lg</code>, however,
+                    all we need to state is when something should be visible, and bootstrap assumes it is hidden otherwise. Conversely, if we want to hide content on a specific size,
+                    we can use the hidden classes, <code>hidden-xs hidden-sm hidden-md hidden-lg</code> and bootstrap will assume it should be visible on the other sizes.
+                </p>
                 <p>
-                    To emphasise this example, we will look at the classes on the third <code>&lt;div&gt;</code>. We see <code>hidden-xs hidden-sm col-12-md hidden-lg h2</code>. 
+                    Now look at the classes on the third <code>&lt;div&gt;</code>. We see <code>visible-md h2</code>. 
                     Can you guess what this tells us about the column?
                 </p>
 
@@ -121,7 +128,7 @@
                     <ul>
                         <li>On Mobile Phones (xs) this column is hidden.</li>
                         <li>On Tablets (sm) this column is hidden.</li>
-                        <li>On Laptops (md) this column spans 12/12, 100% of the container.</li>
+                        <li>On Laptops (md) this column is visible and spans 12/12, 100% of the container by default.</li>
                         <li>On Desktops (lg) this column is hidden.</li>
                         <li>The content is Heading 2 size.</li>
                     </ul>

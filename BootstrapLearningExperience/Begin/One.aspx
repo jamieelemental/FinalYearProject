@@ -14,27 +14,27 @@
 
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-primary">1</p>
+                    <p class="bg-primary">1</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">2</p>
+                    <p class="bg-danger">2</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">3</p>
+                    <p class="bg-danger">3</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">4</p>
+                    <p class="bg-danger">4</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">5</p>
+                    <p class="bg-danger">5</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">6</p>
+                    <p class="bg-danger">6</p>
                 </div>
             </div>
             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>

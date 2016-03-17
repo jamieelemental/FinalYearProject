@@ -14,27 +14,27 @@
 
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">1</p>
+                    <p class="bg-success">1</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">2</p>
+                    <p class="bg-success">2</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">3</p>
+                    <p class="bg-success">3</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">4</p>
+                    <p class="bg-success">4</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">5</p>
+                    <p class="bg-success">5</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">6</p>
+                    <p class="bg-success">6</p>
                 </div>
             </div>
 

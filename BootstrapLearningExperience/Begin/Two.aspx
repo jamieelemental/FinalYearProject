@@ -12,27 +12,27 @@
 
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">1</p>
+                    <p class="bg-success">1</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-primary">2</p>
+                    <p class="bg-primary">2</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">3</p>
+                    <p class="bg-danger">3</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">4</p>
+                    <p class="bg-danger">4</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">5</p>
+                    <p class="bg-danger">5</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">6</p>
+                    <p class="bg-danger">6</p>
                 </div>
             </div>
 
@@ -109,7 +109,7 @@
 
                 <p>
                     Once we have Bootstrap hooked up to our website, we can make use of the following CSS classes:
-                    <code>col-sm-1</code>, <code>text-center</code>, <code>hidden-lg</code>, <code>col-push-5</code>, <code>btn-primary</code>, <code>table-bordered</code>
+                    <code>col-sm-1</code>, <code>text-center</code>, <code>hidden-lg</code>, <code>btn-primary</code>, <code>table-bordered</code>
                     By the end of all three tutorials, you'll know how all these classes work, their different variants and hopefully many more.
                 </p>
 

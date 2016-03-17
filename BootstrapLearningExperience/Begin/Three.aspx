@@ -57,27 +57,27 @@
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">1</p>
+                    <p class="bg-success">1</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-success">2</p>
+                    <p class="bg-success">2</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-primary">3</p>
+                    <p class="bg-primary">3</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">4</p>
+                    <p class="bg-danger">4</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">5</p>
+                    <p class="bg-danger">5</p>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="btn-danger">6</p>
+                    <p class="bg-danger">6</p>
                 </div>
             </div>
 
@@ -91,9 +91,10 @@
                 <p class="h2">The Basics</p>
                 <p>
                     The first part of bootstrap to get to grips with is the style elements. These are typically simple, but useful stylings for your webpage, that are conviniently set up for
-                    you to use straight out of the box. Take a look at this simple table below:
+                    you to use straight out of the box.
                 </p>
-                <br />
+                <p class="h2">Tables</p>
+                <p>Tables are a key element of many webspages, and Boostrap provides us with some useful styles for tables. Take a look at this simple HTML table below:</p>
                 <div>
                     <table style="width: 100%; display: table; border: 1px black solid;">
                         <thead>
@@ -118,9 +119,10 @@
                         </tr>
                     </table>
                 </div>
+                <br />
 
                 <p>
-                    This table is very simple, and uses very little styling but a border that outlines it. Bootstrap can handle some different styles for tables, a few being:
+                    This table is very simple, and uses no styling, apart from a border that outlines it. Bootstrap can handle some different styles for tables, a few being:
                     <code>table</code>, <code>table-condensed</code>, <code>table-bordered</code>. Below is an example of the same table, but with the different styles.
                 </p>
 
@@ -227,10 +229,10 @@
                 </div>
 
                 <p>
-                    <input id="showTable" type="button" class="btn btn-primary" value="table" />
-                    <input id="showTableCondensed" type="button" class="btn btn-primary" value="table-condensed" />
-                    <input id="showTableBordered" type="button" class="btn btn-primary" value="table-bordered" />
-                    <input id="showTableAll" type="button" class="btn btn-primary" value="All" />
+                    <input id="showTable" type="button" class="btn btn-primary btn-sm" value="table" />
+                    <input id="showTableCondensed" type="button" class="btn btn-primary btn-sm" value="table-condensed" />
+                    <input id="showTableBordered" type="button" class="btn btn-primary btn-sm" value="table-bordered" />
+                    <input id="showTableAll" type="button" class="btn btn-primary btn-sm" value="All" />
                 </p>
                 <br />
                 <ul>
@@ -252,7 +254,7 @@
                 </p>
                 
 
-                <table class="table-bordered table-condensed text-center">
+                <table class="table-bordered table-condensed text-center" style="font-size: 0.9em;">
 
                     <tr>
                         <td><code>btn-default</code></td>
@@ -266,19 +268,19 @@
 
                     <tr>
                         <td>
-                            <input class="btn btn-default" type="button" value="Click" /></td>
+                            <input class="btn btn-default btn-xs" type="button" value="Click" /></td>
                         <td>
-                            <input class="btn btn-primary" type="button" value="Click" /></td>
+                            <input class="btn btn-primary btn-xs" type="button" value="Click" /></td>
                         <td>
-                            <input class="btn btn-success" type="button" value="Click" /></td>
+                            <input class="btn btn-success btn-xs" type="button" value="Click" /></td>
                         <td>
-                            <input class="btn btn-info" type="button" value="Click" /></td>
+                            <input class="btn btn-info btn-xs" type="button" value="Click" /></td>
                         <td>
-                            <input class="btn btn-warning" type="button" value="Click" /></td>
+                            <input class="btn btn-warning btn-xs" type="button" value="Click" /></td>
                         <td>
-                            <input class="btn btn-danger" type="button" value="Click" /></td>
+                            <input class="btn btn-danger btn-xs" type="button" value="Click" /></td>
                         <td>
-                            <input class="btn btn-link" type="button" value="Click" /></td>
+                            <input class="btn btn-link btn-xs" type="button" value="Click" /></td>
                     </tr>
                 </table>
 
