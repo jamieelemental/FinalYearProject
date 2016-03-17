@@ -3,13 +3,14 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container">
+
         <div class="row">
             <p class="h2 text-center">Chapter 4</p>
         </div>
+
         <div class="row">
 
             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
-
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="bg-success">1</p>
@@ -35,12 +36,11 @@
                     <p class="bg-danger">6</p>
                 </div>
             </div>
-
             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
 
         </div>
 
-         <div class="row">
+        <div class="row">
 
             <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
             <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
@@ -52,16 +52,6 @@
                     The 'grid' layout splits the page into up to 12 sections. These sections can be further split into more sections,
                      however, it starts to get complicated and this will be covered later. 
                 </p>
-            </div>
-            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-
-            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
 
 
                 <p class="h3">Examples</p>
@@ -93,46 +83,39 @@
 &lt;/html&gt;
                 </pre>
                 <br />
-                <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example.html', '_blank', 'height=300, width=1000','false')"/>
-            </div>
+                <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example.html', '_blank', 'height=300, width=1000', 'false')" />
 
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 
-        </div>
-        <br />
-
-         <div class="row">
-
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                <p>This layout is achieved using many <code>&lt;div&gt;</code> tags to define each section of the layout. The position of
+                <p>
+                    This layout is achieved using many <code>&lt;div&gt;</code> tags to define each section of the layout. The position of
                     each section is defined by two things, the screen size and the Bootstrap class applied to it. The first Bootstrap class used
                     is <code>container</code>, on the <code>&lt;body&gt;</code> tag. This sets a maximum width for the content, and is important as
                     each section of the layout will use this width as reference. This tag also uses <code>text-center</code>, which centralises the 
                     content.
                 </p>
-                <p>Once we have our container, it is time to build our sections. The first is a <code>row</code>. In our example the first row has no other
+                <p>
+                    Once we have our container, it is time to build our sections. The first is a <code>row</code>. In our example the first row has no other
                     Bootstrap classes, and spans the width of the page. Next we declare another <code>row</code>, this will sit below our first row, and 
                     contain our 3 columns. 
                 </p>
-                <p>The page or container can be split into up to 12 sections. Each section must have a size in reference to that. Our example
+                <p>
+                    The page or container can be split into up to 12 sections. Each section must have a size in reference to that. Our example
                     uses Bootstrap CSS <code>col-md-4</code>. This defines a new column, for medium devices (more on this later), of width
                     4 of 12. Since we want 3 equal columns, all three have the same class.
                 </p>
             </div>
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
 
         </div>
-
 
         <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
-                    <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Three.aspx'" />
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
-                    <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Five.aspx'" />
-                </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Three.aspx'" />
             </div>
-
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Five.aspx'" />
+            </div>
         </div>
+
+    </div>
 </asp:Content>

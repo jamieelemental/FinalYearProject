@@ -6,6 +6,7 @@
         <div class="row">
             <p class="h2 text-center">Chapter 2</p>
         </div>
+
         <div class="row">
 
             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
@@ -130,5 +131,4 @@
         </div>
 
     </div>
-
 </asp:Content>

@@ -47,13 +47,14 @@
 
 
     <div class="container">
+
         <div class="row">
             <p class="h2 text-center">Chapter 3</p>
         </div>
 
         <div class="row">
-            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
 
+            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
@@ -80,20 +81,20 @@
                     <p class="bg-danger">6</p>
                 </div>
             </div>
-
             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
 
         </div>
 
         <div class="row">
+
             <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
             <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-                <p class="h2">The Basics</p>
+                <p class="h3">The Basics</p>
                 <p>
                     The first part of bootstrap to get to grips with is the style elements. These are typically simple, but useful stylings for your webpage, that are conviniently set up for
                     you to use straight out of the box.
                 </p>
-                <p class="h2">Tables</p>
+                <p class="h3">Tables</p>
                 <p>Tables are a key element of many webspages, and Boostrap provides us with some useful styles for tables. Take a look at this simple HTML table below:</p>
                 <div>
                     <table style="width: 100%; display: table; border: 1px black solid;">
@@ -247,7 +248,7 @@
                     gives us a good base, and <code>table-bordered</code> extends it with further styling.
                 </p>
 
-                <p class="h2">Buttons</p>
+                <p class="h3">Buttons</p>
                 <p>
                     Another quick style that can be applied to elements of your website is the button styles. You may have already noticed some of them already on this website. 
                     Different coloured buttons can be used to signify different things. In bootstrap we have a few different ones: 
@@ -341,8 +342,6 @@
 
         </div>
 
-
-        <br />
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
                 <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Two.aspx'" />
@@ -351,6 +350,6 @@
                 <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Four.aspx'" />
             </div>
         </div>
-    </div>
 
+    </div>
 </asp:Content>
