@@ -2,7 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <script type="text/javascript" src="../Scripts/ZeroClip/ZeroClipboard.js"></script>
     <script>
         $(document).ready(function () {
 

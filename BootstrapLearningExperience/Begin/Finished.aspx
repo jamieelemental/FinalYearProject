@@ -59,7 +59,7 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                <input type="button" value="Begin" class="btn btn-warning" onclick="window.location = '/Interm/IOne.aspx'" />
+                <input type="button" value="Continue" class="btn btn-warning" onclick="window.location = '/Interm/IOne.aspx'" />
             </div>
         </div>
 
