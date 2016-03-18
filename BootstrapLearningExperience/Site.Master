@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Get Strapped</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -17,6 +18,7 @@
 </head>
 <body>
     <form runat="server">
+        
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -37,7 +39,7 @@
             </Scripts>
 
         </asp:ScriptManager>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -77,18 +79,14 @@
                 </div>
             </div>
         </div>
-    <div class="container body-content">
-        <br />
+    <div>
+       
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
         <br />
         <br />
-        <hr />
-        <footer>
-                <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6">&copy; <%: DateTime.Now.Year %> - Jamie Chester Charles Element </p>
-                <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><%= Session["VersionNo"].ToString() %></p>
-
-        </footer>
+        
+        
     </div>
     </form>
 

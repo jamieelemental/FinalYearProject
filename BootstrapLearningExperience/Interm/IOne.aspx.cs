@@ -11,7 +11,18 @@ namespace BootstrapLearningExperience
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["UserCode"] != null)
+            {
+                this.inpt.Text = Session["UserCode"].ToString();
+            }
+        }
 
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            Session["UserCode"] = this.inpt.Text;
+
+            string t = this.inpt.Text;
+            string y = t;
         }
     }
 }

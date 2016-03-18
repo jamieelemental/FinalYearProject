@@ -83,8 +83,8 @@
 &lt;/html&gt;
                 </pre>
                 <p>
-                    <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example.html', '_blank', 'height=300, width=1000', 'false')" />
-                </p>
+                <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example.html', '_blank', 'height=300, width=1000', 'false')" />
+</p>
 
                 <p>
                     This layout is achieved using many <code>&lt;div&gt;</code> tags to define each section of the layout. The position of
