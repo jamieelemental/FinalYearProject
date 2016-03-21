@@ -12,17 +12,21 @@
             if (content != "") {
                 document.getElementById("outpt").innerHTML = document.getElementById("MainContent_inpt").value.trim();
             }
-            else
-            {
+            else {
                 document.getElementById("MainContent_inpt").value
                     = document.getElementById("outpt").innerHTML
                     = '<input type="button" class="btn btn-primary" value="Click" />';
             }
-       }
+        }
 
         //Reload the output when input changes.
         function myFunction() {
-            document.getElementById("outpt").innerHTML = document.getElementById("MainContent_inpt").value.trim();
+            var html = document.getElementById("MainContent_inpt").value;
+            html = html.replace(/(\r\n|\n|\r|\t)/gm, "");
+            html = html.replace(/(\s+)/gm, " ");
+            html = html.replace(/> </g, "><");
+            document.getElementById("outpt").innerHTML = html;
+            // window.alert(html);
         }
 
 
@@ -48,20 +52,70 @@
         }
 
 
+        //Exercise one
+        function exerciseOne() {
+
+            document.getElementById("MainContent_inpt").value = '\
+<div class="container-fluid text-center">\n\
+    <div class="row">This Row could contain your title for the page</div>\n\
+    \n\
+    <div class="row">\n\
+\n\
+        <div class="col-md-4 col-sm-6">This is an</div>\n\
+\n\
+        <div class="col-md-4 col-sm-6">edited example of a </div>\n\
+\n\
+        <div class="col-md-4 col-sm-6">three column layout</div>\n\
+\n\
+    </div>            \n\
+</div>';
+            myFunction();
+
+        }
+
+        function newWindow() {
+
+            var w = window.open("", '_blank', false);
+            w.document.write("<script https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"><\/script>\
+                <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\">\
+                    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"><\/script>" + document.getElementById("MainContent_inpt").value.trim());
+            w.resizeTo(800, 600);
+        }
     </script>
 
     <div class="row">
 
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="col-md-11 col-md-offset-1 col-lg-10 coll-lg-offset-2">
-
+        <div class="col-xs-12 col-sm-4 col-sm-height col-md-3 col-lg-3">
+            <div style="overflow-y: scroll; max-height: 80%;">
 
                 <div id="1" class="visible">
                     <p class="h3 text-center">Chapter 1</p>
+                    <p class="h4">Understanding this page</p>
                     <p>
-                        Here is where the comments for the tutorial will reside. They will be informative, with instructions to guide you using bootstrap. 
-                    They will aid you to learn the bootstrap framework, by making you type in the code yourself.
+                        To the right we have two boxes. The upper box allows you to enter and modify code yourself!
+                        The lower box shows the result of the code in the upper box. We have several buttons on this page:
                     </p>
+                    <ul>
+                        <li>Run - if you think the page hasn't updated the code in the lower box, this button will prompt an update.</li>
+                        <li>Save - This option will save you code from this page, until your return.</li>
+                        <li>Open in a new window - Open your code in a seperate window, to test resizing.</li>
+                    </ul>
+
+                    <p>
+                        In the beginner tutorial, we covered the grid. The example we
+                        used was a three column layout, that adapted to two columns depending
+                        on the screen size. If we remember it used <code>col-md-4</code> and <code>col-xs-6</code>.
+                        Click the button below to bring back the code.
+                    </p>
+                    <p>
+                        <input type="button" value="Open Example" class="btn btn-primary" onclick="exerciseOne();" />
+                    </p>
+                    <p>
+                        We can view how the code reacts in the lower box on the right hand side. To see how it reacts
+                        to different device sizes, click "Open in a new window". This will create a page with the 
+                        code entered in the upper right hand box.
+                    </p>
+
                 </div>
 
 
@@ -91,38 +145,35 @@
                     </ul>
                 </nav>
             </div>
+
         </div>
-
-
-
-
-
-
-
-
 
 
 
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="h3">Code: </p>
 
-            <p class="h3">Code: </p>
+                <div style="margin-bottom: 1em;">
+                    <asp:TextBox ID="inpt" runat="server" CssClass="form-control" TextMode="MultiLine" onkeyup="myFunction()" Height="10em"></asp:TextBox>
+                </div>
 
-            <div style="margin-bottom: 1em;">
-                <asp:TextBox ID="inpt" runat="server" CssClass="form-control" TextMode="MultiLine" Height="100px" onkeyup="myFunction()"></asp:TextBox>
-            </div>
-
-            <p>
-                <asp:Button ID="btnSave" runat="server" CssClass="btn btn-primary" Text="Save" OnClick="btnSave_Click" UseSubmitBehavior="false" />
-            </p>
-            <p class="h3">Results:</p>
+                <p>
+                    <input type="button" class="btn btn-primary" value="Run" onclick="myFunction();" />
+                    <asp:Button ID="btnSave" runat="server" CssClass="btn btn-primary" Text="Save" OnClick="btnSave_Click" UseSubmitBehavior="false" />
+                </p>
+                <p class="h3">Results:</p>
 
 
-            <pre id="outpt" style="min-height: 6em;">
+                <pre id="outpt" style="min-height: 10em">
 
             </pre>
+                <p>
+                    <input type="button" class="btn btn-primary" value="Open in new Window" onclick="newWindow();" />
+                </p>
 
 
+            </div>
         </div>
     </div>
-
 </asp:Content>
