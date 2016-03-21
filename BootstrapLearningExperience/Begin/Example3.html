@@ -9,47 +9,45 @@
     <script>
         function getWidth() {
             var content = $(document).width();
-
             document.getElementById("wind").innerHTML = "Content Width: " + content;
         };
     </script>
 </head>
-<body class="container text-center" onresize="getWidth()">
+<body class="text-center" onresize="getWidth()">
 
-        <div class="visible-xs h6">
-            <p>This is a extra small screen size, typically a mobile screen.</p>
-            <div class="btn btn-default">
-                <p>Mobile Phone (xs)</p>
-                <p>Less than 798px wide.</p>
+    <div class="visible-xs h6">
+        <p>This is a extra small screen size, typically a mobile screen.</p>
+        <div class="btn btn-default">
+            <p>Mobile Phone (xs)</p>
+            <p>Less than 768px wide.</p>
+        </div>
+    </div>
 
-            </div>
+    <div class="visible-sm h4">
+        <p>This is a small screen size, typically a tablet screen.</p>
+        <div class="btn btn-default">
+            <p>Tablet (sm)</p>
+            <p>768px - 992px wide.</p>
         </div>
-    
-        <div class="visible-sm h4">
-            <p>This is a small screen size, typically a tablet screen.</p>
-            <div class="btn btn-default">
-                <p>Tablet (sm)</p>
-                <p>798px - 992px wide.</p>
-            </div>
-        </div>
-   
-        <div class="visible-md h2">
-            <p>This is a medium screen size, typically a laptop screen.</p>
-            <div class="btn btn-default">
-                <p>Laptop (md)</p>
-                <p>993px - 1200px wide.</p>
-            </div>
-        </div>
+    </div>
 
-        <div class="visible-lg h1">
-            <p>This is a large screen size, typically a desktop screen.</p>
-            <div class="btn btn-default">
-                <p>Desktop (lg)</p>
-                <p>Greater than 1200px wide.</p>
-            </div>
+    <div class="visible-md h2">
+        <p>This is a medium screen size, typically a laptop screen.</p>
+        <div class="btn btn-default">
+            <p>Laptop (md)</p>
+            <p>993px - 1200px wide.</p>
         </div>
+    </div>
 
-        <p id="wind"></p>
- 
+    <div class="visible-lg h1">
+        <p>This is a large screen size, typically a desktop screen.</p>
+        <div class="btn btn-default">
+            <p>Desktop (lg)</p>
+            <p>Greater than 1200px wide.</p>
+        </div>
+    </div>
+
+    <p id="wind"></p>
+
 </body>
 </html>

@@ -11,9 +11,12 @@ namespace BootstrapLearningExperience
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["UserCode"] != null)
+            if (!IsPostBack)
             {
-                this.inpt.Text = Session["UserCode"].ToString();
+                if (Session["UserCode"] != null)
+                {
+                    this.inpt.Text = Session["UserCode"].ToString();
+                }
             }
         }
 

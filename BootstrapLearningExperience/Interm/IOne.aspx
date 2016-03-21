@@ -3,16 +3,30 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <script>
-       <%-- window.onload = function setUp() {
 
-            document.getElementById("outpt").innerHTML = document.getElementById("MainContent_inpt").innerHTML = '<p class="h3">Hello World</p>';
-            <%--window.alert(html);-
-        }--%>
+        //Set the code content.
+        window.onload = function setUp() {
 
+            var content = document.getElementById("MainContent_inpt").value.trim();
+
+            if (content != "") {
+                document.getElementById("outpt").innerHTML = document.getElementById("MainContent_inpt").value.trim();
+            }
+            else
+            {
+                document.getElementById("MainContent_inpt").value
+                    = document.getElementById("outpt").innerHTML
+                    = '<input type="button" class="btn btn-primary" value="Click" />';
+            }
+       }
+
+        //Reload the output when input changes.
         function myFunction() {
             document.getElementById("outpt").innerHTML = document.getElementById("MainContent_inpt").value.trim();
         }
 
+
+        //Pagination handling
         var page = 1;
         var maxPage = 3;
         var minPage = 1;
@@ -93,8 +107,6 @@
 
             <p class="h3">Code: </p>
 
-            <!-- onkeyup="myFunction()" -->
-
             <div style="margin-bottom: 1em;">
                 <asp:TextBox ID="inpt" runat="server" CssClass="form-control" TextMode="MultiLine" Height="100px" onkeyup="myFunction()"></asp:TextBox>
             </div>
@@ -105,7 +117,9 @@
             <p class="h3">Results:</p>
 
 
-            <pre id="outpt" style="min-height: 6em;"></pre>
+            <pre id="outpt" style="min-height: 6em;">
+
+            </pre>
 
 
         </div>
