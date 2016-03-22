@@ -83,46 +83,49 @@
         }
     </script>
 
-    <div class="row">
+    <div class="row" style="max-height: calc(98% - 50px) !important;">
 
-        <div class="col-xs-12 col-sm-4 col-sm-height col-md-3 col-lg-3">
-            <div style="overflow-y: scroll; max-height: 80%;">
+       <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 85vh; overflow-y: scroll;">
+            <div class="col-xs-offset-1">
 
                 <div id="1" class="visible">
-                    <p class="h3 text-center">Chapter 1</p>
+                    <p class="h3 text-center">Introduction</p>
                     <p class="h4">Understanding this page</p>
                     <p>
-                        To the right we have two boxes. The upper box allows you to enter and modify code yourself!
-                        The lower box shows the result of the code in the upper box. We have several buttons on this page:
+                        To the right we have two boxes. The upper box, 'Code' allows you to enter and modify code yourself!
+                        The lower box, 'Results' shows the result of the code in the upper box. We have several buttons on this page:
                     </p>
                     <ul>
-                        <li>Run - if you think the page hasn't updated the code in the lower box, this button will prompt an update.</li>
-                        <li>Save - This option will save you code from this page, until your return.</li>
-                        <li>Open in a new window - Open your code in a seperate window, to test resizing.</li>
+                        <li><strong>Run</strong> - if you think the page hasn't updated the code in the lower box, this button will prompt an update.</li>
+                        <li><strong>Save</strong> - This option will save you code from this page, until your return.</li>
+                        <li><strong>Open in a new window</strong> - Open your code in a seperate window, to test resizing.</li>
+                        <li><strong>Next &rarr;</strong> - Move forward a chapter (doesn't affect your code).</li>
+                        <li><strong>&larr;</strong> - Move to previous chapter (doesn't affect your code).</li>
                     </ul>
 
-                    <p>
-                        In the beginner tutorial, we covered the grid. The example we
-                        used was a three column layout, that adapted to two columns depending
-                        on the screen size. If we remember it used <code>col-md-4</code> and <code>col-xs-6</code>.
-                        Click the button below to bring back the code.
-                    </p>
-                    <p>
-                        <input type="button" value="Open Example" class="btn btn-primary" onclick="exerciseOne();" />
-                    </p>
-                    <p>
-                        We can view how the code reacts in the lower box on the right hand side. To see how it reacts
-                        to different device sizes, click "Open in a new window". This will create a page with the 
-                        code entered in the upper right hand box.
-                    </p>
+                    
 
                 </div>
 
 
                 <div id="2" class="hidden">
-                    <p class="h3 text-center">Chapter 2</p>
+                    <p class="h3 text-center">Chapter 1</p>
+                   <p>
+                        In the beginner tutorial, we covered the grid. The example we
+                        used was a three column layout, that adapted to two columns depending
+                        on the screen size. If we remember it used <code>col-md-4</code> and <code>col-xs-6</code>.
+                        Click the button below to bring back the code.
+                    </p>
+                    <p>NOTE: this will replace your code.</p>
                     <p>
-                        This is where the content for chapter 2 will go.
+                        <input type="button" value="Load Example" class="btn btn-primary" onclick="exerciseOne();" />
+                    </p>
+                    <p>
+                        Open the code in a new window, and see how it reacts when resizing the window. 
+                        ****** FINISH ******
+                        We can view how the code reacts in the lower box on the right hand side. To see how it reacts
+                        to different device sizes, click "Open in a new window". This will create a page with the 
+                        code entered in the upper right hand box.
                     </p>
                 </div>
 
