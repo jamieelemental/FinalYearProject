@@ -61,7 +61,7 @@
             <div class="col-xs-12 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-2 col-lg-offset-0 text-center">
                 <div class="btn btn-default">
                     <p>Mobile Phone (xs)</p>
-                    <p>&lt; 798px wide.</p>
+                    <p>&lt; 768px wide.</p>
                 </div>
                 <div class="">
                     <br />
@@ -71,7 +71,7 @@
             <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 text-center">
                 <div class="btn btn-default">
                     <p>Tablet (sm)</p>
-                    <p>798px - 992px wide.</p>
+                    <p>768px - 992px wide.</p>
                 </div>
                 <div class="">
                     <br />

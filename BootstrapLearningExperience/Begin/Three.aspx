@@ -258,6 +258,7 @@
                 <table class="table-bordered table-condensed text-center" style="font-size: 0.9em;">
 
                     <tr>
+                        <td><code>btn</code></td>
                         <td><code>btn-default</code></td>
                         <td><code>btn-primary</code></td>
                         <td><code>btn-success</code></td>
@@ -268,6 +269,8 @@
                     </tr>
 
                     <tr>
+                        <td>
+                            <input class="btn btn-xs" type="button" value="Click" /></td>
                         <td>
                             <input class="btn btn-default btn-xs" type="button" value="Click" /></td>
                         <td>

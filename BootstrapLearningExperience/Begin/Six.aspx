@@ -71,7 +71,7 @@
             &lt;p&gt;This is a extra small screen size, typically a mobile screen.&lt;/p&gt;
             &lt;div class="btn btn-default"&gt;
                 &lt;p&gt;Mobile Phone (xs)&lt;/p&gt;
-                &lt;p&gt;Less than 798px wide.&lt;/p&gt;
+                &lt;p&gt;Less than 768px wide.&lt;/p&gt;
 
             &lt;/div&gt;
         &lt;/div&gt;
@@ -80,7 +80,7 @@
             &lt;p&gt;This is a small screen size, typically a tablet screen.&lt;/p&gt;
             &lt;div class="btn btn-default"&gt;
                 &lt;p&gt;Tablet (sm)&lt;/p&gt;
-                &lt;p&gt;798px - 992px wide.&lt;/p&gt;
+                &lt;p&gt;768px - 992px wide.&lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
    

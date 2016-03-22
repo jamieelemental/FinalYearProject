@@ -7,6 +7,15 @@ body {
 .OutLine{
     border: 1px solid black;
 }
+
+.dpcode{
+    padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
