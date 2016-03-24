@@ -23,9 +23,6 @@ namespace BootstrapLearningExperience
         protected void btnSave_Click(object sender, EventArgs e)
         {
             Session["UserCode"] = this.inpt.Text;
-
-            string t = this.inpt.Text;
-            string y = t;
         }
     }
 }
