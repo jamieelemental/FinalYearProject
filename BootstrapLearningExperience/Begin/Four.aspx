@@ -95,7 +95,7 @@
                 </p>
                 <p>
                     Once we have our container, it is time to build our sections. The first is a <code>row</code>. In our example the first row has no other
-                    Bootstrap classes, and spans the width of the page. Next we declare another <code>row</code>, this will sit below our first row, and 
+                    Bootstrap classes, and spans the width of the page or <code>container</code> in this case. Next we declare another <code>row</code>, this will sit below our first row, and 
                     contain our 3 columns. 
                 </p>
                 <p>

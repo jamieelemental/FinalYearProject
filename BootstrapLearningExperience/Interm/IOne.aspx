@@ -27,12 +27,13 @@
             html = html.replace(/(\s+)/gm, " ");
             html = html.replace(/> </g, "><");
             document.getElementById("outpt").innerHTML = html;
-            // window.alert(html);
         }
 
 
         //Pagination handling
-        var page = 1;
+        var page = '<%=Session["userPage"]%>';
+        if (page == null) { page = 1; }
+
         var maxPage = 3;
         var minPage = 1;
 
@@ -52,6 +53,7 @@
             }
         }
 
+
         //Load in example code.
         function loadExample() {
 
@@ -70,7 +72,6 @@
     </div>            \n\
 </div>';
             reload();
-
         }
 
         function newWindow() {
@@ -83,9 +84,10 @@
         }
     </script>
 
+
     <div class="row" style="max-height: calc(98% - 50px) !important;">
 
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 85vh; overflow-y: scroll;">
+        <!-- <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 85vh; overflow-y: scroll;">
             <div class="col-xs-offset-1">
 
                 <div id="1" class="visible">
@@ -114,7 +116,7 @@
                     <p>
                         In the beginner tutorial, we covered the grid. The example we
                         used was a three column layout, that adapted to two columns depending
-                        on the screen size. If we remember it used <code>col-md-4</code> and <code>col-xs-6</code>.
+                        on the screen size. If we remember it used <code>col-md-4</code> and <code>col-sm-6</code>.
                         Click the button below to bring back the code.
                     </p>
                     <p>NOTE: this will replace your code.</p>
@@ -173,25 +175,67 @@
                     </p>
                     <p>
                         To combat this, we can move the second column to where the first column used to be. We can achieve this using <code>pull</code>.
-                        Add on to the second <code>&lt;div&gt;</code> another class <code>col-sm-pull-6</code>.
+                        Add on to the second <code>&lt;div&gt;</code> another class <code>col-sm-pull-6</code>. Open in a new window.
                     </p>
                     <p>
                         You may notice, that some of these examples do not line up as mentioned. This is down to screen sizing, and to ensure that the <code>push</code>
-                        and <code>pull</code> work effectively, we must add extra classes for the other screen sizes.
+                        and <code>pull</code> work effectively, we must add extra classes for the other screen sizes:
                     </p>
-                    <p>-<code>col-xs-push-0 col-sm-push-6 col-md-push-0 col-lg-push-0</code></p>
-                    <p>-<code>col-xs-pull-0 col-sm-pull-6 col-md-pull-0 col-lg-pull-0</code></p>
-
+                    <p><code>col-xs-push-0 col-sm-push-6 col-md-push-0 col-lg-push-0</code></p>
+                    <p><code>col-xs-pull-0 col-sm-pull-6 col-md-pull-0 col-lg-pull-0</code></p>
 
                 </div>
 
                 <nav>
                     <ul class="pager">
-                        <li class="previous"><a onclick="paginationPrev();" class="btn"><span aria-hidden="true">&larr;</span></a></li>
-                        <li class="next"><a onclick="paginationNext();" class="btn">Next <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="previous"><a id="prevbtn" onclick="paginationPrev();" class="btn"><span aria-hidden="true">&larr;</span></a></li>
+                        <li class="next"><a id="nextbtn" onclick="paginationNext();" class="btn">Next <span aria-hidden="true">&rarr;</span></a></li>
                     </ul>
                 </nav>
             </div>
+
+        </div>
+-->
+
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 90vh; overflow-y: scroll;">
+
+            <asp:Wizard ID="IntermWiz" DisplayCancelButton="false" runat="server" DisplaySideBar="false" CssClass="col-xs-12" >
+                <WizardSteps>
+                    <asp:WizardStep ID="Step1" AllowReturn="true" runat="server">
+                        <p class="text-center h3">Chapter 1</p>
+                    </asp:WizardStep>
+                    <asp:WizardStep ID="Step2" AllowReturn="true" runat="server">
+                        <p class="text-center h3">Chapter 2</p>
+                    </asp:WizardStep>
+                    <asp:WizardStep ID="Step3" AllowReturn="true" runat="server">
+                        <p class="text-center h3">Chapter 3</p>
+                    </asp:WizardStep>
+                </WizardSteps>
+
+
+                <StartNavigationTemplate>
+                    <div class="col-xs-12 text-center">
+                        <asp:Button ID="btnNext" runat="server" Text="Begin" CommandName="MoveNext" CssClass="btn btn-success btn-sm" />
+                    </div>
+                </StartNavigationTemplate>
+
+                <StepNavigationTemplate>
+                    <div class="col-xs-2" style="text-align:left;">
+                        <asp:Button ID="btnPrev" runat="server" Text="Previous" CommandName="MovePrevious" CssClass="btn btn-primary btn-sm" />
+                    </div>
+                    <div class="col-xs-8"></div>
+                    <div class="col-xs-2">
+                        <asp:Button ID="btnNext" runat="server" Text="Next" CommandName="MoveNext" CssClass="btn btn-success btn-sm" />
+                    </div>
+                </StepNavigationTemplate>
+
+                <FinishNavigationTemplate>
+                     <div class="col-xs-12 text-center">
+                        <asp:Button ID="btnNext" runat="server" Text="Finish" CssClass="btn btn-success btn-sm" PostBackUrl="/Advanced/AOne.aspx" />
+                    </div>
+                </FinishNavigationTemplate>
+
+            </asp:Wizard>
 
         </div>
 
