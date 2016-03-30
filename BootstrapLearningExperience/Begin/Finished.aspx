@@ -13,7 +13,7 @@
             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
 
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
+                <%--<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="bg-success">1</p>
                 </div>
 
@@ -35,6 +35,12 @@
 
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
                     <p class="bg-success">6</p>
+                </div>--%>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100"
+                        aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span>100%</span>
+                    </div>
                 </div>
             </div>
 

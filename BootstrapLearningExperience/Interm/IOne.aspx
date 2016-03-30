@@ -31,9 +31,7 @@
 
 
         //Pagination handling
-        var page = '<%=Session["userPage"]%>';
-        if (page == null) { page = 1; }
-
+        var page = 1;
         var maxPage = 3;
         var minPage = 1;
 
@@ -87,7 +85,7 @@
 
     <div class="row" style="max-height: calc(98% - 50px) !important;">
 
-        <!-- <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 85vh; overflow-y: scroll;">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 85vh; overflow-y: scroll;">
             <div class="col-xs-offset-1">
 
                 <div id="1" class="visible">
@@ -186,6 +184,37 @@
 
                 </div>
 
+                <div id="4" class="hidden">
+                    <p class="h3 text-center">Chapter 3</p>
+                    <p class="h4">Interactivity</p>
+                    <p>
+                        Now we have mastered column sizes, and indentation (even on multiple devices), we now look at re-ordering the columns. Reload the
+                        example code again.
+                    </p>
+                    <p>
+                        <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample();" />
+                    </p>
+                    <p>
+                        Change the class on the first <code>&lt;div&gt;</code>, add the class <code>col-sm-push-6</code> and open in a new window. 
+                    </p>
+                    <p>What happens?</p>
+                    <p>
+                        On <code>sm</code> screen sizes, the first column will have changed location to be in the same place a the second column, and now they overwrite each other. 
+                        This is because we have pushed the column to position 6/12, which is occupied.
+                    </p>
+                    <p>
+                        To combat this, we can move the second column to where the first column used to be. We can achieve this using <code>pull</code>.
+                        Add on to the second <code>&lt;div&gt;</code> another class <code>col-sm-pull-6</code>. Open in a new window.
+                    </p>
+                    <p>
+                        You may notice, that some of these examples do not line up as mentioned. This is down to screen sizing, and to ensure that the <code>push</code>
+                        and <code>pull</code> work effectively, we must add extra classes for the other screen sizes:
+                    </p>
+                    <p><code>col-xs-push-0 col-sm-push-6 col-md-push-0 col-lg-push-0</code></p>
+                    <p><code>col-xs-pull-0 col-sm-pull-6 col-md-pull-0 col-lg-pull-0</code></p>
+
+                </div>
+
                 <nav>
                     <ul class="pager">
                         <li class="previous"><a id="prevbtn" onclick="paginationPrev();" class="btn"><span aria-hidden="true">&larr;</span></a></li>
@@ -195,9 +224,9 @@
             </div>
 
         </div>
--->
 
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 90vh; overflow-y: scroll;">
+
+        <%-- <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 90vh; overflow-y: scroll;">
 
             <asp:Wizard ID="IntermWiz" DisplayCancelButton="false" runat="server" DisplaySideBar="false" CssClass="col-xs-12" >
                 <WizardSteps>
@@ -237,7 +266,7 @@
 
             </asp:Wizard>
 
-        </div>
+        </div>--%>
 
 
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
