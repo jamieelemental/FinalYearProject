@@ -54,16 +54,14 @@
                     <a class="navbar-brand" runat="server" href="~/">Get Strapped</a>
                 </div>
 
-
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/"><div class="glyphicon glyphicon-home col-xs-1"></div><div class="visible-xs">Home</div></a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
+                                <li><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-list-alt"></span> Cheat sheet</a></li>
                                 <li><a runat="server" href="~/Ranks">Rank: <%= Session["Rank"].ToString() %></a></li>
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
@@ -81,21 +79,256 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content">
+        <div>
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Bootstrap References</h4>
+                        </div>
+                        <div class="modal-body" style="max-height: 50vh; overflow-y: scroll;">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th colspan="6">Button Styles</th>
+                                    </tr>
+                                </thead>
+
+                                <tr>
+                                    <td><code>btn</code></td>
+                                    <td>
+                                        <input class="btn btn-xs" value="click" type="button" /></td>
+                                    <td><code>btn-default</code></td>
+                                    <td>
+                                        <input class="btn btn-default btn-xs" type="button" value="Click" /></td>
+                                    <td><code>btn-primary</code></td>
+                                    <td>
+                                        <input class="btn btn-primary btn-xs" type="button" value="Click" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>btn-success</code></td>
+                                    <td>
+                                        <input class="btn btn-success btn-xs" type="button" value="Click" /></td>
+                                    <td><code>btn-info</code></td>
+                                    <td>
+                                        <input class="btn btn-info btn-xs" type="button" value="Click" /></td>
+                                    <td><code>btn-warning</code></td>
+                                    <td>
+                                        <input class="btn btn-warning btn-xs" type="button" value="Click" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>btn-danger</code></td>
+                                    <td>
+                                        <input class="btn btn-danger btn-xs" type="button" value="Click" /></td>
+                                    <td><code>btn-link</code></td>
+                                    <td>
+                                        <input class="btn btn-link btn-xs" type="button" value="Click" /></td>
+                                </tr>
+                            </table>
+
+                            <table class="table table-bordered text-center">
+                                <thead>
+                                    <tr>
+                                        <th colspan="6">Button Properties</th>
+                                    </tr>
+                                </thead>
+
+                                <tr>
+                                    <td><code>btn-xs</code></td>
+                                    <td><code>btn-sm</code></td>
+                                    <td><code>btn-md</code></td>
+                                    <td><code>btn-lg</code></td>
+                                    <td><code>active</code></td>
+                                    <td><code>disabled</code></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input class="btn btn-primary btn-xs" type="button" value="Click" /></td>
+                                    <td>
+                                        <input class="btn btn-primary btn-sm" type="button" value="Click" /></td>
+                                    <td>
+                                        <input class="btn btn-primary btn-md" type="button" value="Click" /></td>
+                                    <td>
+                                        <input class="btn btn-primary btn-lg" type="button" value="Click" /></td>
+                                    <td>
+                                        <input class="btn btn-primary active" type="button" value="Click" /></td>
+                                    <td>
+                                        <input class="btn btn-primary disabled" type="button" value="Click" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="6"><code>btn-block</code></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <input class="btn btn-primary btn-block" type="button" value="Click" /></td>
+                                </tr>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Tables</th>
+                                    </tr>
+                                </thead>
+
+                                <tr>
+                                    <td><code>table</code></td>
+                                    <td>Base table class, adds row breaks and spacing.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>table-condensed</code></td>
+                                    <td>Small padding in cells.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>table-bordered</code></td>
+                                    <td>Adds all gridlines, no padding added.</td>
+                                </tr>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th colspan="5">The Grid</th>
+                                    </tr>
+                                </thead>
+
+                                <tr>
+                                    <td>Property</td>
+                                    <td class="text-center">-</td>
+                                    <td>Screen Size</td>
+                                    <td class="text-center">-</td>
+                                    <td>Size Factor (out of 12)</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>col</code></td>
+                                    <td class="text-center"><code>-</code></td>
+                                    <td>
+                                        <select class="dpcode">
+                                            <option>xs</option>
+                                            <option>sm</option>
+                                            <option>md</option>
+                                            <option>lg</option>
+                                        </select>
+                                    </td>
+                                    <td class="text-center"><code>-</code></td>
+                                    <td>
+                                        <select class="dpcode">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>hidden</code></td>
+                                    <td class="text-center"><code>-</code></td>
+                                    <td colspan="3">
+                                        <select class="dpcode">
+                                            <option>xs</option>
+                                            <option>sm</option>
+                                            <option>md</option>
+                                            <option>lg</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>visible</code></td>
+                                    <td class="text-center"><code>-</code></td>
+                                    <td colspan="3">
+                                        <select class="dpcode">
+                                            <option>xs</option>
+                                            <option>sm</option>
+                                            <option>md</option>
+                                            <option>lg</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table table-bordered">
+
+                                <tr>
+                                    <td>Property</td>
+                                    <td class="text-center">-</td>
+                                    <td>Screen size</td>
+                                    <td class="text-center">-</td>
+                                    <td>Action</td>
+                                    <td class="text-center">-</td>
+                                    <td>Size Factor (out of 12)</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>col</code></td>
+                                    <td class="text-center"><code>-</code></td>
+                                    <td>
+                                        <select class="dpcode">
+                                            <option>xs</option>
+                                            <option>sm</option>
+                                            <option>md</option>
+                                            <option>lg</option>
+                                        </select></td>
+                                    <td class="text-center"><code>-</code></td>
+                                    <td>
+                                        <select class="dpcode">
+                                            <option>offset</option>
+                                            <option>push</option>
+                                            <option>pull</option>
+                                        </select></td>
+                                    <td class="text-center"><code>-</code></td>
+                                    <td>
+                                        <select class="dpcode">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select></td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <br />
-            <br />
-            <hr />
-            <footer>
-                <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6">&copy; <%: DateTime.Now.Year %> - Jamie Chester Charles Element </p>
-                <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><%= Session["VersionNo"].ToString() %></p>
 
-            </footer>
         </div>
     </form>
-
-
 </body>
 </html>
