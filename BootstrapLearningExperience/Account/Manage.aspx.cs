@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Owin;
-using BootstrapLearningExperience.Models;
 
 namespace BootstrapLearningExperience.Account
 {
@@ -38,9 +31,6 @@ namespace BootstrapLearningExperience.Account
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
             HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
-
-            // Enable this after setting up two-factor authentientication
-            //PhoneNumber.Text = manager.GetPhoneNumber(User.Identity.GetUserId()) ?? String.Empty;
 
             TwoFactorEnabled = manager.GetTwoFactorEnabled(User.Identity.GetUserId());
 
@@ -123,23 +113,6 @@ namespace BootstrapLearningExperience.Account
             manager.SetTwoFactorEnabled(User.Identity.GetUserId(), true);
 
             Response.Redirect("/Account/Manage");
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
- 
-            //var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            //var user = Context.GetOwinContext().Request.User;
-      
-            //user.
-            //manager.RemoveLogin(user.Identity, new UserLoginInfo(user.LoginProvider, user.ProviderKey));
-            //HttpContext.Current.User.Identity.GetUserId();
-           
-            //var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            //var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            //var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
-            //IdentityResult result = manager.Create(user, Password.Text);
-
         }
     }
 }
