@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="row">
-                    <input type="button" value="Begin" class="btn btn-danger" name="Advanced"  onclick="window.location = '/Advanced/AOne.aspx'"/>
+                    <input type="button" value="Begin" class="btn btn-danger" name="Advanced" onclick="window.location = '/Advanced/AOne.aspx'"/>
                 </div>
             </div>
         </div>

@@ -171,6 +171,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Advanced\ATask.aspx" />
     <Content Include="Advanced\AOne.aspx" />
     <Content Include="Begin\Example.html" />
     <Content Include="Begin\Example2.html" />
@@ -328,6 +329,13 @@
     </Compile>
     <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\ATask.aspx.cs">
+      <DependentUpon>ATask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Advanced\ATask.aspx.designer.cs">
+      <DependentUpon>ATask.aspx</DependentUpon>
     </Compile>
     <Compile Include="Advanced\AOne.aspx.cs">
       <DependentUpon>AOne.aspx</DependentUpon>

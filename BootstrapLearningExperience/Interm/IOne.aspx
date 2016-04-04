@@ -2,7 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <script src="../Scripts/Pagination.js"></script>
     <script>
 
         //Set the code content.
