@@ -55,10 +55,20 @@
                     <asp:TextBox ID="inpt" runat="server" CssClass="form-control" TextMode="MultiLine" onkeyup="reload()" Height="10em"></asp:TextBox>
                 </div>
 
-                <p>
-                    <a id="lnkReload" class="glyphicon glyphicon-play" onclick="reload();" style="font-size: 2em;"></a>&nbsp;
-                    <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" Style="font-size: 2em;" UseSubmitBehaviour="false"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>
-                </p>
+
+                <div class="row">
+                    <div class="col-xs-2">
+                        <a id="lnkReload" class="glyphicon glyphicon-play" onclick="reload();" style="font-size: 2em;"></a>&nbsp;
+                            <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" Style="font-size: 2em;" UseSubmitBehaviour="false"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>
+                    </div>
+                    <div class="col-xs-8">
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="button" value="View Target Page" class="btn btn-primary" onclick="window.open('AExample.html', '_blank', 'height=600, width=800', 'false')" />
+                    </div>
+
+                </div>
+
                 <p class="h3">Results:</p>
 
 
