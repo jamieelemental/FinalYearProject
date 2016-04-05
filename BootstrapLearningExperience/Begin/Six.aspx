@@ -2,16 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <script>
-        $(document).ready(function () {
-
-            $("#show").click(function () {
-                $("#Answer").toggle();
-            });
-        });
-    </script>
-
-
     <div class="container">
         <div class="row">
             <p class="h2 text-center">Chapter 6</p>
@@ -21,29 +11,7 @@
             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
 
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
-                <%--<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-success">1</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-success">2</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-success">3</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-success">4</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-success">5</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-primary">6</p>
-                </div>--%>
+                
                  <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="83"
                         aria-valuemin="0" aria-valuemax="100" style="width: 83%">
@@ -130,7 +98,7 @@
                     Can you guess what this tells us about the column?
                 </p>
 
-                <div id="Answer" hidden="hidden">
+                <div id="Answer" class="collapse">
                     <ul>
                         <li>On Mobile Phones (xs) this column is hidden.</li>
                         <li>On Tablets (sm) this column is hidden.</li>
@@ -141,7 +109,7 @@
 
                 </div>
                 <p>
-                    <input id="show" type="button" value="Reveal Answer" class="btn btn-primary" />
+                    <input id="show" type="button" value="Reveal Answer" class="btn btn-primary" data-toggle="collapse" data-target="#Answer" />
                 </p>
                 <br />
             </div>

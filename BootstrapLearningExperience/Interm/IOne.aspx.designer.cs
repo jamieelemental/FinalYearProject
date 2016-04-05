@@ -67,6 +67,15 @@ namespace BootstrapLearningExperience {
         protected global::System.Web.UI.WebControls.WizardStep Step5;
         
         /// <summary>
+        /// Step6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.WizardStep Step6;
+        
+        /// <summary>
         /// inpt control.
         /// </summary>
         /// <remarks>

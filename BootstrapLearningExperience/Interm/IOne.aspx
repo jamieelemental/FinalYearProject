@@ -3,12 +3,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <script>
-        $(document).ready(function () {
-
-            $("#showAnswer").click(function () {
-                $("#optEx").toggle();
-            });
-        });
 
         //Set the code content.
         window.onload = function setUp() {
@@ -65,7 +59,7 @@
             reload();
         }
 
-        function loadExample3(){
+        function loadExample3() {
             document.getElementById("MainContent_inpt").value = '\
 <div class="alert alert-success" data-dismiss="alert">\n\
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>\n\
@@ -85,7 +79,20 @@ alert alert-danger\n\
 </div>\n\n\
 ';
             reload();
-                        
+
+        }
+        
+        function loadExample4() {
+
+            document.getElementById("MainContent_inpt").value = '\
+<div id="Content" class="collapse">\n\
+    <p class="h4">Bazinga!</p>\n\
+ </div>\n\
+<input type="button" class="btn btn-primary" data-toggle="collapse" data-target="#Content" value="Click Me!">\n\
+';
+
+
+            reload();
         }
 
         function newWindow() {
@@ -214,10 +221,11 @@ alert alert-danger\n\
                         <p>To help understand it better, here is another example:</p>
                         <p><code>col-xs-2 col-sm-2 col-md-4 col-lg-4</code></p>
                         <p>How do you think this could be shortened?</p>
-                        <p id="optEx" hidden="hidden"><code>col-xs-2 col-md-4</code></p>
+                        <p id="optEx" class="collapse"><code>col-xs-2 col-md-4</code></p>
                         <p>
-                            <input id="showAnswer" type="button" value="View Answer" class="btn btn-primary" />
+                            <input id="showAnswer" type="button" value="View Answer" class="btn btn-primary" data-toggle="collapse" data-target="#optEx" />
                         </p>
+
                         <p>Have a go in the code window.</p>
 
                     </asp:WizardStep>
@@ -264,9 +272,9 @@ alert alert-danger\n\
 
                     <asp:WizardStep ID="Step5" AllowReturn="true" runat="server">
                         <p class="h3 text-center">Chapter 5</p>
-                        <p class="h4">JavaScript</p>
+                        <p class="h4">JavaScript Basics</p>
                         <p>
-                            One of the simplest JavaScript functions that Bootstrap offers is the <code>alert</code>. Not to be confused with JavaScripts built in <code>window.alert();</code> function.
+                            One of the simplest JavaScript functions that Bootstrap offers is the <code>alert</code>. Not to be confused with JavaScript's built in <code>window.alert();</code> function.
                             Here is an example:
                         </p>
 
@@ -275,17 +283,50 @@ alert alert-danger\n\
                         <p>
                             <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample2();" />
                         </p>
-                        <p>You may have noticed similar warnings on this website already, including the one preceeding this example. Here we are using a combination of Bootstrap styles,
-                            <code>alert alert-danger</code>, combined with javascript functionality <code>data-dismiss="alert"</code>. The <code>alert</code> class provides
+                        <p>
+                            You may have noticed similar warnings on this website already, including the one preceding this example. Here we are using a combination of Bootstrap styles,
+                            <code>alert alert-danger</code>, combined with JavaScript functionality <code>data-dismiss="alert"</code>. The <code>alert</code> class provides
                             the base class for the alert, spacing and padding. The <code>alert-danger</code> class provides the colour and outline for the alert, making appear red.
-                            The JavaScript function <code>data-dismiss="alert"</code> dismisses the alert, referencing itselft with the name "alert".
+                            The JavaScript function <code>data-dismiss="alert"</code> dismisses the alert when clicked, referencing itself with the name "alert".
                         </p>
                         <p>Like buttons, alerts come in a variety of colours:</p>
                         <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
                         <p>
                             <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample3();" />
                         </p>
-                        
+                        <p>
+                            In this example, we have altered the alert to include an 'x' in the corner. This provides a more user friendly method of dismissing the alert, but we have
+                            still maintained the original functionality, allowing the user to click anywhere on the alert to dismiss it.
+                        </p>
+
+
+                    </asp:WizardStep>
+
+
+                    <asp:WizardStep ID="Step6" AllowReturn="true" runat="server">
+                        <p class="h3 text-center">Chapter 6</p>
+                        <p class="h4">JavaScript Collapse</p>
+                        <p>Another simple but effective JavaScript feature, is the collapsable feature. This allows you to show and hide content 
+                            on your web page, in a simple manner. Load up the example below:
+                        </p>
+                        <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
+                        <p>
+                            <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample4();" />
+                        </p>
+                        <p>First we declare a <code>&lt;div&gt;</code> to contain the content (for
+                            this example we are using a div, but could be another type of content),
+                            and we give it a unique id "Content" and the class <code>collapse</code>. 
+                            Next we put some content inside the <code>&lt;div&gt;</code>, in this
+                            case it is a heading.
+                        </p>
+                       <p>Next we must set up the button to toggle the collapse. Using data-toggle
+                           we can specify the type of animation, in this case we are using 
+                           <code>collapse</code>. The we use <code>data-target</code> to select the
+                           element on the page that we want to animate, in this case it is our
+                           <code>&lt;div&gt;</code>, identified by the name "Content".
+                       </p>
+
+
 
                     </asp:WizardStep>
 

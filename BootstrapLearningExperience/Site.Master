@@ -62,7 +62,7 @@
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-list-alt"></span>Cheat sheet</a></li>
+                                <li><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Cheat sheet</a></li>
                                 <li><a runat="server" href="~/Ranks">Rank: <%= Session["Rank"].ToString() %></a></li>
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
