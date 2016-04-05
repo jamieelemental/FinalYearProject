@@ -54,12 +54,15 @@
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/"><div class="glyphicon glyphicon-home col-xs-1"></div><div class="visible-xs">Home</div></a></li>
+                        <li><a runat="server" href="~/">
+                            <div class="glyphicon glyphicon-home col-xs-1"></div>
+                            <div class="visible-xs">Home</div>
+                        </a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-list-alt"></span> Cheat sheet</a></li>
+                                <li><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-list-alt"></span>Cheat sheet</a></li>
                                 <li><a runat="server" href="~/Ranks">Rank: <%= Session["Rank"].ToString() %></a></li>
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
@@ -311,6 +314,27 @@
                                         </select></td>
                                 </tr>
                             </table>
+
+                            <div class="alert alert-success" data-dismiss="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                alert alert-sucess
+                            </div>
+
+                            <div class="alert alert-info" data-dismiss="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                alert alert-info
+                            </div>
+
+                            <div class="alert alert-warning" data-dismiss="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                alert alert-warning
+                            </div>
+
+                            <div class="alert alert-danger" data-dismiss="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                alert alert-danger
+                            </div>
+
 
 
 

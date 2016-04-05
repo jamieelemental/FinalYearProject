@@ -3,6 +3,12 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <script>
+        $(document).ready(function () {
+
+            $("#showAnswer").click(function () {
+                $("#optEx").toggle();
+            });
+        });
 
         //Set the code content.
         window.onload = function setUp() {
@@ -50,6 +56,38 @@
             reload();
         }
 
+        function loadExample2() {
+
+            document.getElementById("MainContent_inpt").value = '\
+<div class="alert alert-danger" data-dismiss="alert">\n\
+    Warning! Set your warning text here.\n\
+</div>';
+            reload();
+        }
+
+        function loadExample3(){
+            document.getElementById("MainContent_inpt").value = '\
+<div class="alert alert-success" data-dismiss="alert">\n\
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>\n\
+alert alert-sucess\n\
+</div>\n\n\
+<div class="alert alert-info" data-dismiss="alert">\n\
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>\n\
+alert alert-info\n\
+</div>\n\n\
+<div class="alert alert-warning" data-dismiss="alert">\n\
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>\n\
+alert alert-warning\n\
+</div>\n\n\
+<div class="alert alert-danger" data-dismiss="alert">\n\
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>\n\
+alert alert-danger\n\
+</div>\n\n\
+';
+            reload();
+                        
+        }
+
         function newWindow() {
 
             var w = window.open("", '_blank', false);
@@ -59,6 +97,9 @@
                 <style>.OutLine{ border: 1px solid black;}<\/style>" + document.getElementById("MainContent_inpt").value.trim());
             w.resizeTo(800, 600);
         }
+
+
+
     </script>
 
 
@@ -83,7 +124,7 @@
                             <li><strong>Previous</strong> - Move to previous chapter (doesn't affect your code).</li>
                         </ul>
                         <p>
-                            If you cant rememeber the Bootstrap classes we have covered already, use the <strong><span class="glyphicon glyphicon-list-alt"></span> Cheat sheet</strong> button 
+                            If you cant remember the Bootstrap classes we have covered already, use the <strong><span class="glyphicon glyphicon-list-alt"></span>Cheat sheet</strong> button 
                         in the top navigation bar, to help jog your memory.
                         </p>
                     </asp:WizardStep>
@@ -96,7 +137,7 @@
                         on the screen size. If we remember it used <code>col-md-4</code> and <code>col-sm-6</code>.
                         Click the button below to bring back the code.
                         </p>
-                        <p>NOTE: this will replace your code.</p>
+                        <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
                         <p>
                             <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample();" />
                         </p>
@@ -138,6 +179,7 @@
                             Now we have mastered column sizes, and indentation (even on multiple devices), we now look at re-ordering the columns. Reload the
                         example code again.
                         </p>
+                        <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
                         <p>
                             <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample();" />
                         </p>
@@ -159,6 +201,24 @@
                         </p>
                         <p><code>col-xs-push-0 col-sm-push-6 col-md-push-0 col-lg-push-0</code></p>
                         <p><code>col-xs-pull-0 col-sm-pull-6 col-md-pull-0 col-lg-pull-0</code></p>
+                        <p>
+                            When using many bootstrap classes at once, it is a good idea to try and keep them tidy by reducing the amount of classes used. For example:
+                        </p>
+                        <p><code>col-xs-2 col-sm-2 col-md-2 col-lg-2</code></p>
+                        <p>
+                            This is specifying a column that has a width of 2/12, for all device sizes. The way that Bootstrap works is abiding by
+                            the smallest device first then moving up. If all the columns will always be these same widths, we can shortern the amount
+                            of classes down to only the smallest. 
+                        </p>
+                        <p><code>col-xs-2</code></p>
+                        <p>To help understand it better, here is another example:</p>
+                        <p><code>col-xs-2 col-sm-2 col-md-4 col-lg-4</code></p>
+                        <p>How do you think this could be shortened?</p>
+                        <p id="optEx" hidden="hidden"><code>col-xs-2 col-md-4</code></p>
+                        <p>
+                            <input id="showAnswer" type="button" value="View Answer" class="btn btn-primary" />
+                        </p>
+                        <p>Have a go in the code window.</p>
 
                     </asp:WizardStep>
 
@@ -173,9 +233,7 @@
                         <p>
                             Load up our example again, and add the <code>OutLine</code> class to each <code>&lt;div&gt;</code> tag.
                         </p>
-                        <p>
-                            NOTE: will replace your code.
-                        </p>
+                        <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
                         <p>
                             <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample();" />
                         </p>
@@ -206,8 +264,29 @@
 
                     <asp:WizardStep ID="Step5" AllowReturn="true" runat="server">
                         <p class="h3 text-center">Chapter 5</p>
-                        <p class="h4"></p>
+                        <p class="h4">JavaScript</p>
+                        <p>
+                            One of the simplest JavaScript functions that Bootstrap offers is the <code>alert</code>. Not to be confused with JavaScripts built in <code>window.alert();</code> function.
+                            Here is an example:
+                        </p>
+
+                        <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
+
+                        <p>
+                            <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample2();" />
+                        </p>
+                        <p>You may have noticed similar warnings on this website already, including the one preceeding this example. Here we are using a combination of Bootstrap styles,
+                            <code>alert alert-danger</code>, combined with javascript functionality <code>data-dismiss="alert"</code>. The <code>alert</code> class provides
+                            the base class for the alert, spacing and padding. The <code>alert-danger</code> class provides the colour and outline for the alert, making appear red.
+                            The JavaScript function <code>data-dismiss="alert"</code> dismisses the alert, referencing itselft with the name "alert".
+                        </p>
+                        <p>Like buttons, alerts come in a variety of colours:</p>
+                        <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
+                        <p>
+                            <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample3();" />
+                        </p>
                         
+
                     </asp:WizardStep>
 
 

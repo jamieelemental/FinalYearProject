@@ -314,6 +314,25 @@
                                 </tr>
                             </table>
 
+                            <div class="alert alert-success" data-dismiss="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                alert alert-sucess
+                            </div>
+
+                            <div class="alert alert-info" data-dismiss="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                alert alert-info
+                            </div>
+
+                            <div class="alert alert-warning" data-dismiss="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                alert alert-warning
+                            </div>
+
+                            <div class="alert alert-danger" data-dismiss="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                alert alert-danger
+                            </div>
 
 
                         </div>
