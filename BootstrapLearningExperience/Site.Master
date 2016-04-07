@@ -194,6 +194,11 @@
                                     <td><code>table-bordered</code></td>
                                     <td>Adds all gridlines, no padding added.</td>
                                 </tr>
+
+                                 <tr>
+                                    <td><code>table-striped</code></td>
+                                    <td>Adds alternating color to rows, no padding added.</td>
+                                </tr>
                             </table>
 
                             <table class="table table-bordered">
@@ -349,7 +354,9 @@
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-
+            <br/>
+				<br/>
+				<div class="text-center h4"><a href="https://docs.google.com/forms/d/1BNcJicEsQ6M1KK7iHSn-Hb5a42D0rNFhlBr9BFuHBdw/edit?usp=forms_home&ths=true" >Got some feedback?</a></div>
         </div>
     </form>
 </body>

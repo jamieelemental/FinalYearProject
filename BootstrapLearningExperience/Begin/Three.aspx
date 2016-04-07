@@ -5,31 +5,27 @@
         $(document).ready(function () {
 
             $("#showTable").click(function () {
-                $("#Table").show();
-                $("#TableBordered").hide();
-                $("#TableCondensed").hide();
-                $("#TableAll").hide();
+                $("#Table").removeClass("table-condensed table-bordered table-striped");
             });
 
             $("#showTableCondensed").click(function () {
-                $("#Table").hide();
-                $("#TableBordered").hide();
-                $("#TableCondensed").show();
-                $("#TableAll").hide();
+                $("#Table").removeClass("table table-condensed table-bordered table-striped");
+                $("#Table").addClass("table-condensed");
             });
 
             $("#showTableBordered").click(function () {
-                $("#Table").hide();
-                $("#TableBordered").show();
-                $("#TableCondensed").hide();
-                $("#TableAll").hide();
+                $("#Table").removeClass("table table-condensed table-bordered table-striped");
+                $("#Table").addClass("table-bordered");
+            });
+
+            $("#showTableStriped").click(function () {
+                $("#Table").removeClass("table table-condensed table-bordered table-striped");
+                $("#Table").addClass("table-striped");
             });
 
             $("#showTableAll").click(function () {
-                $("#Table").hide();
-                $("#TableBordered").hide();
-                $("#TableCondensed").hide();
-                $("#TableAll").show();
+                $("#Table").removeClass("table table-condensed table-bordered table-striped");
+                $("#Table").addClass("table table-condensed table-bordered table-striped");
             });
         });
     </script>
@@ -57,31 +53,8 @@
             <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
             <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
 
-                <%--<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-success">1</p>
-                </div>
 
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-success">2</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-primary">3</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-danger">4</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-danger">5</p>
-                </div>
-
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
-                    <p class="bg-danger">6</p>
-                </div>--%>
-
-                 <div class="progress">
+                <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="33"
                         aria-valuemin="0" aria-valuemax="100" style="width: 33%">
                         <span>33%</span>
@@ -130,37 +103,12 @@
                 <br />
 
                 <p>
-                    This table is very simple, and uses no styling, apart from a border that outlines it. Bootstrap can handle some different styles for tables, a few being:
-                    <code>table</code>, <code>table-condensed</code>, <code>table-bordered</code>. Below is an example of the same table, but with the different styles.
+                    This table is very simple, and uses no styling, apart from a border that outlines it. Bootstrap can handle some different styles for tables, being:
+                    <code>table</code>, <code>table-condensed</code>, <code>table-bordered</code>, <code>table-striped</code>. Below is an example of the same table, but with the different styles.
                 </p>
 
-                <div id="Table">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Town/City</th>
-                                <th>Postcode</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>John Smith</td>
-                            <td>128 Beaker Street</td>
-                            <td>Townsville</td>
-                            <td>TW4 1IK</td>
-                        </tr>
-                        <tr>
-                            <td>Jane Doe</td>
-                            <td>32 Rinestone Grove</td>
-                            <td>Fortington</td>
-                            <td>FT5 9AD</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div id="TableCondensed" hidden="hidden">
-                    <table class="table-condensed">
+       
+                    <table id="Table" class="table">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -183,74 +131,25 @@
                         </tr>
                     </table>
                     <br />
-                </div>
-
-                <div id="TableBordered" hidden="hidden">
-                    <table class="table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Town/City</th>
-                                <th>Postcode</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>John Smith</td>
-                            <td>128 Beaker Street</td>
-                            <td>Townsville</td>
-                            <td>TW4 1IK</td>
-                        </tr>
-                        <tr>
-                            <td>Jane Doe</td>
-                            <td>32 Rinestone Grove</td>
-                            <td>Fortington</td>
-                            <td>FT5 9AD</td>
-                        </tr>
-                    </table>
-                    <br />
-                </div>
-
-                <div id="TableAll" hidden="hidden">
-                    <table class="table table-condensed table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Town/City</th>
-                                <th>Postcode</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>John Smith</td>
-                            <td>128 Beaker Street</td>
-                            <td>Townsville</td>
-                            <td>TW4 1IK</td>
-                        </tr>
-                        <tr>
-                            <td>Jane Doe</td>
-                            <td>32 Rinestone Grove</td>
-                            <td>Fortington</td>
-                            <td>FT5 9AD</td>
-                        </tr>
-                    </table>
-                </div>
+              
 
                 <p>
                     <input id="showTable" type="button" class="btn btn-primary btn-sm" value="table" />
                     <input id="showTableCondensed" type="button" class="btn btn-primary btn-sm" value="table-condensed" />
                     <input id="showTableBordered" type="button" class="btn btn-primary btn-sm" value="table-bordered" />
+                    <input id="showTableStriped" type="button" class="btn btn-primary btn-sm" value="table-striped" />
                     <input id="showTableAll" type="button" class="btn btn-primary btn-sm" value="All" />
                 </p>
                 <br />
                 <ul>
                     <li><code>table</code> adds padding in the cells, makes the table as wide as the container, and adds row lines.</li>
-                    <li><code>table-condensed</code> adds a smaller amount of padding, does not alter width of the table. </li>
-                    <li><code>table-bordered</code> does not add padding, does not alter width, adds all gridlines.</li>
+                    <li><code>table-condensed</code> adds a smaller amount of padding then table, but the table stays as small as the content. </li>
+                    <li><code>table-bordered</code> does not add padding, does not alter size, adds all gridlines.</li>
+                    <li><code>table-striped</code> does not add padding, does not alter size, adds darker colour to alternating rows.</li>
                 </ul>
                 <p>
-                    The all option, <code>table table-condensed table-bordered</code> adds padding left and right, adds smaller padding top and bottom, makes the table as wide
-                    as the container and adds all gridlines. The reason for this is that <code>table</code> and <code>table-condensed</code> conflict. Despite this, it is
+                    The all option, <code>table table-condensed table-bordered table-striped</code> adds padding left and right, adds smaller padding top and bottom, makes the table as wide
+                    as the container, adds all gridlines and adds darker colour to alternating rows. The reason for this is that <code>table</code> and <code>table-condensed</code> conflict. Despite this, it is
                     useful to combine the others, <code>table table-bordered</code> which gives a similar result to the All example. This is because <code>table</code>
                     gives us a good base, and <code>table-bordered</code> extends it with further styling.
                 </p>
@@ -260,7 +159,7 @@
                     Another quick style that can be applied to elements of your website is the button styles. You may have already noticed some of them already on this website. 
                     Different coloured buttons can be used to signify different things. In bootstrap we have a few different ones: 
                 </p>
-                
+
 
                 <table class="table-bordered table-condensed text-center" style="font-size: 0.9em;">
 
@@ -325,10 +224,12 @@
                 <p>
                     <input type="button" value="Click" class="btn btn-default btn-block" />
                 </p>
-                <p>Finally, we can add in <code>active</code> or <code>disabled</code> to determine
+                <p>
+                    Finally, we can add in <code>active</code> or <code>disabled</code> to determine
                     whether the button is clickable.
                 </p>
-                <p><input type="button" value="Active" class="btn btn-primary active" />&nbsp;<input type="button" value="Disabled" class="btn btn-primary disabled" /></p>
+                <p>
+                    <input type="button" value="Active" class="btn btn-primary active" />&nbsp;<input type="button" value="Disabled" class="btn btn-primary disabled" /></p>
                 <p>All these should be combined with the base button class <code>btn</code>. So <code>btn-danger</code> becomes <code>btn btn-danger</code>.</p>
                 <p>Have a go combining these classes below:</p>
 
