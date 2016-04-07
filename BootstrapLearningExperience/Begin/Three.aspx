@@ -5,27 +5,33 @@
         $(document).ready(function () {
 
             $("#showTable").click(function () {
-                $("#Table").removeClass("table-condensed table-bordered table-striped");
+                $("#Table").removeClass("table table-condensed table-bordered table-striped table-hover");
+                $("#Table").addClass("table");
             });
 
             $("#showTableCondensed").click(function () {
-                $("#Table").removeClass("table table-condensed table-bordered table-striped");
+                $("#Table").removeClass("table table-condensed table-bordered table-striped table-hover");
                 $("#Table").addClass("table-condensed");
             });
 
             $("#showTableBordered").click(function () {
-                $("#Table").removeClass("table table-condensed table-bordered table-striped");
+                $("#Table").removeClass("table table-condensed table-bordered table-striped table-hover");
                 $("#Table").addClass("table-bordered");
             });
 
             $("#showTableStriped").click(function () {
-                $("#Table").removeClass("table table-condensed table-bordered table-striped");
+                $("#Table").removeClass("table table-condensed table-bordered table-striped table-hover");
                 $("#Table").addClass("table-striped");
             });
 
+            $("#showTableHover").click(function () {
+                $("#Table").removeClass("table table-condensed table-bordered table-striped table-hover");
+                $("#Table").addClass("table-hover");
+            });
+
             $("#showTableAll").click(function () {
-                $("#Table").removeClass("table table-condensed table-bordered table-striped");
-                $("#Table").addClass("table table-condensed table-bordered table-striped");
+                $("#Table").removeClass("table table-condensed table-bordered table-striped table-hover");
+                $("#Table").addClass("table table-condensed table-bordered table-striped table-hover");
             });
         });
     </script>
@@ -104,7 +110,7 @@
 
                 <p>
                     This table is very simple, and uses no styling, apart from a border that outlines it. Bootstrap can handle some different styles for tables, being:
-                    <code>table</code>, <code>table-condensed</code>, <code>table-bordered</code>, <code>table-striped</code>. Below is an example of the same table, but with the different styles.
+                    <code>table</code>, <code>table-condensed</code>, <code>table-bordered</code>, <code>table-striped</code>, <code>table-hover</code>. Below is an example of the same table, but with the different styles.
                 </p>
 
        
@@ -138,6 +144,7 @@
                     <input id="showTableCondensed" type="button" class="btn btn-primary btn-sm" value="table-condensed" />
                     <input id="showTableBordered" type="button" class="btn btn-primary btn-sm" value="table-bordered" />
                     <input id="showTableStriped" type="button" class="btn btn-primary btn-sm" value="table-striped" />
+                    <input id="showTableHover" type="button" class="btn btn-primary btn-sm" value="table-hover" />
                     <input id="showTableAll" type="button" class="btn btn-primary btn-sm" value="All" />
                 </p>
                 <br />
@@ -146,9 +153,10 @@
                     <li><code>table-condensed</code> adds a smaller amount of padding then table, but the table stays as small as the content. </li>
                     <li><code>table-bordered</code> does not add padding, does not alter size, adds all gridlines.</li>
                     <li><code>table-striped</code> does not add padding, does not alter size, adds darker colour to alternating rows.</li>
+                    <li><code>table-hover</code> does not add padding, does not alter size, adds darker colour to row on mouse hover.</li>
                 </ul>
                 <p>
-                    The all option, <code>table table-condensed table-bordered table-striped</code> adds padding left and right, adds smaller padding top and bottom, makes the table as wide
+                    The all option, <code>table table-condensed table-bordered table-striped table-hover</code> adds padding left and right, adds smaller padding top and bottom, makes the table as wide
                     as the container, adds all gridlines and adds darker colour to alternating rows. The reason for this is that <code>table</code> and <code>table-condensed</code> conflict. Despite this, it is
                     useful to combine the others, <code>table table-bordered</code> which gives a similar result to the All example. This is because <code>table</code>
                     gives us a good base, and <code>table-bordered</code> extends it with further styling.

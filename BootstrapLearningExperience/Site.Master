@@ -80,7 +80,7 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="container-fluid">
 
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -198,6 +198,11 @@
                                  <tr>
                                     <td><code>table-striped</code></td>
                                     <td>Adds alternating color to rows, no padding added.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>table-hover</code></td>
+                                    <td>Adds highlight color to row hovered over, no padding added.</td>
                                 </tr>
                             </table>
 
@@ -355,7 +360,6 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <br/>
-				<br/>
 				<div class="text-center h4"><a href="https://docs.google.com/forms/d/1BNcJicEsQ6M1KK7iHSn-Hb5a42D0rNFhlBr9BFuHBdw/edit?usp=forms_home&ths=true" >Got some feedback?</a></div>
         </div>
     </form>

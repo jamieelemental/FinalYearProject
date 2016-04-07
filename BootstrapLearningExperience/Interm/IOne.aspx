@@ -81,7 +81,7 @@ alert alert-danger\n\
             reload();
 
         }
-        
+
         function loadExample4() {
 
             document.getElementById("MainContent_inpt").value = '\
@@ -90,8 +90,28 @@ alert alert-danger\n\
  </div>\n\
 <input type="button" class="btn btn-primary" data-toggle="collapse" data-target="#Content" value="Click Me!">\n\
 ';
+            reload();
+        }
 
-
+        function loadExample5() {
+            document.getElementById("MainContent_inpt").value = '\
+<div class="modal fade" id="modalExample" role="dialog">\n\
+    <div class="modal-dialog">\n\
+        <div class="modal-content">\n\
+            <div class="modal-header">\n\
+                <button type="button" class="close" data-dismiss="modal">&times;</button>\n\
+                <h4 class="modal-title">Header</h4>\n\
+            </div>\n\
+            <div class="modal-body">\n\
+                <p>This is the body of the modal.</p>\n\
+            </div>\n\
+            <div class="modal-footer">\n\
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>\n\
+            </div>\n\
+        </div>\n\
+    </div>\n\
+</div>\n\
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExample">Open Example</button>';
             reload();
         }
 
@@ -131,7 +151,7 @@ alert alert-danger\n\
                             <li><strong>Previous</strong> - Move to previous chapter (doesn't affect your code).</li>
                         </ul>
                         <p>
-                            If you cant remember the Bootstrap classes we have covered already, use the <strong><span class="glyphicon glyphicon-list-alt"></span>Cheat sheet</strong> button 
+                            If you cant remember the Bootstrap classes we have covered already, use the <strong><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Cheat sheet</strong> button 
                         in the top navigation bar, to help jog your memory.
                         </p>
                     </asp:WizardStep>
@@ -306,25 +326,65 @@ alert alert-danger\n\
                     <asp:WizardStep ID="Step6" AllowReturn="true" runat="server">
                         <p class="h3 text-center">Chapter 6</p>
                         <p class="h4">JavaScript Collapse</p>
-                        <p>Another simple but effective JavaScript feature, is the collapsable feature. This allows you to show and hide content 
+                        <p>
+                            Another simple but effective JavaScript feature, is the collapsable feature. This allows you to show and hide content 
                             on your web page, in a simple manner. Load up the example below:
                         </p>
                         <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
                         <p>
                             <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample4();" />
                         </p>
-                        <p>First we declare a <code>&lt;div&gt;</code> to contain the content (for
+                        <p>
+                            First we declare a <code>&lt;div&gt;</code> to contain the content (for
                             this example we are using a div, but could be another type of content),
                             and we give it a unique id "Content" and the class <code>collapse</code>. 
                             Next we put some content inside the <code>&lt;div&gt;</code>, in this
                             case it is a heading.
                         </p>
-                       <p>Next we must set up the button to toggle the collapse. Using data-toggle
+                        <p>
+                            Next we must set up the button to toggle the collapse. Using data-toggle
                            we can specify the type of animation, in this case we are using 
                            <code>collapse</code>. The we use <code>data-target</code> to select the
                            element on the page that we want to animate, in this case it is our
                            <code>&lt;div&gt;</code>, identified by the name "Content".
-                       </p>
+                        </p>
+                        <br />
+                        <p class="h4">JavaScript Modal</p>
+                        <p>
+                            The JavaScript <code>modal</code> is another way to show and hide content, except this time it is done in a window that shows over the content. You may have noticed this effect
+                            being used on the cheat sheet. 
+                        </p>
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExample">Open Example</button>
+
+                        <div class="modal fade" id="modalExample" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>This is the body of the modal.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>The code for this can be put almost anywhere on the page, as it always remains hidden until prompted, and appears over your
+                            website content. It shouldn't interfere with the flow of the webpage. Load up the example and have a look at what classes
+                            are used to acheive this effect.
+                        </p>
+
+                        <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
+                        <p>
+                            <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample5();" />
+                        </p>
+
+
 
 
 
