@@ -118,10 +118,10 @@ alert alert-danger\n\
         function newWindow() {
 
             var w = window.open("", '_blank', false);
-            w.document.write("<script https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"><\/script>\
-                <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\">\
-                    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"><\/script>\
-                <style>.OutLine{ border: 1px solid black;}<\/style>" + document.getElementById("MainContent_inpt").value.trim());
+            w.document.write("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"><\/script>\n\
+                        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"><\/script>\n\
+                <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\"/>\n\
+         <style>.OutLine{ border: 1px solid black;}<\/style>" + document.getElementById("MainContent_inpt").value.trim());
             w.resizeTo(800, 600);
         }
 
@@ -355,9 +355,9 @@ alert alert-danger\n\
                             being used on the cheat sheet. 
                         </p>
 
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExample">Open Example</button>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExampleTutorial">Open Example</button></p>
 
-                        <div class="modal fade" id="modalExample" role="dialog">
+                        <div class="modal fade" id="modalExampleTutorial" role="dialog">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -382,6 +382,25 @@ alert alert-danger\n\
                         <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
                         <p>
                             <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample5();" />
+                        </p>
+
+                        <p>Many bootstrap classes are being used here, so lets list them: <code>modal fade modal-dialog modal-content modal-header close modal-title modal-body modal-footer</code>
+                            we also have JavaScript being used <code>role="dialog"</code> and <code>data-dismiss="modal"</code>.
+                        </p>
+                        <p>
+                            <ul>
+                                <li><code>modal</code> - defines the tag which contains the modal content. Adds the grey overlay on the content behind.</li>
+                                <li><code>fade</code> - adds the animation of fading the content behind to the grey.</li>
+                                <li><code>modal-dialog</code> - defines the position of the modal, around the center of the page.</li>
+                                <li><code>modal-content</code> - adds white box around content.</li>
+                                <li><code>modal-header</code> - defines the header of the modal and adds a seperator below it.</li>
+                                <li><code>close</code> - floats the content to the top right, and removes traditional button styles. </li>
+                                <li><code>modal-title</code>, <code>modal-body</code>, <code>modal-footer</code>  - defines styling for the header text. font size.</li>
+                                <li><code>role="dialog"</code> - used to give contextual information.</li>
+                                <li><code>data-dismiss="modal"</code> - identify what should be dismissed by clicking on this item.</li>
+                                <li><code>data-toggle="modal"</code> - identify what should be toggled by clicking on this item.</li>
+                                <li><code>data-target="#modalExampleTutorial"</code> - the unique ID associated with the type of item being targetted.</li>
+                            </ul>
                         </p>
 
 
