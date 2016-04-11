@@ -10,8 +10,8 @@
 
         <div class="row">
 
-            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
-            <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
+            <div class="col-xs-1 col-sm-2 col-md-3"></div>
+            <div class="col-xs-10 col-sm-8 col-md-6">
          
                  <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="67"
@@ -20,27 +20,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
+            <div class="col-xs-1 col-sm-2 col-md-3"></div>
 
         </div>
 
         <div class="row">
 
-            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
-            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+            <div class="hidden-xs col-sm-1"></div>
+            <div class="col-xs-12 col-sm-10">
                 <p class="h3">Different devices</p>
                 <p>
                     The grid will display differently depending on the size of the device
                     viewing the webpage. Generally, these devices are categorised as the following:
                 </p>
             </div>
-            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="hidden-xs col-sm-1"></div>
 
         </div>
 
         <div class="row">
 
-            <div class="col-md-2 col-lg-2"></div>
+            <div class="hidden-xs col-md-2"></div>
 
             <div class="col-xs-12 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-2 col-lg-offset-0 text-center">
                 <div class="btn btn-default">
@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 text-center">
+            <div class="col-xs-12 col-sm-4 col-md-2 text-center">
                 <div class="btn btn-default">
                     <p>Tablet (sm)</p>
                     <p>768px - 992px wide.</p>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 text-center">
+            <div class="col-xs-12 col-sm-4 col-md-2 text-center">
                 <div class="btn btn-default">
                     <p>Desktop (lg)</p>
                     <p>&gt; 1200px wide.</p>
@@ -82,14 +82,14 @@
                 </div>
             </div>
 
-            <div class="col-md-2 col-lg-2"></div>
+            <div class="hidden-xs col-md-2"></div>
 
         </div>
 
         <div class="row">
 
-            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
-            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+            <div class="hidden-xs col-sm-1"></div>
+            <div class="col-xs-12 col-sm-10">
                 <p>
                     If we recall our example in chapter 4, it used <code>col-md-4</code>, to define 3 columns of width 4 of 12. The <code>md</code>
                     part indicates which devices this column should display at width of 4 of 12. Medium size (md) screens will view this column as a third of the screen, however,
@@ -153,15 +153,15 @@
                         size has become large enough to be classed as a medium size device.
                 </p>
             </div>
-            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="hidden-xs col-sm-1"></div>
 
         </div>
 
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+            <div class="col-xs-6 text-center">
                 <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Four.aspx'" />
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+            <div class="col-xs-6 text-center">
                 <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Six.aspx'" />
             </div>
         </div>

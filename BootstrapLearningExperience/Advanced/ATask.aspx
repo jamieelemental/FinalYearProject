@@ -43,9 +43,9 @@
 
     <div class="row">
 
-        <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+        <div class="col-xs-1 col-sm-2"></div>
 
-        <div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+        <div class="col-xs-10 col-sm-8">
             <br />
 
             <div class="alert alert-info" data-dismiss="alert">
@@ -85,6 +85,6 @@
 
         </div>
     </div>
-    <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+    <div class="col-xs-1 col-sm-2"></div>
 
 </asp:Content>

@@ -132,7 +132,7 @@ alert alert-danger\n\
 
     <div class="row" style="max-height: calc(98% - 50px) !important;">
 
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" style="height: 85vh; overflow-y: scroll;">
+        <div class="col-xs-12 col-sm-4 col-md-3" style="height: 85vh; overflow-y: scroll;">
 
             <asp:Wizard ID="IntermWiz" DisplayCancelButton="false" runat="server" DisplaySideBar="false" CssClass="col-xs-11 col-xs-offset-1">
                 <WizardSteps>
@@ -406,13 +406,7 @@ alert alert-danger\n\
                             <li><code>data-target="#modalExampleTutorial"</code> - the unique ID associated with the type of item being targetted.</li>
                         </ul>
 
-
-
-
-
                     </asp:WizardStep>
-
-
 
                 </WizardSteps>
 
@@ -447,8 +441,8 @@ alert alert-danger\n\
 
         </div>
 
-        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
-            <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-7 col-md-8">
+            <div class="col-xs-12">
                 <p class="h3">Code: </p>
 
                 <div style="margin-bottom: 1em;">

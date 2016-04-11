@@ -12,7 +12,7 @@
 
         <div class="row">
 
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="col-xs-12 col-sm-4 text-center">
 
                 <div class="row">
                     <h2>Beginner</h2>
@@ -31,7 +31,7 @@
 
 
 
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="col-xs-12 col-sm-4 text-center">
                 <div class="row">
                     <h2>Intermediate</h2>
                 </div>
@@ -49,7 +49,7 @@
 
 
 
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="col-xs-12 col-sm-4 text-center">
 
 
                 <div class="row">
@@ -67,8 +67,8 @@
 
         <footer class="container body-content">
             <hr />
-            <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6">&copy; <%: DateTime.Now.Year %> - Jamie Element </p>
-            <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><%= Session["VersionNo"].ToString() %></p>
+            <p class="col-xs-6">&copy; <%: DateTime.Now.Year %> - Jamie Element </p>
+            <p class="col-xs-6" style="text-align: right;"><%= Session["VersionNo"].ToString() %></p>
         </footer>
     </div>
 </asp:Content>

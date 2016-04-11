@@ -56,8 +56,8 @@
 
         <div class="row">
 
-            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
-            <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
+            <div class="col-xs-1 col-sm-2 col-md-3"></div>
+            <div class="col-xs-10 col-sm-8 col-md-6">
 
 
                 <div class="progress">
@@ -67,14 +67,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3"></div>
+            <div class="col-xs-1 col-sm-2 col-md-3"></div>
 
         </div>
 
         <div class="row">
 
-            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
-            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+            <div class="hidden-xs col-sm-1"></div>
+            <div class="col-xs-12 col-sm-10">
                 <p class="h3">The Basics</p>
                 <p>
                     The first part of bootstrap to get to grips with is the style elements. These are typically simple, but useful stylings for your webpage, that are conviniently set up for
@@ -257,18 +257,17 @@
 
 
             </div>
-            <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="hidden-xs col-sm-1"></div>
 
         </div>
 
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+            <div class="col-xs-6 text-center">
                 <input type="button" value="Previous" class="btn btn-primary" onclick="window.location = '/Begin/Two.aspx'" />
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+            <div class="col-xs-6 text-center">
                 <input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Four.aspx'" />
             </div>
         </div>
-
     </div>
 </asp:Content>

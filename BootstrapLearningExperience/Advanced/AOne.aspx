@@ -1,23 +1,11 @@
 ﻿<%@ Page Title="Advanced" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AOne.aspx.cs" Inherits="BootstrapLearningExperience.Advanced.AOne" ValidateRequest="false" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <script>
-
-        function BeginTask() {
-            document.getElementById("Intro").className = "hidden";
-            document.getElementById("Task").className = "visible";
-        }
-
-
-    </script>
-
-
     <div class="row">
 
-        <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+        <div class="col-xs-1 col-sm-2"></div>
 
-        <div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+        <div class="col-xs-10 col-sm-8">
 
             <div id="Intro">
                 <div class="text-center">
@@ -34,6 +22,6 @@
             </div>
         </div>
 
-        <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+        <div class="col-xs-1 col-sm-2"></div>
     </div>
 </asp:Content>
