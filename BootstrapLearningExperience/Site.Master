@@ -195,7 +195,7 @@
                                     <td>Adds all gridlines, no padding added.</td>
                                 </tr>
 
-                                 <tr>
+                                <tr>
                                     <td><code>table-striped</code></td>
                                     <td>Adds alternating color to rows, no padding added.</td>
                                 </tr>
@@ -277,6 +277,7 @@
                                     </td>
                                 </tr>
                             </table>
+
                             <table class="table table-bordered">
 
                                 <tr>
@@ -345,6 +346,90 @@
                                 alert alert-danger
                             </div>
 
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">JavaScript</th>
+                                    </tr>
+                                </thead>
+
+                                
+                                <tr>
+                                    <td><code>data-toggle="collapse"</code></td>
+                                    <td>Toggles the content when clicked, referencing itself with the name "collapse".</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>data-target="#Content"</code></td>
+                                    <td>Targets and item on the page, with the ID "Content".</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>data-dismiss="alert"</code></td>
+                                    <td>Dismisses the alert when clicked, referencing itself with the name "alert".</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>data-dismiss="modal"</code></td>
+                                    <td>Dismisses the modal when clicked, referencing itself with the name "modal".</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>data-toggle="modal"</code></td>
+                                    <td>Toggles the modal when clicked, referencing itself with the name "modal".</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>data-target="#modalExampleTutorial"</code></td>
+                                    <td>Targets and item on the page, with the ID "modalExampleTutorial".</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><code>modal</code></td>
+                                    <td>Defines the tag which contains the modal content. Adds the grey overlay on the content behind.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>fade</code></td>
+                                    <td>Adds the animation of fading the content behind to the grey.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>modal-dialog</code></td>
+                                    <td>Defines the position of the modal, around the center of the page.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>modal-content</code></td>
+                                    <td>Adds white box around content.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>modal-header</code></td>
+                                    <td>Defines the header of the modal and adds a seperator below it.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>close</code></td>
+                                    <td>Floats the content to the top right, and removes traditional button styles.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>modal-title, modal-body</code></td>
+                                    <td>Defines styling for the header text, font size.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>modal-footer</code></td>
+                                    <td>Defines styling for the header text, font size. Aligned right by default.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>role="dialog"</code></td>
+                                    <td>Used to give contextual information.</td>
+                                </tr>
+                            </table>
+
 
 
 
@@ -359,8 +444,8 @@
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <br/>
-				<div class="text-center h4"><a href="https://docs.google.com/forms/d/1BNcJicEsQ6M1KK7iHSn-Hb5a42D0rNFhlBr9BFuHBdw/edit?usp=forms_home&ths=true" >Got some feedback?</a></div>
+            <br />
+            <div class="text-center h4"><a href="https://docs.google.com/forms/d/1BNcJicEsQ6M1KK7iHSn-Hb5a42D0rNFhlBr9BFuHBdw/edit?usp=forms_home&ths=true">Got some feedback?</a></div>
         </div>
     </form>
 </body>

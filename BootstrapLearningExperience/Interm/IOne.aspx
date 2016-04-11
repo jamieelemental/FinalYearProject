@@ -355,7 +355,8 @@ alert alert-danger\n\
                             being used on the cheat sheet. 
                         </p>
 
-                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExampleTutorial">Open Example</button></p>
+                        <p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExampleTutorial">Open Example</button></p>
 
                         <div class="modal fade" id="modalExampleTutorial" role="dialog">
                             <div class="modal-dialog">
@@ -374,7 +375,8 @@ alert alert-danger\n\
                             </div>
                         </div>
 
-                        <p>The code for this can be put almost anywhere on the page, as it always remains hidden until prompted, and appears over your
+                        <p>
+                            The code for this can be put almost anywhere on the page, as it always remains hidden until prompted, and appears over your
                             website content. It shouldn't interfere with the flow of the webpage. Load up the example and have a look at what classes
                             are used to acheive this effect.
                         </p>
@@ -384,24 +386,25 @@ alert alert-danger\n\
                             <input type="button" value="Load Example" class="btn btn-primary" onclick="loadExample5();" />
                         </p>
 
-                        <p>Many bootstrap classes are being used here, so lets list them: <code>modal fade modal-dialog modal-content modal-header close modal-title modal-body modal-footer</code>
+                        <p>
+                            Many bootstrap classes are being used here, so lets list them: <code>modal fade modal-dialog modal-content modal-header close modal-title modal-body modal-footer</code>
                             we also have JavaScript being used <code>role="dialog"</code> and <code>data-dismiss="modal"</code>.
                         </p>
-                        <p>
-                            <ul>
-                                <li><code>modal</code> - defines the tag which contains the modal content. Adds the grey overlay on the content behind.</li>
-                                <li><code>fade</code> - adds the animation of fading the content behind to the grey.</li>
-                                <li><code>modal-dialog</code> - defines the position of the modal, around the center of the page.</li>
-                                <li><code>modal-content</code> - adds white box around content.</li>
-                                <li><code>modal-header</code> - defines the header of the modal and adds a seperator below it.</li>
-                                <li><code>close</code> - floats the content to the top right, and removes traditional button styles. </li>
-                                <li><code>modal-title</code>, <code>modal-body</code>, <code>modal-footer</code>  - defines styling for the header text. font size.</li>
-                                <li><code>role="dialog"</code> - used to give contextual information.</li>
-                                <li><code>data-dismiss="modal"</code> - identify what should be dismissed by clicking on this item.</li>
-                                <li><code>data-toggle="modal"</code> - identify what should be toggled by clicking on this item.</li>
-                                <li><code>data-target="#modalExampleTutorial"</code> - the unique ID associated with the type of item being targetted.</li>
-                            </ul>
-                        </p>
+
+                        <ul>
+                            <li><code>modal</code> - defines the tag which contains the modal content. Adds the grey overlay on the content behind.</li>
+                            <li><code>fade</code> - adds the animation of fading the content behind to the grey.</li>
+                            <li><code>modal-dialog</code> - defines the position of the modal, around the center of the page.</li>
+                            <li><code>modal-content</code> - adds white box around content.</li>
+                            <li><code>modal-header</code> - defines the header of the modal and adds a seperator below it.</li>
+                            <li><code>close</code> - floats the content to the top right, and removes traditional button styles. </li>
+                            <li><code>modal-title</code>, <code>modal-body</code> - defines styling for the header text, font size.</li>
+                            <li><code>modal-footer</code>  - defines styling for the header text, font size. Aligned right by default. </li>
+                            <li><code>role="dialog"</code> - used to give contextual information.</li>
+                            <li><code>data-dismiss="modal"</code> - identify what should be dismissed by clicking on this item.</li>
+                            <li><code>data-toggle="modal"</code> - identify what should be toggled by clicking on this item.</li>
+                            <li><code>data-target="#modalExampleTutorial"</code> - the unique ID associated with the type of item being targetted.</li>
+                        </ul>
 
 
 
