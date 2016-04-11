@@ -171,10 +171,10 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
-    <Content Include="Advanced\AExample.html" />
+    <Content Include="Advanced\AExampleStriped.html" />
     <Content Include="Advanced\ATask.aspx" />
     <Content Include="Advanced\AOne.aspx" />
-    <Content Include="Advanced\index.html" />
+    <Content Include="Advanced\AExample.html" />
     <Content Include="Begin\Example.html" />
     <Content Include="Begin\Example2.html" />
     <Content Include="Begin\Example3.html" />

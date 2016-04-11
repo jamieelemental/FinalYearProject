@@ -46,39 +46,45 @@
         <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
 
         <div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+            <br />
 
-            <div id="Task">
-
-                <p class="h3">Code: </p>
-
-                <div style="margin-bottom: 1em;">
-                    <asp:TextBox ID="inpt" runat="server" CssClass="form-control" TextMode="MultiLine" onkeyup="reload()" Height="10em"></asp:TextBox>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-xs-2">
-                        <a id="lnkReload" class="glyphicon glyphicon-play" onclick="reload();" style="font-size: 2em;"></a>&nbsp;
-                            <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" Style="font-size: 2em;" UseSubmitBehaviour="false"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>
-                    </div>
-                    <div class="col-xs-8">
-                    </div>
-                    <div class="col-xs-2">
-                        <input type="button" value="View Target Page" class="btn btn-primary" onclick="window.open('AExample.html', '_blank', 'height=600, width=800', 'false')" />
-                    </div>
-
-                </div>
-
-                <p class="h3">Results:</p>
-
-
-                <pre id="outpt" style="min-height: 10em"></pre>
-                <p>
-                    <a class="glyphicon glyphicon-new-window" onclick="newWindow();" style="font-size: 2em;"></a>
-                </p>
+            <div class="alert alert-info" data-dismiss="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                Open the Target Page, a template provided by: http://startbootstrap.com/template-overviews/shop-homepage/. The HTML has been provided, 
+                    but all the Bootstrap classes have been removed! Try and fill them in
+                to create the target page. If you get stuck, try use the cheat sheet for help. 
+                    Note: You may need to do additional research into Bootstrap!
             </div>
+
+            <p class="h3">Code: </p>
+
+            <div style="margin-bottom: 1em;">
+                <asp:TextBox ID="inpt" runat="server" CssClass="form-control" TextMode="MultiLine" onkeyup="reload()" Height="10em"></asp:TextBox>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <a id="lnkReload" class="glyphicon glyphicon-play" onclick="reload();" style="font-size: 2em;"></a>&nbsp;
+                            <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" Style="font-size: 2em;" UseSubmitBehaviour="false"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>&nbsp;
+                    <a class="glyphicon glyphicon-new-window" onclick="newWindow();" style="font-size: 2em;"></a>
+                </div>
+
+                <div class="col-xs-4"></div>
+
+                <div class="col-xs-4">
+                    <asp:Button runat="server" ID="btnDownload" CssClass="btn btn-info" OnClick="btnDownload_Click" Text="Download Task" />
+                    <input type="button" value="View Target Page" class="btn btn-primary pull-right" onclick="window.open('AExample.html', '_blank', 'height=600, width=800', 'false')" />
+                </div>
+            </div>
+
+            <p class="h3">Results:</p>
+
+
+            <pre id="outpt" style="min-height: 10em"></pre>
+
         </div>
-        <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
     </div>
+    <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
 
 </asp:Content>
