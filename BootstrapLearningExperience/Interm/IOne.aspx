@@ -429,7 +429,7 @@ alert alert-danger\n\
                     </div>
                     <div class="col-xs-7"></div>
                     <div class="col-xs-3">
-                        <asp:Button ID="btnFinish" runat="server" Text="Finish" CssClass="btn btn-success btn-sm" PostBackUrl="/Advanced/AOne.aspx" />
+                        <asp:Button ID="btnFinish" runat="server" Text="Finish" CssClass="btn btn-success btn-sm" OnClick="btnFinish_Click"/>
                     </div>
                 </FinishNavigationTemplate>
 

@@ -2,6 +2,7 @@
 using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.SqlClient;
 
 namespace BootstrapLearningExperience.Account
 {
@@ -22,11 +23,13 @@ namespace BootstrapLearningExperience.Account
                 var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
 
                 var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
+                
 
                 switch (result)
                 {
                     case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        getRank(Email.Text);
+                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);                        
                         break;
                     case SignInStatus.LockedOut:
                         Response.Redirect("/Account/Lockout");
@@ -43,6 +46,28 @@ namespace BootstrapLearningExperience.Account
                         ErrorMessage.Visible = true;
                         break;
                 }
+            }
+        }
+
+        private void getRank(string email)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
+
+            try
+            {
+                SqlCommand getUser = new SqlCommand();
+                getUser.CommandText = "SELECT usrRank FROM Users.dbo.[Table] WHERE usrEmail = '" + email + "'";
+                getUser.Connection = con;
+
+                con.Open();
+                Session["Rank"] = getUser.ExecuteScalar().ToString();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                Session["Rank"] = "Failed";
             }
         }
     }

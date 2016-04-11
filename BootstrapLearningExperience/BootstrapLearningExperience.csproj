@@ -170,6 +170,10 @@
     <Content Include="Advanced\ATask.aspx" />
     <Content Include="Advanced\AOne.aspx" />
     <Content Include="Advanced\AExample.html" />
+    <Content Include="App_Data\Users.mdf" />
+    <Content Include="App_Data\Users_log.ldf">
+      <DependentUpon>Users.mdf</DependentUpon>
+    </Content>
     <Content Include="Begin\Example.html" />
     <Content Include="Begin\Example2.html" />
     <Content Include="Begin\Example3.html" />
@@ -385,9 +389,7 @@
     </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

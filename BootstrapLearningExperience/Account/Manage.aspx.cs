@@ -3,6 +3,7 @@ using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using BootstrapLearningExperience.Models;
+using System.Data.SqlClient;
 
 namespace BootstrapLearningExperience.Account
 {
@@ -53,12 +54,36 @@ namespace BootstrapLearningExperience.Account
             if (user != null)
             {
                 manager.Delete(user);
+                deleteUser(userEmail);
                 Request.GetOwinContext().Authentication.SignOut();
                 Response.Redirect("/Default.aspx");
             }
             else
             {
                 Response.Write("Error");
+            }
+        }
+
+        private bool deleteUser(string Email)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
+
+            try
+            {
+                SqlCommand addUser = new SqlCommand();
+                addUser.CommandText = "DELETE FROM Users.dbo.[Table] WHERE usrEmail = '" + Email + "'";
+                addUser.Connection = con;
+
+                con.Open();
+                addUser.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                return false;
             }
         }
     }

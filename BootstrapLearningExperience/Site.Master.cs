@@ -6,6 +6,8 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.AspNet.Identity.Owin;
+using System.Data.SqlClient;
 
 namespace BootstrapLearningExperience
 {
@@ -135,11 +137,30 @@ namespace BootstrapLearningExperience
 
         private void getRank()
         {
-            if (Session["Rank"] != null)
+            string userEmail = Context.User.Identity.GetUserName().ToString();
+            if (userEmail != null)
             {
-                //Do nothing as their rank is set.
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
+
+                try
+                {
+                    SqlCommand getUser = new SqlCommand();
+                    getUser.CommandText = "SELECT usrRank FROM Users.dbo.[Table] WHERE usrEmail = '" + userEmail + "'";
+                    getUser.Connection = con;
+
+                    con.Open();
+                    Session["Rank"] = getUser.ExecuteScalar().ToString();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    con.Close();
+                    Session["Rank"] = "Novice";
+                }
             }
-            else { 
+
+            else {
                 Session["Rank"] = "Novice";
             }
         }
