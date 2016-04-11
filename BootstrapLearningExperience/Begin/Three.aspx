@@ -34,12 +34,10 @@
                 $("#Table").addClass("table table-condensed table-bordered table-striped table-hover");
             });
         });
-    </script>
-    <script>
+    
         window.onload = function setUp() {
 
             var html = document.getElementById("inpt").value = document.getElementById("outpt").innerHTML.trim();
-            <%--window.alert(html);--%>
         }
 
         function myFunction() {

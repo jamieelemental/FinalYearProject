@@ -26,7 +26,6 @@
             html = html.replace(/(\s+)/gm, " ");
             html = html.replace(/> </g, "><");
             document.getElementById("outpt").innerHTML = html;
-            // window.alert('reload fire');
         }
 
 
@@ -124,9 +123,6 @@ alert alert-danger\n\
          <style>.OutLine{ border: 1px solid black;}<\/style>" + document.getElementById("MainContent_inpt").value.trim());
             w.resizeTo(800, 600);
         }
-
-
-
     </script>
 
 

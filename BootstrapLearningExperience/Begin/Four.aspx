@@ -46,9 +46,10 @@
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Simple Example&lt;/title&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
         &lt;script src="js/bootstrap.js">&lt;/script&gt;
         &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
-        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+        
     &lt;/head&gt;
 
     &lt;body class="container text-center"&gt;

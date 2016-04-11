@@ -72,6 +72,9 @@
                 <p>For each page you wish to use Bootstrap with, place the following in the <code>&lt;head&gt;</code> tag:</p>
 
                 <ul style="list-style-type: none;">
+                    <li>
+                        <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</code>
+                    </li>
 
                     <li>
                         <code>&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;</code>
@@ -81,14 +84,12 @@
                         <code>&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;</code>
                     </li>
 
-                    <li>
-                        <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</code>
-                    </li>
+                    
                 </ul>
 
                 <p>
-                    These lines link the bootstrap files with each webpage. The third line of code links your webpage with Googles JQuery. This is also important for some of the functionality
-                    elements of bootstrap.
+                    These lines link the bootstrap files with each webpage. The first line of code links your webpage with Googles JQuery. This is important for some of the functionality
+                    elements of bootstrap (which rely on JQuery).
                 </p>
 
                 <p>
