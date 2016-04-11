@@ -13,33 +13,18 @@ namespace BootstrapLearningExperience.Account
             private set;
         }
 
-        private bool HasPassword(ApplicationUserManager manager)
-        {
-            return manager.HasPassword(User.Identity.GetUserId());
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
             if (!IsPostBack)
             {
-                // Determine the sections to render
-                if (HasPassword(manager))
-                {
-                    changePasswordHolder.Visible = true;
-                }
-                else
-                {
-                    setPassword.Visible = true;
-                    changePasswordHolder.Visible = false;
-                }
+                changePasswordHolder.Visible = true;
 
                 // Render success message
                 var message = Request.QueryString["m"];
                 if (message != null)
                 {
-                    // Strip the query string from action
                     Form.Action = ResolveUrl("~/Account/Manage");
                 }
             }
@@ -55,7 +40,7 @@ namespace BootstrapLearningExperience.Account
                 if (result.Succeeded)
                 {
                     var user = manager.FindById(User.Identity.GetUserId());
-                    signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
+                    signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                     Response.Redirect("~/Account/Manage?m=ChangePwdSuccess");
                 }
                 else

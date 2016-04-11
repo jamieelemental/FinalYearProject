@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BootstrapLearningExperience.Account.Login" Async="true" %>
 
-<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
-
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
 
     <div class="container">
@@ -41,7 +39,6 @@
                             <div class="col-xs-offset-1 col-xs-11 col-md-2 col-md-10">
                                 <div class="checkbox">
                                     <asp:CheckBox runat="server" ID="RememberMe" Text="Remember me?" />
-                                    <!--<asp:Label runat="server" AssociatedControlID="RememberMe">Remember me?</asp:Label>-->
                                 </div>
                             </div>
                         </div>

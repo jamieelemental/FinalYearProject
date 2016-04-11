@@ -2,6 +2,7 @@
 using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using BootstrapLearningExperience.Models;
 
 namespace BootstrapLearningExperience.Account
 {
@@ -13,43 +14,15 @@ namespace BootstrapLearningExperience.Account
             private set;
         }
 
-        private bool HasPassword(ApplicationUserManager manager)
-        {
-            return manager.HasPassword(User.Identity.GetUserId());
-        }
-
-        public bool HasPhoneNumber { get; private set; }
-
-        public bool TwoFactorEnabled { get; private set; }
-
-        public bool TwoFactorBrowserRemembered { get; private set; }
-
-        public int LoginsCount { get; set; }
-
         protected void Page_Load()
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-
-            HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
-
-            TwoFactorEnabled = manager.GetTwoFactorEnabled(User.Identity.GetUserId());
-
-            LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count;
 
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
 
             if (!IsPostBack)
             {
-                // Determine the sections to render
-                if (HasPassword(manager))
-                {
-                    ChangePassword.Visible = true;
-                }
-                else
-                {
-                    CreatePassword.Visible = true;
-                    ChangePassword.Visible = false;
-                }
+                ChangePassword.Visible = true;
 
                 // Render success message
                 var message = Request.QueryString["m"];
@@ -70,49 +43,23 @@ namespace BootstrapLearningExperience.Account
             }
         }
 
-
-        private void AddErrors(IdentityResult result)
-        {
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error);
-            }
-        }
-
-        // Remove phonenumber from user
-        protected void RemovePhone_Click(object sender, EventArgs e)
+        protected void btnDelete_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var result = manager.SetPhoneNumber(User.Identity.GetUserId(), null);
-            if (!result.Succeeded)
-            {
-                return;
-            }
-            var user = manager.FindById(User.Identity.GetUserId());
+            string userEmail = Context.User.Identity.GetUserName().ToString();
+            var user = manager.FindByEmail(userEmail);
+
             if (user != null)
             {
-                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                Response.Redirect("/Account/Manage?m=RemovePhoneNumberSuccess");
+                manager.Delete(user);
+                Request.GetOwinContext().Authentication.SignOut();
+                Response.Redirect("/Default.aspx");
             }
-        }
-
-        // DisableTwoFactorAuthentication
-        protected void TwoFactorDisable_Click(object sender, EventArgs e)
-        {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            manager.SetTwoFactorEnabled(User.Identity.GetUserId(), false);
-
-            Response.Redirect("/Account/Manage");
-        }
-
-        //EnableTwoFactorAuthentication 
-        protected void TwoFactorEnable_Click(object sender, EventArgs e)
-        {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            manager.SetTwoFactorEnabled(User.Identity.GetUserId(), true);
-
-            Response.Redirect("/Account/Manage");
+            else
+            {
+                Response.Write("Error");
+            }
         }
     }
 }
