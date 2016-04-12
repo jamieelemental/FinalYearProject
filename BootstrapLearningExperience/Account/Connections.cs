@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BootstrapLearningExperience
 {
@@ -10,7 +11,7 @@ namespace BootstrapLearningExperience
             if (userEmail != null)
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["UsersConnection"].ConnectionString;
 
                 try
                 {
@@ -38,7 +39,7 @@ namespace BootstrapLearningExperience
         public static bool UpdateUserRank(string Email, string Rank)
         {//Connect to the local database and update the rank for the stored user.
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["UsersConnection"].ConnectionString;
 
             try
             {
@@ -61,7 +62,7 @@ namespace BootstrapLearningExperience
         public static bool RegisterUser(string userEmail)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["UsersConnection"].ConnectionString;
 
             try
             {
@@ -84,7 +85,7 @@ namespace BootstrapLearningExperience
         public static bool DeleteUser(string Email)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["UsersConnection"].ConnectionString;
 
             try
             {

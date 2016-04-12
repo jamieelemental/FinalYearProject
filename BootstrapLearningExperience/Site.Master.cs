@@ -68,6 +68,7 @@ namespace BootstrapLearningExperience
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            AppDomain.CurrentDomain.SetData("DataDirectory", Server.MapPath("~/App_Data/"));
             versionInfo();
             getRank();
         }
