@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Chapter 4" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Four.aspx.cs" Inherits="BootstrapLearningExperience._Default" %>
+﻿<%@ Page Title="Chapter 4" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" Inherits="BootstrapLearningExperience._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
