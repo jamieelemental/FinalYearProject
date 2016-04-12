@@ -305,72 +305,16 @@
     <Compile Include="Advanced\ATask.aspx.designer.cs">
       <DependentUpon>ATask.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Advanced\AOne.aspx.cs">
-      <DependentUpon>AOne.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Advanced\AOne.aspx.designer.cs">
-      <DependentUpon>AOne.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Begin\Finished.aspx.cs">
-      <DependentUpon>Finished.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Begin\Finished.aspx.designer.cs">
-      <DependentUpon>Finished.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Begin\Three.aspx.cs">
-      <DependentUpon>Three.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Begin\Three.aspx.designer.cs">
-      <DependentUpon>Three.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Begin\Four.aspx.cs">
-      <DependentUpon>Four.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Begin\Four.aspx.designer.cs">
-      <DependentUpon>Four.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Begin\Five.aspx.cs">
-      <DependentUpon>Five.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Begin\Five.aspx.designer.cs">
-      <DependentUpon>Five.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Begin\Six.aspx.cs">
       <DependentUpon>Six.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Begin\Six.aspx.designer.cs">
       <DependentUpon>Six.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Begin\Two.aspx.cs">
-      <DependentUpon>Two.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Begin\Two.aspx.designer.cs">
-      <DependentUpon>Two.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Begin\One.aspx.cs">
-      <DependentUpon>One.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Begin\One.aspx.designer.cs">
-      <DependentUpon>One.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

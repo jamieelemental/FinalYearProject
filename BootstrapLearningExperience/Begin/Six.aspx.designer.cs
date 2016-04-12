@@ -8,8 +8,7 @@
 //------------------------------------------------------------------------------
 
 namespace BootstrapLearningExperience {
-    
-    
+        
     public partial class _Six {
         
         /// <summary>

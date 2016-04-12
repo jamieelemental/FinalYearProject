@@ -13,15 +13,15 @@ namespace BootstrapLearningExperience
 
         protected void btnFinished_Click(object sender, EventArgs e)
         {
-            Session["Rank"] = "Initiate";
-            string userEmail = Context.User.Identity.GetUserName().ToString();
+            Session["Rank"] = "Initiate"; //Update users rank in session.
+            string userEmail = Context.User.Identity.GetUserName().ToString(); //Get users email
 
             if (userEmail != null)
             {
-                Connections.UpdateUserRank(userEmail, "Initiate");
+                Connections.UpdateUserRank(userEmail, "Initiate"); //Update users rank stored in the database.
             }
 
-            Response.Redirect("/Begin/Finished.aspx", true);
+            Response.Redirect("/Begin/Finished.aspx", true); //Redirect to the next page.
         }
     }
 }

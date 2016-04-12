@@ -10,6 +10,7 @@ using BootstrapLearningExperience.Models;
 
 namespace BootstrapLearningExperience
 {
+    //The contents of this class has not been written by me (Jamie Element). Comments serve only to explain it's use.
     public class EmailService : IIdentityMessageService
     {
         public Task SendAsync(IdentityMessage message)

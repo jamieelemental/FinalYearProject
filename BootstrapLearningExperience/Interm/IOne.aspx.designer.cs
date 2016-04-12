@@ -9,7 +9,6 @@
 
 namespace BootstrapLearningExperience {
     
-    
     public partial class IOne {
         
         /// <summary>

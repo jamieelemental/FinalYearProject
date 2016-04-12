@@ -9,6 +9,7 @@ using System.IO;
 
 namespace BootstrapLearningExperience
 {
+    //The contents of this class has not been entirely written by me (Jamie Element). Comments serve only to explain it's use.
     public partial class SiteMaster : MasterPage
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
@@ -68,7 +69,7 @@ namespace BootstrapLearningExperience
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            AppDomain.CurrentDomain.SetData("DataDirectory", Server.MapPath("~/App_Data/"));
+            AppDomain.CurrentDomain.SetData("DataDirectory", Server.MapPath("~/App_Data/")); //Set the database path. Mapping the path reletive to the server.
             versionInfo();
             getRank();
         }
@@ -80,11 +81,12 @@ namespace BootstrapLearningExperience
 
         private void versionInfo()
         {
-            Session["VersionNo"] = findFiles().ToString();
+            Session["VersionNo"] = findFiles().ToString(); //Set Version 'number' in the session (date).
         }
 
         private List<String> DirSearch(string sDir)
-        {
+        {//Searches all folders of the website, and creates a list of all files.
+
             List<String> files = new List<String>();
             string txtFiles = "";
             try
@@ -106,7 +108,7 @@ namespace BootstrapLearningExperience
         }
 
         private DateTime findFiles()
-        {
+        {//searches through list of files to find the most recently editied file. This will give us the date the website was last updated. 
             string exePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
             string exeDir = System.IO.Path.GetDirectoryName(exePath);
             DirectoryInfo binDir = System.IO.Directory.GetParent(exeDir);
@@ -136,6 +138,7 @@ namespace BootstrapLearningExperience
 
         private void getRank()
         {
+            //Get the users rank from the databse if they are signed in. If not, set their rank to Novice.
             if(Session["Rank"] == null && Context.User.Identity.GetUserName().ToString() != null)
             {
                 string res = Connections.getRank(Context.User.Identity.GetUserName().ToString());

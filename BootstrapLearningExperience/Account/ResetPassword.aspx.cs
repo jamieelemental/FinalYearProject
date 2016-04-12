@@ -7,6 +7,8 @@ using Microsoft.AspNet.Identity.Owin;
 
 namespace BootstrapLearningExperience.Account
 {
+    //The contents of this class has not been written by me (Jamie Element). Comments serve only to explain it's use.
+    //This page is never accessed as the recovery Email is never sent out. Never got coded in. 
     public partial class ResetPassword : Page
     {
         protected string StatusMessage
@@ -21,8 +23,8 @@ namespace BootstrapLearningExperience.Account
             if (code != null)
             {
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-
                 var user = manager.FindByName(Email.Text);
+
                 if (user == null)
                 {
                     ErrorMessage.Text = "No user found";

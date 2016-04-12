@@ -16,7 +16,7 @@ namespace BootstrapLearningExperience.Advanced
                 }
                 else
                 {
-                    this.inpt.Text = System.IO.File.ReadAllText(Server.MapPath("AExampleStriped.html"));
+                    this.inpt.Text = System.IO.File.ReadAllText(Server.MapPath("AExampleStriped.html")); //If no user code saved, load in the task code.
                 }
             }
         }
@@ -24,7 +24,7 @@ namespace BootstrapLearningExperience.Advanced
         protected void btnSave_Click(object sender, EventArgs e)
         {
             //Save users code in the session.
-            Session["UserCodeAdv"] = this.inpt.Text;
+            Session["UserCodeAdv"] = this.inpt.Text; //store the users code in a session variable. 
         }
 
         protected void btnDownload_Click(object sender, EventArgs e)

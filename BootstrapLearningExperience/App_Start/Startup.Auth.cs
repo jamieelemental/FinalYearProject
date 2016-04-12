@@ -8,6 +8,7 @@ using BootstrapLearningExperience.Models;
 
 namespace BootstrapLearningExperience
 {
+    //The contents of this class has not been written by me (Jamie Element). Comments serve only to explain it's use.
     public partial class Startup {
 
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301883

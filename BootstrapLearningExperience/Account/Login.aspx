@@ -49,10 +49,10 @@
                         </div>
                     </div>
                     <p>
-                        <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Enabled">Register as a new user</asp:HyperLink>
+                        <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Enabled" NavigateUrl="~/Account/Register.aspx">Register as a new user</asp:HyperLink>
                     </p>
                     <p>
-                        <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Enabled">Forgot your password?</asp:HyperLink>
+                        <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Enabled" NavigateUrl="~/Account/Forgot.aspx">Forgot your password?</asp:HyperLink>
 
                     </p>
                 </section>
