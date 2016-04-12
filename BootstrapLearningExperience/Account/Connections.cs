@@ -1,21 +1,10 @@
 ﻿using System;
-
-using System;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Microsoft.AspNet.Identity;
-using System.Collections.Generic;
-using System.IO;
 using System.Data.SqlClient;
-using BootstrapLearningExperience.Models;
 
 namespace BootstrapLearningExperience
 {
     public static class Connections
     {
-
         public static string getRank(string userEmail)
         {
             if (userEmail != null)
@@ -47,7 +36,7 @@ namespace BootstrapLearningExperience
         }
 
         public static bool UpdateUserRank(string Email, string Rank)
-        {
+        {//Connect to the local database and update the rank for the stored user.
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
 

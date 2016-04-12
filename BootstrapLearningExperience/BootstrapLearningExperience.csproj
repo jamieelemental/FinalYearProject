@@ -170,6 +170,10 @@
     <Content Include="Advanced\ATask.aspx" />
     <Content Include="Advanced\AOne.aspx" />
     <Content Include="Advanced\AExample.html" />
+    <Content Include="App_Data\OwinAuth.mdf" />
+    <Content Include="App_Data\OwinAuth_log.ldf">
+      <DependentUpon>OwinAuth.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Users.mdf" />
     <Content Include="App_Data\Users_log.ldf">
       <DependentUpon>Users.mdf</DependentUpon>
