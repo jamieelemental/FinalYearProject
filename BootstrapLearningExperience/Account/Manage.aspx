@@ -13,20 +13,27 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-horizontal">
-                    <h4>Change your account settings</h4>
-                    <hr />
-                    <dl class="dl-horizontal">
-                        <dt>Password:</dt>
-                        <dd>
-                            <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Change]" Visible="false" ID="ChangePassword" runat="server" />
-                        </dd>                       
-                    </dl>
+            <div class="col-xs-12">
+                <h4>Change your account settings</h4>
+                <hr />
 
-                     <asp:Button ID="btnDelete" runat="server" Text="Delete account" CssClass="btn btn-danger" OnClick="btnDelete_Click" />
+                <div class="col-xs-1 text-right bold">
+                    <p>
+                        <strong>Password:</strong>
+                    </p>
+                    <p>
+                        <strong>Rank:</strong>
+                    </p>
+                </div>
+                <div class="col-xs-11">
+                    <p>
+                        <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Change]" Visible="false" ID="ChangePassword" runat="server" />
+                    </p>
+                    <p><%= Session["Rank"].ToString() %></p>
                 </div>
             </div>
+
+            <asp:Button ID="btnDelete" runat="server" Text="Delete account" CssClass="btn btn-danger" OnClick="btnDelete_Click" />
         </div>
     </div>
 </asp:Content>

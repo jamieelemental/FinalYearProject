@@ -371,6 +371,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Account\Connections.cs" />
     <Compile Include="Interm\IOne.aspx.cs">
       <DependentUpon>IOne.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

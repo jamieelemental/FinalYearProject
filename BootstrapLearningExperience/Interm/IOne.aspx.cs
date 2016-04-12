@@ -26,25 +26,7 @@ namespace BootstrapLearningExperience
         protected void btnFinish_Click(object sender, EventArgs e)
         {
             Session["Rank"] = "Semi-Pro";
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Users.mdf;Initial Catalog=Users;Integrated Security=True";
-
-            string userEmail = Context.User.Identity.GetUserName().ToString();
-            try
-            {
-                SqlCommand updateUser = new SqlCommand();
-                updateUser.CommandText = "UPDATE Users.dbo.[Table] SET usrRank = 'Semi-Pro' WHERE usrEmail = '" + userEmail + "'";
-                updateUser.Connection = con;
-
-                con.Open();
-                updateUser.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                con.Close();
-            }
-
+            Connections.UpdateUserRank(Context.User.Identity.GetUserName().ToString(), "Semi-Pro");
             Response.Redirect("/Advanced/AOne.aspx");
         }
     }
