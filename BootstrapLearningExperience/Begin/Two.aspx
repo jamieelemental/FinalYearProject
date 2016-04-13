@@ -84,7 +84,7 @@
                         <code>&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;</code>
                     </li>
 
-                    
+
                 </ul>
 
                 <p>
@@ -98,7 +98,25 @@
                     By the end of all three tutorials, you'll know how all these classes work, their different variants and hopefully many more.
                 </p>
 
+                <p class="h3">Quick Start Alternative</p>
+                <p>
+                    If you just want to get started quickly, you can add these three lines of code to each of your web pages:
 
+                     <ul style="list-style-type: none;">
+                         <li>
+                             <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</code>
+                         </li>
+
+                         <li>
+                             <code>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;</code>
+                         </li>
+
+                         <li>
+                             <code>&lt;link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /&gt;</code>
+                         </li>
+                     </ul>
+                </p>
+                <p>This will link the same three files from the download, but in this method, they are hosted online and don't require handling files.</p>
                 <br />
             </div>
             <div class="hidden-xs col-sm-1"></div>
