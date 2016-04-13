@@ -140,21 +140,24 @@ namespace BootstrapLearningExperience
         private void getRank()
         {
             //Get the users rank from the databse if they are signed in. If not, set their rank to Novice.
-            if (Session["Rank"] == null && Context.User.Identity.GetUserName().ToString() != null)
+            if (Session["Rank"] == null)
             {
-                string res = Connections.getRank(Context.User.Identity.GetUserName().ToString());
-                if (res != "error")
+                if (Context.User.Identity.GetUserName().ToString() != null)
                 {
-                    Session["Rank"] = res;
+                    string res = Connections.getRank(Context.User.Identity.GetUserName().ToString());
+                    if (res != "error")
+                    {
+                        Session["Rank"] = res;
+                    }
+                    else
+                    {
+                        Session["Rank"] = "Novice";
+                    }
                 }
                 else
                 {
                     Session["Rank"] = "Novice";
                 }
-            }
-            else
-            {
-                Session["Rank"] = "Novice";
             }
         }
     }
