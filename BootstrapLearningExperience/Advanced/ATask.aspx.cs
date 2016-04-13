@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Net;
+using System.Text;
 using System.Web;
 
 namespace BootstrapLearningExperience.Advanced
@@ -36,6 +39,40 @@ namespace BootstrapLearningExperience.Advanced
             Response.TransmitFile(Server.MapPath("AExampleStriped.html"));
             Response.Flush();
             Response.End();
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            WebRequest request = WebRequest.Create("https://validator.w3.org/nu/?out=gnu");
+            request.ContentType = "text/html; charset=UTF-8";
+            request.Method = "POST";
+
+            //string prePostData = "<!DOCTYPE html><html><head><title>Users Code</title><meta charset = \"utf-8\" /><script src = \"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\" ></script><script src = \"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\" ></script><link href = \"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel = \"stylesheet\" /></head><body>";
+            string postData = this.inpt.Text;
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+            request.ContentLength = byteArray.Length;
+            Stream dataStream = request.GetRequestStream();
+            dataStream.Write(byteArray, 0, byteArray.Length);
+            dataStream.Close();
+
+            WebResponse response = request.GetResponse();
+            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+            dataStream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(dataStream);
+            string responseFromServer = reader.ReadToEnd();
+            Console.WriteLine(responseFromServer);
+            reader.Close();
+            dataStream.Close();
+            response.Close();
+
+            if (responseFromServer == "")
+            {
+                validationResponse.Text = "Valid HTML, congratulations!";
+            }
+            else
+            {
+                validationResponse.Text = responseFromServer;
+            }
         }
     }
 }

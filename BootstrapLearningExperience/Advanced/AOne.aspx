@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Advanced" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AOne.aspx.cs" Inherits="BootstrapLearningExperience.Advanced.AOne" ValidateRequest="false" %>
+﻿<%@ Page Title="Advanced" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" ValidateRequest="false" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
