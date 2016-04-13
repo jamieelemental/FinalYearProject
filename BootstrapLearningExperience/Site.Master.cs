@@ -1,11 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
-using System.IO;
+
 
 namespace BootstrapLearningExperience
 {
@@ -139,7 +140,7 @@ namespace BootstrapLearningExperience
         private void getRank()
         {
             //Get the users rank from the databse if they are signed in. If not, set their rank to Novice.
-            if(Session["Rank"] == null && Context.User.Identity.GetUserName().ToString() != null)
+            if (Session["Rank"] == null && Context.User.Identity.GetUserName().ToString() != null)
             {
                 string res = Connections.getRank(Context.User.Identity.GetUserName().ToString());
                 if (res != "error")

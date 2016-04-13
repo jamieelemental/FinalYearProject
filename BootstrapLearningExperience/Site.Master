@@ -92,7 +92,8 @@
                             <h4 class="modal-title">Bootstrap References</h4>
                         </div>
                         <div class="modal-body" style="max-height: 50vh; overflow-y: scroll;">
-                            <table class="table table-bordered">
+                           
+                             <table class="table table-bordered">
                                 <thead>
                                     <tr class="text-center">
                                         <th colspan="6">Button Styles</th>
@@ -130,6 +131,7 @@
                                     <td><code>btn-link</code></td>
                                     <td>
                                         <input class="btn btn-link btn-xs" type="button" value="Click" /></td>
+                                    <td colspan="2"></td>
                                 </tr>
                             </table>
 
@@ -349,7 +351,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th colspan="3">JavaScript</th>
+                                        <th colspan="2">JavaScript</th>
                                     </tr>
                                 </thead>
 
