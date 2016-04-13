@@ -352,7 +352,8 @@ alert alert-danger\n\
                         </p>
 
                         <p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExampleTutorial">Open Example</button></p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExampleTutorial">Open Example</button>
+                        </p>
 
                         <div class="modal fade" id="modalExampleTutorial" role="dialog">
                             <div class="modal-dialog">
@@ -429,7 +430,7 @@ alert alert-danger\n\
                     </div>
                     <div class="col-xs-7"></div>
                     <div class="col-xs-3">
-                        <asp:Button ID="btnFinish" runat="server" Text="Finish" CssClass="btn btn-success btn-sm" OnClick="btnFinish_Click"/>
+                        <asp:Button ID="btnFinish" runat="server" Text="Finish" CssClass="btn btn-success btn-sm" OnClick="btnFinish_Click" />
                     </div>
                 </FinishNavigationTemplate>
 
@@ -437,25 +438,26 @@ alert alert-danger\n\
 
         </div>
 
-        <div class="col-xs-12 col-sm-7 col-md-8">
+        <div class="col-xs-12 col-sm-8 col-md-9">
             <div class="col-xs-12">
                 <p class="h3">Code: </p>
 
                 <div style="margin-bottom: 1em;">
-                    <asp:TextBox ID="inpt" runat="server" CssClass="form-control" TextMode="MultiLine" onkeyup="reload()" Height="10em"></asp:TextBox>
+                    <asp:TextBox ID="inpt" runat="server" CssClass="form-control" TextMode="MultiLine" onkeyup="reload()" Height="10em" Style="overflow-y: scroll; resize: vertical;"></asp:TextBox>
                 </div>
 
                 <p>
                     <a id="lnkReload" class="glyphicon glyphicon-play" onclick="reload();" style="font-size: 2em;"></a>&nbsp;
-                    <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" Style="font-size: 2em;" UseSubmitBehaviour="false"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>
+                    <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" Style="font-size: 2em;" UseSubmitBehaviour="false"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>&nbsp;
+                    <a class="glyphicon glyphicon-new-window" onclick="newWindow();" style="font-size: 2em;"></a>
+                    <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" CssClass="btn btn-primary pull-right" Text="Validate HTML" />
                 </p>
                 <p class="h3">Results:</p>
+                <pre id="outpt" style="height: 10em; overflow-y: scroll; resize: vertical;"></pre>
 
-
-                <pre id="outpt" style="min-height: 10em"></pre>
-                <p>
-                    <a class="glyphicon glyphicon-new-window" onclick="newWindow();" style="font-size: 2em;"></a>
-                </p>
+                <p class="h3">Validation Results:</p>
+                <asp:TextBox ID="validationResponse" runat="server" TextMode="MultiLine" CssClass="form-control" Height="10em" ReadOnly="true" Style="overflow-y: scroll; resize: vertical;"></asp:TextBox>
+                <p>Validation provided by <a href="https://validator.w3.org/">https://validator.w3.org/</a></p>
             </div>
         </div>
     </div>

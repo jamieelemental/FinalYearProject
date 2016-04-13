@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Get Strapped | A bootstrap tutorial website" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" Inherits="BootstrapLearningExperience._Default" %>
+﻿<%@ Page Title="Get Strapped | A bootstrap tutorial website" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
