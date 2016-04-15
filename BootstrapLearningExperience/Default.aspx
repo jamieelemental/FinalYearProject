@@ -1,74 +1,85 @@
 ﻿<%@ Page Title="Get Strapped | A bootstrap tutorial website" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <script>
+        $(document).ready(function () {
+            $('body').scrollspy({ target: ".navbar", offset: 50 });
+        });
+    </script>
+    <style>
+        #Beginner, #Intermediate, #Advanced {
+            padding-top: 50px;
+            height: 100vh;
+            color: #fff;
+        }
 
-    <div class="container">
+        #Beginner {
+            background-color: #449d44;
+        }
 
-        <div class="row">
-            <p class="text-center h1">
-                Welcome to the bootstrap tutorial!
+        #Intermediate {
+            background-color: #ec971f;
+        }
+
+        #Advanced {
+            background-color: #d9534f;
+        }
+
+        .pad {
+            height: 30vh;
+        }
+    </style>
+
+    <div id="Beginner" class="row text-center" onclick="window.location = '/Begin/One.aspx'">
+        <div class="pad"></div>
+        <div class="pad">
+            <p class="h2">Beginner</p>
+            <p>
+                Your starting point for learning Bootstrap. Introduction to the Bootstrap framework, 
+                            how to integrate into your project and what it can do.
+            </p>
+            <p>
+                <input type="button" value="Begin" class="btn btn-success" name="Beginner" onclick="window.location = '/Begin/One.aspx'" />
             </p>
         </div>
-
-        <div class="row">
-
-            <div class="col-xs-12 col-sm-4 text-center">
-
-                <div class="row">
-                    <h2>Beginner</h2>
-                </div>
-                <div class="row">
-                    <p>
-                        Your starting point for learning Bootstrap. Introduction to the Bootstrap framework, 
-                            how to integrate into your project and what it can do.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <input type="button" value="Begin" class="btn btn-success" name="Beginner" onclick="window.location = '/Begin/One.aspx'" />
-                </div>
-            </div>
-
-
-
-            <div class="col-xs-12 col-sm-4 text-center">
-                <div class="row">
-                    <h2>Intermediate</h2>
-                </div>
-                <div class="row">
-                    <p>
-                        You've had some experience with the Bootstrap framework before, and want to jump straight into coding. Jump right on in
-                    and start editing code for yourself.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <input type="button" value="Begin" class="btn btn-warning" name="Intermediate" onclick="window.location = '/Interm/IOne.aspx'" />
-                </div>
-            </div>
-
-
-
-            <div class="col-xs-12 col-sm-4 text-center">
-
-
-                <div class="row">
-                    <p class="h2">Advanced</p>
-                </div>
-                <div class="row">
-                    <p>Need no guidance, jump in and practive what you've learned. A true master of Bootstrap in the making, returned for old times. Be bold, try something new!</p>
-                </div>
-
-                <div class="row">
-                    <input type="button" value="Begin" class="btn btn-danger" name="Advanced" onclick="window.location = '/Advanced/AOne.aspx'"/>
-                </div>
-            </div>
-        </div>
-
-        <footer class="container body-content">
-            <hr />
-            <p class="col-xs-6">&copy; <%: DateTime.Now.Year %> - Jamie Element </p>
-            <p class="col-xs-6" style="text-align: right;"><%= Session["VersionNo"].ToString() %></p>
-        </footer>
+        <div class="pad"></div>
     </div>
+
+    <div id="Intermediate" class="row text-center" onclick="window.location = '/Interm/IOne.aspx'">
+        <div class="pad"></div>
+        <div class="pad">
+            <p class="h2">Intermediate</p>
+            <p>
+                You've had some experience with the Bootstrap framework before, and want to jump straight into coding. Jump right on in
+                        and start editing code for yourself.
+            </p>
+            <p>
+                <input type="button" value="Begin" class="btn btn-warning" name="Intermediate" onclick="window.location = '/Interm/IOne.aspx'" />
+            </p>
+        </div>
+        <div class="pad"></div>
+    </div>
+
+    <div id="Advanced" class="row text-center" onclick="window.location = '/Advanced/AOne.aspx'">
+        <div class="pad"></div>
+        <div class="pad">
+            <p class="h2">Advanced</p>
+            <p>Need no guidance, jump in and practive what you've learned. A true master of Bootstrap in the making, returned for old times. Be bold, try something new!</p>
+            <p>
+                <input type="button" value="Begin" class="btn btn-danger" name="Advanced" onclick="window.location = '/Advanced/AOne.aspx'" />
+            </p>
+        </div>
+        <div class="pad"></div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <ul class="nav navbar-nav">
+            <li class="hidden-xs"><a runat="server" href="~/">&copy; <%: DateTime.Now.Year %> - Jamie Element</a></li>
+            <li><a href="https://docs.google.com/forms/d/1BNcJicEsQ6M1KK7iHSn-Hb5a42D0rNFhlBr9BFuHBdw/edit?usp=forms_home&ths=true">&nbsp;Got some feedback?</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right hidden-xs">
+            <li><a runat="server" href="~/"><%= Session["VersionNo"].ToString() %> &nbsp;</a></li>
+        </ul>
+    </nav>
 </asp:Content>
