@@ -34,7 +34,7 @@
                 $("#Table").addClass("table table-condensed table-bordered table-striped table-hover");
             });
         });
-    
+
         window.onload = function setUp() {
 
             var html = document.getElementById("inpt").value = document.getElementById("outpt").innerHTML.trim();
@@ -111,40 +111,42 @@
                     <code>table</code>, <code>table-condensed</code>, <code>table-bordered</code>, <code>table-striped</code>, <code>table-hover</code>. Below is an example of the same table, but with the different styles.
                 </p>
 
-       
-                    <table id="Table" class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Town/City</th>
-                                <th>Postcode</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>John Smith</td>
-                            <td>128 Beaker Street</td>
-                            <td>Townsville</td>
-                            <td>TW4 1IK</td>
-                        </tr>
-                        <tr>
-                            <td>Jane Doe</td>
-                            <td>32 Rinestone Grove</td>
-                            <td>Fortington</td>
-                            <td>FT5 9AD</td>
-                        </tr>
-                    </table>
-                    <br />
-              
 
-                <p>
+                <table id="Table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Town/City</th>
+                            <th>Postcode</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>John Smith</td>
+                        <td>128 Beaker Street</td>
+                        <td>Townsville</td>
+                        <td>TW4 1IK</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Doe</td>
+                        <td>32 Rinestone Grove</td>
+                        <td>Fortington</td>
+                        <td>FT5 9AD</td>
+                    </tr>
+                </table>
+                <br />
+
+
+                <div class="row text-center">
                     <input id="showTable" type="button" class="btn btn-primary btn-sm" value="table" />
                     <input id="showTableCondensed" type="button" class="btn btn-primary btn-sm" value="table-condensed" />
                     <input id="showTableBordered" type="button" class="btn btn-primary btn-sm" value="table-bordered" />
+                    <br class="visible-xs" />
+                    <br class="visible-xs" />
                     <input id="showTableStriped" type="button" class="btn btn-primary btn-sm" value="table-striped" />
                     <input id="showTableHover" type="button" class="btn btn-primary btn-sm" value="table-hover" />
                     <input id="showTableAll" type="button" class="btn btn-primary btn-sm" value="All" />
-                </p>
+                </div>
                 <br />
                 <ul>
                     <li><code>table</code> adds padding in the cells, makes the table as wide as the container, and adds row lines.</li>
@@ -167,7 +169,7 @@
                 </p>
 
 
-                <table class="table-bordered table-condensed text-center" style="font-size: 0.9em;">
+                <table class="table-bordered table-condensed text-center" style="font-size: 0.9em; table-layout: fixed; width: 100%;">
 
                     <tr>
                         <td><code>btn</code></td>
@@ -235,7 +237,8 @@
                     whether the button is clickable.
                 </p>
                 <p>
-                    <input type="button" value="Active" class="btn btn-primary active" />&nbsp;<input type="button" value="Disabled" class="btn btn-primary disabled" /></p>
+                    <input type="button" value="Active" class="btn btn-primary active" />&nbsp;<input type="button" value="Disabled" class="btn btn-primary disabled" />
+                </p>
                 <p>All these should be combined with the base button class <code>btn</code>. So <code>btn-danger</code> becomes <code>btn btn-danger</code>.</p>
                 <p>Have a go combining these classes below:</p>
 
