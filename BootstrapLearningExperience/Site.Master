@@ -1,7 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BootstrapLearningExperience.SiteMaster" %>
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
@@ -14,11 +13,14 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <script>
+        $(document).ready(function () {
+            $('body').scrollspy({ target: ".navbar", offset: 50 });
+        });
+    </script>
 </head>
 <body>
     <form runat="server">
-
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -41,7 +43,7 @@
         </asp:ScriptManager>
 
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-fixed-top navbar-default">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -52,13 +54,18 @@
                     <a class="navbar-brand" runat="server" href="~/">Get Strapped</a>
                 </div>
 
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                <div class="nvbr navbar-collapse collapse">
+                    <ul class="nav navbar-nav hidden-sm">
+                        <li><a href="#Beginner" onclick="window.location = '/Default.aspx#Beginner'">Beginner</a></li>
+                        <li><a href="#Intermediate" onclick="window.location = '/Default.aspx#Intermediate'">Intermediate</a></li>
+                        <li><a href="#Advanced" onclick="window.location = '/Default.aspx#Advanced'">Advanced</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right visible-xs">
                         <li><a runat="server" href="~/">
-                            <div class="glyphicon glyphicon-home col-xs-1"></div>
-                            <div class="visible-xs">Home</div>
+                            <span class="glyphicon glyphicon-home"></span>&nbsp;Home
                         </a></li>
                     </ul>
+
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
@@ -82,369 +89,364 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
 
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Bootstrap References</h4>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Bootstrap References</h4>
+                    </div>
+                    <div class="modal-body" style="max-height: 50vh; overflow-y: scroll;">
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center">
+                                    <th colspan="6">Button Styles</th>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td><code>btn</code></td>
+                                <td>
+                                    <input class="btn btn-xs" value="click" type="button" /></td>
+                                <td><code>btn-default</code></td>
+                                <td>
+                                    <input class="btn btn-default btn-xs" type="button" value="Click" /></td>
+                                <td><code>btn-primary</code></td>
+                                <td>
+                                    <input class="btn btn-primary btn-xs" type="button" value="Click" /></td>
+                            </tr>
+
+                            <tr>
+                                <td><code>btn-success</code></td>
+                                <td>
+                                    <input class="btn btn-success btn-xs" type="button" value="Click" /></td>
+                                <td><code>btn-info</code></td>
+                                <td>
+                                    <input class="btn btn-info btn-xs" type="button" value="Click" /></td>
+                                <td><code>btn-warning</code></td>
+                                <td>
+                                    <input class="btn btn-warning btn-xs" type="button" value="Click" /></td>
+                            </tr>
+
+                            <tr>
+                                <td><code>btn-danger</code></td>
+                                <td>
+                                    <input class="btn btn-danger btn-xs" type="button" value="Click" /></td>
+                                <td><code>btn-link</code></td>
+                                <td>
+                                    <input class="btn btn-link btn-xs" type="button" value="Click" /></td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </table>
+
+                        <table class="table table-bordered text-center">
+                            <thead>
+                                <tr>
+                                    <th colspan="6">Button Properties</th>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td><code>btn-xs</code></td>
+                                <td><code>btn-sm</code></td>
+                                <td><code>btn-md</code></td>
+                                <td><code>btn-lg</code></td>
+                                <td><code>active</code></td>
+                                <td><code>disabled</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input class="btn btn-primary btn-xs" type="button" value="Click" /></td>
+                                <td>
+                                    <input class="btn btn-primary btn-sm" type="button" value="Click" /></td>
+                                <td>
+                                    <input class="btn btn-primary btn-md" type="button" value="Click" /></td>
+                                <td>
+                                    <input class="btn btn-primary btn-lg" type="button" value="Click" /></td>
+                                <td>
+                                    <input class="btn btn-primary active" type="button" value="Click" /></td>
+                                <td>
+                                    <input class="btn btn-primary disabled" type="button" value="Click" /></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="6"><code>btn-block</code></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <input class="btn btn-primary btn-block" type="button" value="Click" /></td>
+                            </tr>
+                        </table>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Tables</th>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td><code>table</code></td>
+                                <td>Base table class, adds row breaks and spacing.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>table-condensed</code></td>
+                                <td>Small padding in cells.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>table-bordered</code></td>
+                                <td>Adds all gridlines, no padding added.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>table-striped</code></td>
+                                <td>Adds alternating color to rows, no padding added.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>table-hover</code></td>
+                                <td>Adds highlight color to row hovered over, no padding added.</td>
+                            </tr>
+                        </table>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="5">The Grid</th>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td>Property</td>
+                                <td class="text-center">-</td>
+                                <td>Screen Size</td>
+                                <td class="text-center">-</td>
+                                <td>Size Factor (out of 12)</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>col</code></td>
+                                <td class="text-center"><code>-</code></td>
+                                <td>
+                                    <select class="dpcode">
+                                        <option>xs</option>
+                                        <option>sm</option>
+                                        <option>md</option>
+                                        <option>lg</option>
+                                    </select>
+                                </td>
+                                <td class="text-center"><code>-</code></td>
+                                <td>
+                                    <select class="dpcode">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code>hidden</code></td>
+                                <td class="text-center"><code>-</code></td>
+                                <td colspan="3">
+                                    <select class="dpcode">
+                                        <option>xs</option>
+                                        <option>sm</option>
+                                        <option>md</option>
+                                        <option>lg</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code>visible</code></td>
+                                <td class="text-center"><code>-</code></td>
+                                <td colspan="3">
+                                    <select class="dpcode">
+                                        <option>xs</option>
+                                        <option>sm</option>
+                                        <option>md</option>
+                                        <option>lg</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="table table-bordered">
+
+                            <tr>
+                                <td>Property</td>
+                                <td class="text-center">-</td>
+                                <td>Screen size</td>
+                                <td class="text-center">-</td>
+                                <td>Action</td>
+                                <td class="text-center">-</td>
+                                <td>Size Factor (out of 12)</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>col</code></td>
+                                <td class="text-center"><code>-</code></td>
+                                <td>
+                                    <select class="dpcode">
+                                        <option>xs</option>
+                                        <option>sm</option>
+                                        <option>md</option>
+                                        <option>lg</option>
+                                    </select></td>
+                                <td class="text-center"><code>-</code></td>
+                                <td>
+                                    <select class="dpcode">
+                                        <option>offset</option>
+                                        <option>push</option>
+                                        <option>pull</option>
+                                    </select></td>
+                                <td class="text-center"><code>-</code></td>
+                                <td>
+                                    <select class="dpcode">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select></td>
+                            </tr>
+                        </table>
+
+                        <div class="alert alert-success" data-dismiss="alert">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            alert alert-sucess
                         </div>
-                        <div class="modal-body" style="max-height: 50vh; overflow-y: scroll;">
-                           
-                             <table class="table table-bordered">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th colspan="6">Button Styles</th>
-                                    </tr>
-                                </thead>
 
-                                <tr>
-                                    <td><code>btn</code></td>
-                                    <td>
-                                        <input class="btn btn-xs" value="click" type="button" /></td>
-                                    <td><code>btn-default</code></td>
-                                    <td>
-                                        <input class="btn btn-default btn-xs" type="button" value="Click" /></td>
-                                    <td><code>btn-primary</code></td>
-                                    <td>
-                                        <input class="btn btn-primary btn-xs" type="button" value="Click" /></td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>btn-success</code></td>
-                                    <td>
-                                        <input class="btn btn-success btn-xs" type="button" value="Click" /></td>
-                                    <td><code>btn-info</code></td>
-                                    <td>
-                                        <input class="btn btn-info btn-xs" type="button" value="Click" /></td>
-                                    <td><code>btn-warning</code></td>
-                                    <td>
-                                        <input class="btn btn-warning btn-xs" type="button" value="Click" /></td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>btn-danger</code></td>
-                                    <td>
-                                        <input class="btn btn-danger btn-xs" type="button" value="Click" /></td>
-                                    <td><code>btn-link</code></td>
-                                    <td>
-                                        <input class="btn btn-link btn-xs" type="button" value="Click" /></td>
-                                    <td colspan="2"></td>
-                                </tr>
-                            </table>
-
-                            <table class="table table-bordered text-center">
-                                <thead>
-                                    <tr>
-                                        <th colspan="6">Button Properties</th>
-                                    </tr>
-                                </thead>
-
-                                <tr>
-                                    <td><code>btn-xs</code></td>
-                                    <td><code>btn-sm</code></td>
-                                    <td><code>btn-md</code></td>
-                                    <td><code>btn-lg</code></td>
-                                    <td><code>active</code></td>
-                                    <td><code>disabled</code></td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <input class="btn btn-primary btn-xs" type="button" value="Click" /></td>
-                                    <td>
-                                        <input class="btn btn-primary btn-sm" type="button" value="Click" /></td>
-                                    <td>
-                                        <input class="btn btn-primary btn-md" type="button" value="Click" /></td>
-                                    <td>
-                                        <input class="btn btn-primary btn-lg" type="button" value="Click" /></td>
-                                    <td>
-                                        <input class="btn btn-primary active" type="button" value="Click" /></td>
-                                    <td>
-                                        <input class="btn btn-primary disabled" type="button" value="Click" /></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="6"><code>btn-block</code></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6">
-                                        <input class="btn btn-primary btn-block" type="button" value="Click" /></td>
-                                </tr>
-                            </table>
-
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">Tables</th>
-                                    </tr>
-                                </thead>
-
-                                <tr>
-                                    <td><code>table</code></td>
-                                    <td>Base table class, adds row breaks and spacing.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>table-condensed</code></td>
-                                    <td>Small padding in cells.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>table-bordered</code></td>
-                                    <td>Adds all gridlines, no padding added.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>table-striped</code></td>
-                                    <td>Adds alternating color to rows, no padding added.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>table-hover</code></td>
-                                    <td>Adds highlight color to row hovered over, no padding added.</td>
-                                </tr>
-                            </table>
-
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="5">The Grid</th>
-                                    </tr>
-                                </thead>
-
-                                <tr>
-                                    <td>Property</td>
-                                    <td class="text-center">-</td>
-                                    <td>Screen Size</td>
-                                    <td class="text-center">-</td>
-                                    <td>Size Factor (out of 12)</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>col</code></td>
-                                    <td class="text-center"><code>-</code></td>
-                                    <td>
-                                        <select class="dpcode">
-                                            <option>xs</option>
-                                            <option>sm</option>
-                                            <option>md</option>
-                                            <option>lg</option>
-                                        </select>
-                                    </td>
-                                    <td class="text-center"><code>-</code></td>
-                                    <td>
-                                        <select class="dpcode">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                        </select>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>hidden</code></td>
-                                    <td class="text-center"><code>-</code></td>
-                                    <td colspan="3">
-                                        <select class="dpcode">
-                                            <option>xs</option>
-                                            <option>sm</option>
-                                            <option>md</option>
-                                            <option>lg</option>
-                                        </select>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>visible</code></td>
-                                    <td class="text-center"><code>-</code></td>
-                                    <td colspan="3">
-                                        <select class="dpcode">
-                                            <option>xs</option>
-                                            <option>sm</option>
-                                            <option>md</option>
-                                            <option>lg</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <table class="table table-bordered">
-
-                                <tr>
-                                    <td>Property</td>
-                                    <td class="text-center">-</td>
-                                    <td>Screen size</td>
-                                    <td class="text-center">-</td>
-                                    <td>Action</td>
-                                    <td class="text-center">-</td>
-                                    <td>Size Factor (out of 12)</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>col</code></td>
-                                    <td class="text-center"><code>-</code></td>
-                                    <td>
-                                        <select class="dpcode">
-                                            <option>xs</option>
-                                            <option>sm</option>
-                                            <option>md</option>
-                                            <option>lg</option>
-                                        </select></td>
-                                    <td class="text-center"><code>-</code></td>
-                                    <td>
-                                        <select class="dpcode">
-                                            <option>offset</option>
-                                            <option>push</option>
-                                            <option>pull</option>
-                                        </select></td>
-                                    <td class="text-center"><code>-</code></td>
-                                    <td>
-                                        <select class="dpcode">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                        </select></td>
-                                </tr>
-                            </table>
-
-                            <div class="alert alert-success" data-dismiss="alert">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                alert alert-sucess
-                            </div>
-
-                            <div class="alert alert-info" data-dismiss="alert">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                alert alert-info
-                            </div>
-
-                            <div class="alert alert-warning" data-dismiss="alert">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                alert alert-warning
-                            </div>
-
-                            <div class="alert alert-danger" data-dismiss="alert">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                alert alert-danger
-                            </div>
-
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">JavaScript</th>
-                                    </tr>
-                                </thead>
-
-
-                                <tr>
-                                    <td><code>data-toggle="collapse"</code></td>
-                                    <td>Toggles the content when clicked, referencing itself with the name "collapse".</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>data-target="#Content"</code></td>
-                                    <td>Targets and item on the page, with the ID "Content".</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>data-dismiss="alert"</code></td>
-                                    <td>Dismisses the alert when clicked, referencing itself with the name "alert".</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>data-dismiss="modal"</code></td>
-                                    <td>Dismisses the modal when clicked, referencing itself with the name "modal".</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>data-toggle="modal"</code></td>
-                                    <td>Toggles the modal when clicked, referencing itself with the name "modal".</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>data-target="#modalExampleTutorial"</code></td>
-                                    <td>Targets and item on the page, with the ID "modalExampleTutorial".</td>
-                                </tr>
-
-
-                                <tr>
-                                    <td><code>modal</code></td>
-                                    <td>Defines the tag which contains the modal content. Adds the grey overlay on the content behind.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>fade</code></td>
-                                    <td>Adds the animation of fading the content behind to the grey.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>modal-dialog</code></td>
-                                    <td>Defines the position of the modal, around the center of the page.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>modal-content</code></td>
-                                    <td>Adds white box around content.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>modal-header</code></td>
-                                    <td>Defines the header of the modal and adds a seperator below it.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>close</code></td>
-                                    <td>Floats the content to the top right, and removes traditional button styles.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>modal-title, modal-body</code></td>
-                                    <td>Defines styling for the header text, font size.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>modal-footer</code></td>
-                                    <td>Defines styling for the header text, font size. Aligned right by default.</td>
-                                </tr>
-
-                                <tr>
-                                    <td><code>role="dialog"</code></td>
-                                    <td>Used to give contextual information.</td>
-                                </tr>
-                            </table>
-
+                        <div class="alert alert-info" data-dismiss="alert">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            alert alert-info
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                        <div class="alert alert-warning" data-dismiss="alert">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            alert alert-warning
                         </div>
+
+                        <div class="alert alert-danger" data-dismiss="alert">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            alert alert-danger
+                        </div>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">JavaScript</th>
+                                </tr>
+                            </thead>
+
+
+                            <tr>
+                                <td><code>data-toggle="collapse"</code></td>
+                                <td>Toggles the content when clicked, referencing itself with the name "collapse".</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>data-target="#Content"</code></td>
+                                <td>Targets and item on the page, with the ID "Content".</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>data-dismiss="alert"</code></td>
+                                <td>Dismisses the alert when clicked, referencing itself with the name "alert".</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>data-dismiss="modal"</code></td>
+                                <td>Dismisses the modal when clicked, referencing itself with the name "modal".</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>data-toggle="modal"</code></td>
+                                <td>Toggles the modal when clicked, referencing itself with the name "modal".</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>data-target="#modalExampleTutorial"</code></td>
+                                <td>Targets and item on the page, with the ID "modalExampleTutorial".</td>
+                            </tr>
+
+
+                            <tr>
+                                <td><code>modal</code></td>
+                                <td>Defines the tag which contains the modal content. Adds the grey overlay on the content behind.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>fade</code></td>
+                                <td>Adds the animation of fading the content behind to the grey.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>modal-dialog</code></td>
+                                <td>Defines the position of the modal, around the center of the page.</td>
+                            </tr>
+                            <tr>
+                                <td><code>modal-content</code></td>
+                                <td>Adds white box around content.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>modal-header</code></td>
+                                <td>Defines the header of the modal and adds a seperator below it.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>close</code></td>
+                                <td>Floats the content to the top right, and removes traditional button styles.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>modal-title, modal-body</code></td>
+                                <td>Defines styling for the header text, font size.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>modal-footer</code></td>
+                                <td>Defines styling for the header text, font size. Aligned right by default.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>role="dialog"</code></td>
+                                <td>Used to give contextual information.</td>
+                            </tr>
+                        </table>
+
                     </div>
                 </div>
             </div>
+        </div>
 
-
+        <div class="container-fluid">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <br />
-            <div class="text-center h4"><a href="https://docs.google.com/forms/d/1BNcJicEsQ6M1KK7iHSn-Hb5a42D0rNFhlBr9BFuHBdw/edit?usp=forms_home&ths=true">Got some feedback?</a></div>
         </div>
     </form>
 </body>
