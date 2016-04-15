@@ -109,7 +109,6 @@
                 </p>
                 <pre>
 &lt;!DOCTYPE html&gt;
-
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Simple Example&lt;/title&gt;
@@ -137,8 +136,6 @@
         &lt;/div&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-
-
                     </pre>
                 <p>
                     We have changed <code>col-md-4</code> on each of the <code>&lt;div&gt;</code> tags to <code>col-md-4 col-sm-6</code>. This means that for medium screens (md) each column
