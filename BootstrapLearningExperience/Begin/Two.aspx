@@ -72,7 +72,7 @@
                 <p>For each page you wish to use Bootstrap with, place the following in the <code>&lt;head&gt;</code> tag:</p>
 
                 <ul style="list-style-type: none;">
-                    <li style="word-wrap:break-word;">
+                    <li style="word-wrap: break-word;">
                         <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</code>
                     </li>
 
@@ -99,21 +99,22 @@
                 <p class="h3">Quick Start Alternative</p>
                 <p>
                     If you just want to get started quickly, you can add these three lines of code to each of your web pages:
-
-                     <ul style="list-style-type: none;">
-                         <li style="word-wrap:break-word;">
-                             <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</code>
-                         </li>
-
-                         <li style="word-wrap:break-word;">
-                             <code>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;</code>
-                         </li>
-
-                         <li style="word-wrap:break-word;">
-                             <code>&lt;link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /&gt;</code>
-                         </li>
-                     </ul>
                 </p>
+
+                <ul style="list-style-type: none;">
+                    <li style="word-wrap: break-word;">
+                        <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</code>
+                    </li>
+
+                    <li style="word-wrap: break-word;">
+                        <code>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;</code>
+                    </li>
+
+                    <li style="word-wrap: break-word;">
+                        <code>&lt;link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /&gt;</code>
+                    </li>
+                </ul>
+
                 <p>This will link the same three files from the download, but in this method, they are hosted online and don't require handling files.</p>
                 <br />
             </div>

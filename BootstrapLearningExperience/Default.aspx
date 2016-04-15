@@ -6,29 +6,7 @@
             $('body').scrollspy({ target: ".navbar", offset: 50 });
         });
     </script>
-    <style>
-        #Beginner, #Intermediate, #Advanced {
-            padding-top: 50px;
-            height: 100vh;
-            color: #fff;
-        }
-
-        #Beginner {
-            background-color: #449d44;
-        }
-
-        #Intermediate {
-            background-color: #ec971f;
-        }
-
-        #Advanced {
-            background-color: #d9534f;
-        }
-
-        .pad {
-            height: 30vh;
-        }
-    </style>
+    
 
     <div id="Beginner" class="row text-center" onclick="window.location = '/Begin/One.aspx'">
         <div class="pad"></div>

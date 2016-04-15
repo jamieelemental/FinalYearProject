@@ -4,7 +4,7 @@ body {
     padding-bottom: 20px;
 }
 
-.OutLine{
+.OutLine {
     border: 1px solid black;
 }
 
@@ -17,16 +17,39 @@ body {
     border-radius: 2px;
 }
 
-::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(0,0,0,0.5);
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(0,0,0,0.5);
+    }
+
+.dpcode {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
 }
 
-.dpcode{
-    padding: 2px 4px;
-  font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
+
+#Beginner, #Intermediate, #Advanced {
+    padding-top: 50px;
+    height: 100vh;
+    color: #fff;
+}
+
+#Beginner {
+    background-color: #449d44;
+}
+
+#Intermediate {
+    background-color: #ec971f;
+}
+
+#Advanced {
+    background-color: #d9534f;
+}
+
+.pad {
+    height: 30vh;
 }
 
 /* Wrapping element */
@@ -57,6 +80,7 @@ input[type="select"] {
     .jumbotron {
         margin-top: 20px;
     }
+
     .body-content {
         padding: 0;
     }

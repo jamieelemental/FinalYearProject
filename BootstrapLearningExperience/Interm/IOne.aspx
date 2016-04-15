@@ -131,6 +131,7 @@ alert alert-danger\n\
         <div class="col-xs-12 col-sm-4 col-md-3" style="height: 85vh; overflow-y: scroll;">
 
             <asp:Wizard ID="IntermWiz" DisplayCancelButton="false" runat="server" DisplaySideBar="false" CssClass="col-xs-11 col-xs-offset-1">
+                
                 <WizardSteps>
                     <asp:WizardStep ID="Step1" AllowReturn="true" runat="server">
                         <p class="h3 text-center">Introduction</p>
@@ -140,9 +141,9 @@ alert alert-danger\n\
                         The lower box, 'Results' shows the result of the code in the upper box. We have several buttons on this page:
                         </p>
                         <ul>
-                            <li><strong><span class="glyphicon glyphicon-play" /></strong>- if you think the page hasn't updated the code in the lower box, this button will prompt an update.</li>
-                            <li><strong><span class="glyphicon glyphicon-floppy-disk" /></strong>- This option will save you code from this page, until your return.</li>
-                            <li><strong><span class="glyphicon glyphicon-new-window" /></strong>- Open your code in a seperate window, to test resizing.</li>
+                            <li><strong><span class="glyphicon glyphicon-play"></span></strong>- if you think the page hasn't updated the code in the lower box, this button will prompt an update.</li>
+                            <li><strong><span class="glyphicon glyphicon-floppy-disk"></span></strong>- This option will save you code from this page, until your return.</li>
+                            <li><strong><span class="glyphicon glyphicon-new-window"></span></strong>- Open your code in a seperate window, to test resizing.</li>
                             <li><strong>Next</strong> - Move forward a chapter (doesn't affect your code).</li>
                             <li><strong>Previous</strong> - Move to previous chapter (doesn't affect your code).</li>
                         </ul>
@@ -448,7 +449,7 @@ alert alert-danger\n\
 
                 <p>
                     <a id="lnkReload" class="glyphicon glyphicon-play" onclick="reload();" style="font-size: 2em;"></a>&nbsp;
-                    <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" Style="font-size: 2em;" UseSubmitBehaviour="false"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>&nbsp;
+                    <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" Style="font-size: 2em;"><span class="glyphicon glyphicon-floppy-disk"></span></asp:LinkButton>&nbsp;
                     <a class="glyphicon glyphicon-new-window" onclick="newWindow();" style="font-size: 2em;"></a>
                     <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" CssClass="btn btn-primary pull-right" Text="Validate HTML" />
                 </p>

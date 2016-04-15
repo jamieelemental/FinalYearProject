@@ -110,7 +110,7 @@
                             <tr>
                                 <td><code>btn</code></td>
                                 <td>
-                                    <input class="btn btn-xs" value="click" type="button" /></td>
+                                    <input class="btn btn-xs" value="click" type="button"/></td>
                                 <td><code>btn-default</code></td>
                                 <td>
                                     <input class="btn btn-default btn-xs" type="button" value="Click" /></td>
@@ -288,17 +288,17 @@
                         </table>
 
                         <table class="table table-bordered">
-
-                            <tr>
-                                <td>Property</td>
-                                <td class="text-center">-</td>
-                                <td>Screen size</td>
-                                <td class="text-center">-</td>
-                                <td>Action</td>
-                                <td class="text-center">-</td>
-                                <td>Size Factor (out of 12)</td>
-                            </tr>
-
+                            <thead>
+                                <tr>
+                                    <th>Property</th>
+                                    <th class="text-center">-</th>
+                                    <th>Screen size</th>
+                                    <th class="text-center">-</th>
+                                    <th>Action</th>
+                                    <th class="text-center">-</th>
+                                    <th>Size Factor (out of 12)</th>
+                                </tr>
+                            </thead>
                             <tr>
                                 <td><code>col</code></td>
                                 <td class="text-center"><code>-</code></td>

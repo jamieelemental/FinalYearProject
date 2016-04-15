@@ -64,7 +64,7 @@
 
                         <div class="col-xs-4 col-sm-5">
                             <a id="lnkReload" class="glyphicon glyphicon-play" onclick="reload();"></a>
-                            <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>
+                            <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click"><span class="glyphicon glyphicon-floppy-disk"></span></asp:LinkButton>
                             <a class="glyphicon glyphicon-new-window" onclick="newWindow();"></a>
                         </div>
 
@@ -79,7 +79,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <br />
-                            <p class="text-center">Template provided by:  <a href="http://startbootstrap.com/template-overviews/shop-homepage/">http://startbootstrap.com/template-overviews/shop-homepage//</a></p>
+                            <p class="text-center">Template provided by:  <a href="http://startbootstrap.com/template-overviews/shop-homepage/">http://startbootstrap.com/template-overviews/shop-homepage/</a></p>
                         </div>
                     </div>
 
