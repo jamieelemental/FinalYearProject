@@ -39,41 +39,39 @@
                     <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example3.html', '_blank', 'width=600, height=480', 'false')" />
                 </p>
                 <p>Hopefully from the example you will see how we can change the content based on the window size. Take a look at the code used below to achieve this:</p>
-                <pre>
-        
-        &lt;div class="visible-xs h6"&gt;
-            &lt;p&gt;This is a extra small screen size, typically a mobile screen.&lt;/p&gt;
-            &lt;div class="btn btn-default"&gt;
-                &lt;p&gt;Mobile Phone (xs)&lt;/p&gt;
-                &lt;p&gt;Less than 768px wide.&lt;/p&gt;
+                <pre>        
+&lt;div class="visible-xs h6"&gt;
+    &lt;p&gt;This is a extra small screen size, typically a mobile screen.&lt;/p&gt;
+    &lt;div class="btn btn-default"&gt;
+        &lt;p&gt;Mobile Phone (xs)&lt;/p&gt;
+        &lt;p&gt;Less than 768px wide.&lt;/p&gt;
 
-            &lt;/div&gt;
-        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
     
-        &lt;div class="visible-sm h4"&gt;
-            &lt;p&gt;This is a small screen size, typically a tablet screen.&lt;/p&gt;
-            &lt;div class="btn btn-default"&gt;
-                &lt;p&gt;Tablet (sm)&lt;/p&gt;
-                &lt;p&gt;768px - 992px wide.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+&lt;div class="visible-sm h4"&gt;
+    &lt;p&gt;This is a small screen size, typically a tablet screen.&lt;/p&gt;
+    &lt;div class="btn btn-default"&gt;
+        &lt;p&gt;Tablet (sm)&lt;/p&gt;
+        &lt;p&gt;768px - 992px wide.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
    
-        &lt;div class="visible-md h2"&gt;
-            &lt;p&gt;This is a medium screen size, typically a laptop screen.&lt;/p&gt;
-            &lt;div class="btn btn-default"&gt;
-                &lt;p&gt;Laptop (md)&lt;/p&gt;
-                &lt;p&gt;993px - 1200px wide.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+&lt;div class="visible-md h2"&gt;
+    &lt;p&gt;This is a medium screen size, typically a laptop screen.&lt;/p&gt;
+    &lt;div class="btn btn-default"&gt;
+        &lt;p&gt;Laptop (md)&lt;/p&gt;
+        &lt;p&gt;993px - 1200px wide.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-        &lt;div class="visible-lg h1"&gt;
-            &lt;p&gt;This is a large screen size, typically a desktop screen.&lt;/p&gt;
-            &lt;div class="btn btn-default"&gt;
-                &lt;p&gt;Desktop (lg)&lt;/p&gt;
-                &lt;p&gt;Greater than 1200px wide.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
+&lt;div class="visible-lg h1"&gt;
+    &lt;p&gt;This is a large screen size, typically a desktop screen.&lt;/p&gt;
+    &lt;div class="btn btn-default"&gt;
+        &lt;p&gt;Desktop (lg)&lt;/p&gt;
+        &lt;p&gt;Greater than 1200px wide.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
                 </pre>
 
                 <p>
