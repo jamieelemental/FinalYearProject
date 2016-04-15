@@ -40,27 +40,10 @@
 
     </script>
 
-    <style>
-        .Ol {
-            border: solid 1px black;
-        }
-    </style>
-    <br />
-
     <div class="row">
         <div class="hidden-xs col-sm-1"></div>
 
         <div class="col-xs-12 col-sm-10">
-
-            <div class="row">
-                <div class="alert alert-info" data-dismiss="alert">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    Open the Target Page, a template provided by: http://startbootstrap.com/template-overviews/shop-homepage/. The HTML has been provided, 
-                    but all the Bootstrap classes have been removed! Try and fill them in
-                to create the target page. If you get stuck, try use the cheat sheet for help. 
-                    Note: You may need to do additional research into Bootstrap!
-                </div>
-            </div>
 
             <div class="row">
 
@@ -81,7 +64,7 @@
 
                         <div class="col-xs-4 col-sm-5">
                             <a id="lnkReload" class="glyphicon glyphicon-play" onclick="reload();"></a>
-                            <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click" UseSubmitBehaviour="false"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>
+                            <asp:LinkButton ID="lnk" runat="server" OnClick="btnSave_Click"><span class="glyphicon glyphicon-floppy-disk" /></asp:LinkButton>
                             <a class="glyphicon glyphicon-new-window" onclick="newWindow();"></a>
                         </div>
 
@@ -91,6 +74,13 @@
                         </div>
 
                         <div class="hidden-xs col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <br />
+                            <p class="text-center">Template provided by:  <a href="http://startbootstrap.com/template-overviews/shop-homepage/">http://startbootstrap.com/template-overviews/shop-homepage//</a></p>
+                        </div>
                     </div>
 
                 </div>
