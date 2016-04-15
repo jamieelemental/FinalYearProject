@@ -72,7 +72,7 @@
                 <p>For each page you wish to use Bootstrap with, place the following in the <code>&lt;head&gt;</code> tag:</p>
 
                 <ul style="list-style-type: none;">
-                    <li>
+                    <li style="word-wrap:break-word;">
                         <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</code>
                     </li>
 
@@ -83,8 +83,6 @@
                     <li>
                         <code>&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;</code>
                     </li>
-
-
                 </ul>
 
                 <p>
@@ -103,15 +101,15 @@
                     If you just want to get started quickly, you can add these three lines of code to each of your web pages:
 
                      <ul style="list-style-type: none;">
-                         <li>
+                         <li style="word-wrap:break-word;">
                              <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</code>
                          </li>
 
-                         <li>
+                         <li style="word-wrap:break-word;">
                              <code>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;</code>
                          </li>
 
-                         <li>
+                         <li style="word-wrap:break-word;">
                              <code>&lt;link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /&gt;</code>
                          </li>
                      </ul>
