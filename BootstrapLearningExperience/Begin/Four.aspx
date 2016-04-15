@@ -12,8 +12,8 @@
 
             <div class="col-xs-1 col-sm-2 col-md-3"></div>
             <div class="col-xs-10 col-sm-8 col-md-6">
-                
-                 <div class="progress">
+
+                <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="50"
                         aria-valuemin="0" aria-valuemax="100" style="width: 50%">
                         <span>50%</span>
@@ -42,7 +42,6 @@
                 <p>Here is a simple example of a three column layout: </p>
                 <pre>
 &lt;!DOCTYPE html&gt;
-
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Simple Example&lt;/title&gt;
@@ -68,8 +67,8 @@
 &lt;/html&gt;
                 </pre>
                 <p>
-                <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example.html', '_blank', 'height=300, width=1000', 'false')" />
-</p>
+                    <input type="button" value="View example" class="btn btn-primary" onclick="window.open('Example.html', '_blank', 'height=300, width=1000', 'false')" />
+                </p>
 
                 <p>
                     This layout is achieved using many <code>&lt;div&gt;</code> tags to define each section of the layout. The position of
