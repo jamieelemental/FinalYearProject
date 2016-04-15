@@ -40,7 +40,7 @@
 
         <div class="row">
             <div class="col-xs-12 text-center">
-                <p><a href="/Begin/Two.aspx">Begin <span class="glyphicon glyphicon-arrow-right"></span></a></p>
+                <p><input type="button" value="Next" class="btn btn-success" onclick="window.location = '/Begin/Two.aspx'" /></p>
             </div>
         </div>
 
