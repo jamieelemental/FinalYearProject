@@ -34,7 +34,7 @@
                 </p>
                 <p>
                     The 'grid' layout splits the page into up to 12 sections. These sections can be further split into more sections,
-                     however, it starts to get complicated and this will be covered later. 
+                     however, it starts to get complicated and this will be covered later.
                 </p>
 
 

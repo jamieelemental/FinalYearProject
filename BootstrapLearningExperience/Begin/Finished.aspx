@@ -31,7 +31,7 @@
 
                 <p class="h3">You've achieved the rank of Initiate!</p>
                 <p>
-                    You've completed the beginner tutorial, and as such are granted the rank of initiate... Unfortunately there is no certificate, but if you are lucky, 
+                    You've completed the beginner tutorial, and as such are granted the rank of initiate... Unfortunately, there is no certificate. But if you are lucky, 
                     we may give you a badge. If you think you've got what it takes, move on to the next set of tutorials and a earn the next rank.
                 </p>
             </div>

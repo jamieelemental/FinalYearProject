@@ -42,7 +42,7 @@
         <div class="pad"></div>
         <div class="pad">
             <p class="h2">Advanced</p>
-            <p>Need no guidance, jump in and practive what you've learned. A true master of Bootstrap in the making, returned for old times. Be bold, try something new!</p>
+            <p>Need no guidance, jump in and practice what you've learned. A true master of Bootstrap in the making, returned for old times. Be bold, try something new!</p>
             <p>
                 <input type="button" value="Begin" class="btn btn-danger" name="Advanced" onclick="window.location = '/Advanced/AOne.aspx'" />
             </p>

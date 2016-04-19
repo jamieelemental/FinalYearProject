@@ -26,7 +26,7 @@
             <div class="hidden-xs col-sm-1"></div>
             <div class="col-xs-12 col-sm-10">
 
-                <p class="h3">What is BootStrap?</p>
+                <p class="h3">What is Bootstrap?</p>
                 <p>
                     Bootstrap is a collection of files, CSS (cascading style sheets) and JavaScript, that you can include as part of a website to help
                     create a structured layout and add some functionality. Bootstrap has many useful features, and is quite notable for including tools

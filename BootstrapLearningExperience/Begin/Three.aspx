@@ -204,7 +204,7 @@
 
                 <br />
                 <p>
-                    We then also have suppliment classes to modify the size of the button:
+                    We then also have supplement classes to modify the size of the button:
                 </p>
 
                 <table class="table-condensed table-bordered text-center">

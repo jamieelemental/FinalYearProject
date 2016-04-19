@@ -201,17 +201,17 @@
 
                             <tr>
                                 <td><code>table-bordered</code></td>
-                                <td>Adds all gridlines, no padding added.</td>
+                                <td>Adds all grid lines, no padding added.</td>
                             </tr>
 
                             <tr>
                                 <td><code>table-striped</code></td>
-                                <td>Adds alternating color to rows, no padding added.</td>
+                                <td>Adds alternating colour to rows, no padding added.</td>
                             </tr>
 
                             <tr>
                                 <td><code>table-hover</code></td>
-                                <td>Adds highlight color to row hovered over, no padding added.</td>
+                                <td>Adds highlight colour to row hovered over, no padding added.</td>
                             </tr>
                         </table>
 
@@ -337,7 +337,7 @@
 
                         <div class="alert alert-success" data-dismiss="alert">
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                            alert alert-sucess
+                            alert alert-success
                         </div>
 
                         <div class="alert alert-info" data-dismiss="alert">
@@ -406,7 +406,7 @@
 
                             <tr>
                                 <td><code>modal-dialog</code></td>
-                                <td>Defines the position of the modal, around the center of the page.</td>
+                                <td>Defines the position of the modal, around the centre of the page.</td>
                             </tr>
                             <tr>
                                 <td><code>modal-content</code></td>
@@ -415,7 +415,7 @@
 
                             <tr>
                                 <td><code>modal-header</code></td>
-                                <td>Defines the header of the modal and adds a seperator below it.</td>
+                                <td>Defines the header of the modal and adds a separator below it.</td>
                             </tr>
 
                             <tr>
