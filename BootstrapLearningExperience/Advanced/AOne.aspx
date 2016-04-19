@@ -11,7 +11,7 @@
                 <div class="text-center">
                     <p class="h3 text-center">Introduction</p>
                     <p>
-                        In this chapter, you will be tasked with creating a webpage for yourself, applying the bootstrap knowledge you hae learned so far.
+                        In this chapter, you will be tasked with creating a webpage for yourself, applying the bootstrap knowledge you have learned so far.
                         The content will be provided for you, but will have no bootstrap classes. Your job is to make it look like, and behave, like the example given.
                     Use the cheat sheet to jog your memory, and the example page to help guide you in your class choices.
                     </p>

@@ -143,12 +143,12 @@ alert alert-danger\n\
                         <ul>
                             <li><strong><span class="glyphicon glyphicon-play"></span></strong>- if you think the page hasn't updated the code in the lower box, this button will prompt an update.</li>
                             <li><strong><span class="glyphicon glyphicon-floppy-disk"></span></strong>- This option will save you code from this page, until your return.</li>
-                            <li><strong><span class="glyphicon glyphicon-new-window"></span></strong>- Open your code in a seperate window, to test resizing.</li>
+                            <li><strong><span class="glyphicon glyphicon-new-window"></span></strong>- Open your code in a separate window, to test resizing.</li>
                             <li><strong>Next</strong> - Move forward a chapter (doesn't affect your code).</li>
                             <li><strong>Previous</strong> - Move to previous chapter (doesn't affect your code).</li>
                         </ul>
                         <p>
-                            If you cant remember the Bootstrap classes we have covered already, use the <strong><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Cheat sheet</strong> button 
+                            If you can't remember the Bootstrap classes we have covered already, use the <strong><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Cheat sheet</strong> button 
                         in the top navigation bar, to help jog your memory.
                         </p>
                     </asp:WizardStep>
@@ -180,12 +180,12 @@ alert alert-danger\n\
                         <p>
                             Before, the columns
                         collapsed into one single column, now they collapse into three small columns
-                        on the left hand side because we have only specificed three columns of 2/12 width, 
-                        totaling 6/12 of the page. 
+                        on the left hand side because we have only specified three columns of 2/12 width, 
+                        totalling 6/12 of the page. 
                         </p>
                         <p>
                             Now, we are going to try something new. In only the first <code>&lt;div&gt;</code> tag, add the class
-                        <code>col-xs-offset-2</code>. The first colum has been indented by a width of 2/12 of the screen. When using this
+                        <code>col-xs-offset-2</code>. The first column has been indented by a width of 2/12 of the screen. When using this
                         class, it is important to note that an <code>offset</code> value should be set for each screen size, otherwise the <code>offset</code> will
                         be assumed for all sizes. We only set an <code>offset</code> value for <code>xs</code> devices. Not only this, but our total
                         column widths exceeded 12, as offset counts as column space, and our columns get pushed down the page on some screen sizes.
@@ -212,7 +212,7 @@ alert alert-danger\n\
                         </p>
                         <p>What happens?</p>
                         <p>
-                            On <code>sm</code> screen sizes, the first column will have changed location to be in the same place a the second column, and now they overwrite each other. 
+                            On <code>sm</code> screen sizes, the first column will have changed location to be in the same place as the second column, and now they overwrite each other. 
                         This is because we have pushed the column to position 6/12, which is occupied.
                         </p>
                         <p>
@@ -231,7 +231,7 @@ alert alert-danger\n\
                         <p><code>col-xs-2 col-sm-2 col-md-2 col-lg-2</code></p>
                         <p>
                             This is specifying a column that has a width of 2/12, for all device sizes. The way that Bootstrap works is abiding by
-                            the smallest device first then moving up. If all the columns will always be these same widths, we can shortern the amount
+                            the smallest device first then moving up. If all the columns will always be these same widths, we can shorten the amount
                             of classes down to only the smallest. 
                         </p>
                         <p><code>col-xs-2</code></p>
@@ -252,7 +252,7 @@ alert alert-danger\n\
                         <p class="h4">Nested Grids</p>
                         <p>
                             We have covered many aspects of the grid layout, column sizing and reordering on different devices, but now we come to 
-                            nesting grids. For the puposes of this exercise, an extra custom class can be used: <code>OutLine</code>. This will
+                            nesting grids. For the purposes of this exercise, an extra custom class can be used: <code>OutLine</code>. This will
                             put a black border around whatever you assign the class to.
                         </p>
                         <p>
@@ -279,7 +279,7 @@ alert alert-danger\n\
                             of the new <code>&lt;div&gt;</code>. This is because each column in the grid sizes itself based on the size of its parent, which is not always the same size
                             as the page.
                         </p>
-                        <p>Here we have another example, achieved by nesting columns inside eachother:</p>
+                        <p>Here we have another example, achieved by nesting columns inside each other:</p>
                         <p>
                             <input type="button" value="View example" class="btn btn-primary" onclick="window.open('IExample2.html', '_blank', 'height=300, width=1000', 'false')" />
                         </p>
@@ -324,7 +324,7 @@ alert alert-danger\n\
                         <p class="h3 text-center">Chapter 6</p>
                         <p class="h4">JavaScript Collapse</p>
                         <p>
-                            Another simple but effective JavaScript feature, is the collapsable feature. This allows you to show and hide content 
+                            Another simple but effective JavaScript feature, is the collapsible feature. This allows you to show and hide content 
                             on your web page, in a simple manner. Load up the example below:
                         </p>
                         <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
@@ -376,7 +376,7 @@ alert alert-danger\n\
                         <p>
                             The code for this can be put almost anywhere on the page, as it always remains hidden until prompted, and appears over your
                             website content. It shouldn't interfere with the flow of the webpage. Load up the example and have a look at what classes
-                            are used to acheive this effect.
+                            are used to achieve this effect.
                         </p>
 
                         <div class="alert alert-danger" data-dismiss="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>NOTE: this will replace your code.</div>
