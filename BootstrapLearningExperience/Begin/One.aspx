@@ -28,7 +28,7 @@
 
                 <p class="h3">What is Bootstrap?</p>
                 <p>
-                    Bootstrap is a collection of files, CSS (cascading style sheets) and JavaScript, that you can include as part of a website to help
+                    Bootstrap is a collection of files, CSS (cascading style sheets) and JavaScript, that you can include as part of a website, to help
                     create a structured layout and add some functionality. Bootstrap has many useful features, and is quite notable for including tools
                     to make your website responsive, resizing items to fit different screen sizes. 
                 </p>

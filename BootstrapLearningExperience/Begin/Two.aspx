@@ -86,8 +86,8 @@
                 </ul>
 
                 <p>
-                    These lines link the bootstrap files with each webpage. The first line of code links your webpage with Googles JQuery. This is important for some of the functionality
-                    elements of bootstrap (which rely on JQuery).
+                    These lines link the bootstrap files with each webpage. The first line of code links your webpage with Google's JQuery. This is important for some of the functionality
+                    elements of Bootstrap (which rely on JQuery).
                 </p>
 
                 <p>

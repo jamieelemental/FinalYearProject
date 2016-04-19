@@ -32,7 +32,7 @@
                 <p class="h3">Different Devices Advanced</p>
 
                 <p>
-                    It is not only possible to rearrange the layout of the page on different screen sizes, but we can also hide content. The next example contains 4 similar items on the page
+                    It is not only possible to rearrange the layout of the page on different screen sizes, but we can also hide content. The next example contains 4 similar items on the page,
                     but they are only visible in the correct screen size. Click below to open and have a go at slowly resizing the window. 
                 </p>
                 <p>
@@ -88,7 +88,7 @@
                 <p>
                     In the previous example we used multiple classes, <code>col-md-4 col-sm-6</code>, to specify how a column should appear for different screen sizes. 
                     In this example you could achieve column hiding using a similar approach, <code>col-xs-12 hidden-sm hidden-md hidden-lg</code>, however,
-                    all we need to state is when something should be visible, and bootstrap assumes it is hidden otherwise. Conversely, if we want to hide content on a specific size,
+                    all we need to state is when something should be visible, and Bootstrap assumes it is hidden otherwise. Conversely, if we want to hide content on a specific size,
                     we can use the hidden classes, <code>hidden-xs hidden-sm hidden-md hidden-lg</code> and bootstrap will assume it should be visible on the other sizes.
                 </p>
                 <p>

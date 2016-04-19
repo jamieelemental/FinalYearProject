@@ -104,7 +104,7 @@
                 </p>
 
                 <p>
-                    For this example, we decide that whilst on larger screens 3 column layout is perfect, we would like a maximum of two columns on the screen, and any extra columns display on
+                    For this example, we decide that whilst on larger screens 3 column layout is perfect, we would like a maximum of two columns on a smaller screen, and any extra columns display on
                         the next row. Here is the code, note the changes made:
                 </p>
                 <pre>

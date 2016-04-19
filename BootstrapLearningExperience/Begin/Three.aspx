@@ -75,11 +75,11 @@
             <div class="col-xs-12 col-sm-10">
                 <p class="h3">The Basics</p>
                 <p>
-                    The first part of bootstrap to get to grips with is the style elements. These are typically simple, but useful stylings for your webpage, that are conviniently set up for
+                    The first part of Bootstrap to get to grips with is the style elements. These are simple, but useful stylings for your webpage, that are conviniently set up for
                     you to use straight out of the box.
                 </p>
                 <p class="h3">Tables</p>
-                <p>Tables are a key element of many webspages, and Boostrap provides us with some useful styles for tables. Take a look at this simple HTML table below:</p>
+                <p>Tables are a key element of many webpages, and Bootstrap provides us with some useful styles for tables. Take a look at this simple HTML table below:</p>
                 <div>
                     <table style="width: 100%; display: table; border: 1px black solid;">
                         <thead>
@@ -107,7 +107,7 @@
                 <br />
 
                 <p>
-                    This table is very simple, and uses no styling, apart from a border that outlines it. Bootstrap can handle some different styles for tables, being:
+                    This table is very simple, and uses almost no styling, apart from a border that outlines it. Bootstrap can handle some different styles for tables:
                     <code>table</code>, <code>table-condensed</code>, <code>table-bordered</code>, <code>table-striped</code>, <code>table-hover</code>. Below is an example of the same table, but with the different styles.
                 </p>
 
@@ -164,8 +164,8 @@
 
                 <p class="h3">Buttons</p>
                 <p>
-                    Another quick style that can be applied to elements of your website is the button styles. You may have already noticed some of them already on this website. 
-                    Different coloured buttons can be used to signify different things. In bootstrap we have a few different ones: 
+                    Another quick style that can be applied to elements of your website is button styles. You may have already noticed some of them already on this website. 
+                    Different coloured buttons can be used to signify different things. In Bootstrap we have a few different ones: 
                 </p>
 
 

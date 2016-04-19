@@ -137,13 +137,14 @@ alert alert-danger\n\
                         <p class="h3 text-center">Introduction</p>
                         <p class="h4">Understanding this page</p>
                         <p>
-                            To the right we have two boxes. The upper box, 'Code' allows you to enter and modify code yourself!
-                        The lower box, 'Results' shows the result of the code in the upper box. We have several buttons on this page:
+                            To the right we have three boxes. The upper box, 'Code' allows you to enter and modify code yourself!
+                        The middle box, 'Results' shows the result of the code in the upper box. We have several buttons on this page:
                         </p>
                         <ul>
                             <li><strong><span class="glyphicon glyphicon-play"></span></strong>- if you think the page hasn't updated the code in the lower box, this button will prompt an update.</li>
                             <li><strong><span class="glyphicon glyphicon-floppy-disk"></span></strong>- This option will save you code from this page, until your return.</li>
                             <li><strong><span class="glyphicon glyphicon-new-window"></span></strong>- Open your code in a separate window, to test resizing.</li>
+                            <li><strong>Validate HTML</strong> - This will assess the HTML you have written and output warnings to the lowest box on the page, 'Validation results'.</li>
                             <li><strong>Next</strong> - Move forward a chapter (doesn't affect your code).</li>
                             <li><strong>Previous</strong> - Move to previous chapter (doesn't affect your code).</li>
                         </ul>
